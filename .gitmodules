@@ -7,3 +7,10 @@
 [submodule "themes/hugo-theme-walden"]
 	path = themes/hugo-theme-walden
 	url = git@github.com:Homecat805/hugo-theme-walden.git
+[submodule "themes/blist"]
+	path = themes/blist
+	url = https://github.com/apvarun/blist-hugo-theme.git
+[submodule "themes/themes/congo"]
+	path = themes/themes/congo
+	url = https://github.com/jpanther/congo.git
+	branch = stable
