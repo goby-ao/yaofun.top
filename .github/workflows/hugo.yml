@@ -3,7 +3,7 @@ name: deploy
 on:
     push:
         branches:
-            - main
+            - master
     workflow_dispatch:
 
 jobs:
@@ -15,7 +15,7 @@ jobs:
               with:
                   submodules: true
                   fetch-depth: 0
-                  ref: main # 这里选择你触发部署的分支！默认是 master
+                  ref: master # 这里选择你触发部署的分支！默认是 master
 
             - name: Setup Hugo
               uses: peaceiris/actions-hugo@v2
