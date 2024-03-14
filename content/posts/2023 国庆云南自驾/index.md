@@ -4,11 +4,9 @@ date: 2020-08-12
 draft: false
 description: "All the front matter variables available in Congo."
 summary: "While supporting most Hugo defaults, Congo adds a number of front matter parameters to customise the presentation of individual articles."
-slug: "front-matter"
+slug: "2023 国庆云南自驾行"
 tags: ["front matter", "config", "docs"]
 ---
-
-
 
 2023.09.29 - 2023.10.06 中秋国庆 8 天假， 我们一家三口开启了 2500 公里 成都-云南自驾游。
 
