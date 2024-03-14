@@ -1,0 +1,36 @@
+name: deploy
+
+on:
+    push:
+        branches:
+            - main
+    workflow_dispatch:
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+              with:
+                  submodules: true
+                  fetch-depth: 0
+                  ref: main # 这里选择你触发部署的分支！默认是 master
+
+            - name: Setup Hugo
+              uses: peaceiris/actions-hugo@v2
+              with:
+                  hugo-version: "latest"
+                  extended: true # 用 stack 主题需要加这个配置
+
+            - name: Build Web
+              run: hugo --minify
+
+            - name: Deploy Web
+              uses: peaceiris/actions-gh-pages@v3
+              with:
+                  PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+                  EXTERNAL_REPOSITORY: goby-ao/goby-ao.github.io # 改成你的仓库
+                  PUBLISH_BRANCH: pages
+                  PUBLISH_DIR: ./public
+                  commit_message: ${{ github.event.head_commit.message }}
