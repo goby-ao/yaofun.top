@@ -3,10 +3,10 @@ languageCode = 'zh-Hans-CN'
 languageName = '中文'
 weight = 2
 
-title = '瓦尔登湖'
+title = 'Blue Tress'
 copyright = '版权所有'
 
 [author]
-    name = "家猫"
-    description = "吾，家猫是也。生于越，学业于沪。喜读书闲游，好文字代码，置博客于互联网，录趣事以享亲友。"
-    email = "13050082@qq.com"
+    name = "Yao"
+    description = "生活在成都的程序员，热爱大自然"
+    email = "tracyao(at)outlook.com"
