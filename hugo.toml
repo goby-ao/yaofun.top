@@ -1,6 +1,6 @@
 baseURL = "https://yaofun.top"
 title   = "蓝色大树🌲"
-languageCode = "en-us"
+languageCode = "zh-cn"
 theme = "hello-friend-ng"
 
 PygmentsCodeFences = true
@@ -12,6 +12,7 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
 
 # googleAnalytics = ""
 # disqusShortname = ""
+hasCJKLanguage = true
 
 archetypeDir = "archetypes"
 contentDir   = "content"
@@ -256,3 +257,7 @@ disableHugoGeneratorInject = false
     name       = "About"
     url        = "about/"
     weight     = "3"
+ [[menu.main]]
+   identifier = "tags"
+   name       = "Tags"
+   url        = "/tags/"
