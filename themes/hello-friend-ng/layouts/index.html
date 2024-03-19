@@ -4,10 +4,10 @@
 
 {{ define "main" }}
     <main aria-role="main">
-        <div>
+        <div style="max-width:690px">
             <blockquote style="border-left:4px solid #428433;padding:4px;margin:10px 0;text-align:left"><p>{{ .Site.Params.Portrait.hello }}</p></blockquote>
             {{ if .Site.Params.Portrait.Path }}
-               <img src="{{ .Site.Params.Portrait.Path }}" class="" alt="{{ .Site.Params.Portrait.Alt }}" style="max-width:{{ .Site.Params.Portrait.MaxWidth }}; border-radius: 10px;box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);" />
+               <img src="{{ .Site.Params.Portrait.Path }}" class="" alt="{{ .Site.Params.Portrait.Alt }}" style="border-radius: 10px;box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);max-width: 100%;margin:5px;height: auto;" />
             {{ end }}
 
             {{ partial "subtitle.html" . }}
