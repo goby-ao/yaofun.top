@@ -5,11 +5,11 @@
 {{ define "main" }}
     <main aria-role="main">
         <div style="max-width:690px">
-            <p>{{ .Site.Params.Portrait.hello }}</p>
             {{ if .Site.Params.Portrait.Path }}
                <img src="{{ .Site.Params.Portrait.Path }}" class="" alt="{{ .Site.Params.Portrait.Alt }}" style="border-radius: 22px;max-width: 100%;padding:12px;height: auto;" />
             {{ end }}
 
+            <p>{{ .Site.Params.Portrait.hello }}</p>
             {{ partial "subtitle.html" . }}
 
             {{- with .Site.Params.social }}
