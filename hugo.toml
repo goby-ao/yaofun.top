@@ -114,7 +114,7 @@ disableHugoGeneratorInject = false
   # If you want, you can easily override the default footer with your own content. 
   #
   [params.footer]
-    trademark = 2023
+    trademark = 2024
     rss = true
     copyright = true
     author = true
@@ -152,7 +152,7 @@ disableHugoGeneratorInject = false
   #
   [params.portrait]
     #path     = "https://raw.githubusercontent.com/goby-ao/picgo/main/img/IMG_6041.jpeg"
-    path     = "/img/i.jpeg"
+    path     = "/img/cover.jpeg"
     alt      = "Portrait"
     maxWidth = "690px"
     hello = "「晚来天欲雪，能饮一杯无？」"
