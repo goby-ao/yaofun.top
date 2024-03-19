@@ -13,9 +13,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/posts/2024.2.3 春节回家过年.md",
+                "file": "content/posts/春节自驾回湖北，赶上罕见暴雪.md",
                 "mode": "source",
-                "source": false
+                "source": true
               }
             }
           }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/posts/2024.2.3 春节回家过年.md",
+                "file": "content/posts/春节自驾回湖北，赶上罕见暴雪.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/posts/2024.2.3 春节回家过年.md",
+                "file": "content/posts/春节自驾回湖北，赶上罕见暴雪.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/posts/2024.2.3 春节回家过年.md"
+                "file": "content/posts/春节自驾回湖北，赶上罕见暴雪.md"
               }
             }
           }
@@ -148,7 +148,8 @@
   },
   "active": "7a86bdb06b05ba4c",
   "lastOpenFiles": [
+    "content/posts/白日梦想家.md",
     "content/posts/2023.10 国庆云南 2500KM 自驾游.md",
-    "content/posts/2024.2.3 春节回家过年.md"
+    "content/posts/春节自驾回湖北，赶上罕见暴雪.md"
   ]
 }
