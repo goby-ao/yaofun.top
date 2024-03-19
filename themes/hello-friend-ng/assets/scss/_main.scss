@@ -301,11 +301,13 @@ pre {
 
 blockquote {
   position: relative;
-  padding: 10px 25px 10px 25px;
+  padding: 5px 15px 5px 15px;
   background-color: #f8f8f8;
   border-left: 5px solid #4caf50;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin-left: 10px;
+  margin-inline-start: 5px;
+  margin-inline-end: 10px;
 }
 
 blockquote::before {
@@ -329,27 +331,6 @@ blockquote::after {
   background-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
   z-index: -1;
 }
-
-@media (max-width: 600px) {
-  blockquote {
-    padding: 15px 20px 15px 20px;
-    margin-left: 5px;
-    border-left-width: 3px;
-  }
-
-  blockquote::before {
-    left: -5px;
-    width: calc(100% + 10px);
-  }
-
-  blockquote::after {
-    width: 20px;
-    height: 20px;
-    bottom: 5px;
-    right: 5px;
-  }
-}
-
 
 ul,
 ol {

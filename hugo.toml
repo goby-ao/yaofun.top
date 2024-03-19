@@ -248,11 +248,6 @@ disableHugoGeneratorInject = false
     url        = "posts/"
     weight     = "1"
   [[menu.main]]
-    identifier = "think"
-    name       = "Memos"
-    url        = "memos/"
-    weight     = "2"
-  [[menu.main]]
     identifier = "about"
     name       = "About"
     url        = "about/"
@@ -261,3 +256,4 @@ disableHugoGeneratorInject = false
    identifier = "tags"
    name       = "Tags"
    url        = "/tags/"
+    weight     = "2"
