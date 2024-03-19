@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>蓝色大树🌲</title>
+    <link>http://localhost:1313/fr/</link>
+    <description>Recent content on 蓝色大树🌲</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Sun, 28 Sep 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/fr/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Création d&#39;un nouveau thème</title>
+      <link>http://localhost:1313/fr/posts/2014/09/cr%C3%A9ation-dun-nouveau-th%C3%A8me/</link>
+      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fr/posts/2014/09/cr%C3%A9ation-dun-nouveau-th%C3%A8me/</guid>
+      <description>Introduction Ce tutoriel vous montrera comment créer un thème simple pour Hugo. Je suppose que vous êtes familier avec HTML, la ligne de commande bash, et que vous êtes à l&amp;rsquo;aise avec Markdown pour formater le contenu. Je vais expliquer comment Hugo utilise des modèles et comment vous pouvez organiser vos modèles pour créer un thème. Je ne couvrirai pas l&amp;rsquo;utilisation de CSS pour styliser votre thème.&#xA;Nous allons commencer par créer un nouveau site avec un modèle très basique.</description>
+    </item>
+    <item>
+      <title>Débuter avec Hugo</title>
+      <link>http://localhost:1313/fr/posts/2014/04/d%C3%A9buter-avec-hugo/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fr/posts/2014/04/d%C3%A9buter-avec-hugo/</guid>
+      <description>&lt;h2 id=&#34;étape-1-installer-hugo&#34;&gt;Étape 1. Installer Hugo&lt;/h2&gt;&#xA;&lt;p&gt;Allez sur la page de téléchargements de&#xA;&lt;a href=&#34;https://github.com/spf13/hugo/releases&#34;&gt;hugo&lt;/a&gt; et téléchargez la version&#xA;appropriée à votre système d&amp;rsquo;exploitation et votre architecture.&lt;/p&gt;&#xA;&lt;p&gt;Sauvegardez le fichier téléchargé à un endroit précis, afin de l&amp;rsquo;utiliser dans&#xA;l&amp;rsquo;étape suivante.&lt;/p&gt;&#xA;&lt;p&gt;Des informations plus complètes sont disponibles sur la page&#xA;&lt;a href=&#34;http://localhost:1313/overview/installing/&#34;&gt;installing hugo&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Introduction aux modèles (Hu)go</title>
+      <link>http://localhost:1313/fr/posts/2014/04/introduction-aux-mod%C3%A8les-hugo/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fr/posts/2014/04/introduction-aux-mod%C3%A8les-hugo/</guid>
+      <description>Hugo utilise l&amp;rsquo;excellente librairie go html/template pour son moteur de modèles. c&amp;rsquo;est un moteur extrêmement léger qui offre un très petit nombre de fonctions logiques. À notre expérience, c&amp;rsquo;est juste ce qu&amp;rsquo;il faut pour créer un bon site web statique. Si vous avez déjà utilisé d&amp;rsquo;autre moteurs de modèles pour différents langages ou frameworks, vous allez retrouver beaucoup de similitudes avec les modèles go.&#xA;Ce document est une introduction sur l&amp;rsquo;utilisation de Go templates.</description>
+    </item>
+    <item>
+      <title>Migrer vers Hugo depuis Jekyll</title>
+      <link>http://localhost:1313/fr/posts/2014/03/migrer-vers-hugo-depuis-jekyll/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fr/posts/2014/03/migrer-vers-hugo-depuis-jekyll/</guid>
+      <description>&lt;h2 id=&#34;déplacez-le-contenu-statique-vers-static&#34;&gt;Déplacez le contenu statique vers &lt;code&gt;static&lt;/code&gt;&lt;/h2&gt;&#xA;&lt;p&gt;Jekyll a une règle comme quoi tout répertoire qui ne commence pas par &lt;code&gt;_&lt;/code&gt; sera&#xA;copié tel-quel dans le répertoire &lt;code&gt;_site&lt;/code&gt;. Hugo garde tout le contenu statique&#xA;dans le répertoire &lt;code&gt;static&lt;/code&gt;. Vous devez donc déplacer tout ce type de contenu&#xA;là-dedans. Avec Jekylll, l&amp;rsquo;arborescence ressemblant à ceci :&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;▾ &amp;lt;root&amp;gt;/&#xA;    ▾ images/&#xA;        logo.png&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+  </channel>
+</rss>

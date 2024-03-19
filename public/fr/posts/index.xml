@@ -1,0 +1,1402 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on 蓝色大树🌲</title>
+        <link>http://localhost:1313/fr/posts/</link>
+        <description>Recent content in Posts on 蓝色大树🌲</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>fr</language>
+        <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+        <lastBuildDate>Sun, 28 Sep 2014 00:00:00 +0000</lastBuildDate>
+        <atom:link href="http://localhost:1313/fr/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Création d&#39;un nouveau thème</title>
+            <link>http://localhost:1313/fr/posts/2014/09/cr%C3%A9ation-dun-nouveau-th%C3%A8me/</link>
+            <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
+            
+            <guid>http://localhost:1313/fr/posts/2014/09/cr%C3%A9ation-dun-nouveau-th%C3%A8me/</guid>
+            <description>Introduction Ce tutoriel vous montrera comment créer un thème simple pour Hugo. Je suppose que vous êtes familier avec HTML, la ligne de commande bash, et que vous êtes à l&amp;rsquo;aise avec Markdown pour formater le contenu. Je vais expliquer comment Hugo utilise des modèles et comment vous pouvez organiser vos modèles pour créer un thème. Je ne couvrirai pas l&amp;rsquo;utilisation de CSS pour styliser votre thème.
+Nous allons commencer par créer un nouveau site avec un modèle très basique.</description>
+            <content type="html"><![CDATA[<h2 id="introduction">Introduction</h2>
+<p>Ce tutoriel vous montrera comment créer un thème simple pour Hugo. Je suppose que vous êtes familier avec HTML, la ligne de commande bash, et que vous êtes à l&rsquo;aise avec Markdown pour formater le contenu. Je vais expliquer comment Hugo utilise des modèles et comment vous pouvez organiser vos modèles pour créer un thème. Je ne couvrirai pas l&rsquo;utilisation de CSS pour styliser votre thème.</p>
+<p>Nous allons commencer par créer un nouveau site avec un modèle très basique. Ensuite, nous ajouterons quelques pages et des publications. Avec de petites variations, vous pourrez créer de nombreux types de sites web.</p>
+<p>Dans ce tutoriel, les commandes que vous entrez commenceront par l&rsquo;invite &ldquo;$&rdquo;. La sortie suivra. Les lignes qui commencent par &ldquo;#&rdquo; sont des commentaires que j&rsquo;ai ajoutés pour expliquer un point. Lorsque je montre les mises à jour d&rsquo;un fichier, le &ldquo;:wq&rdquo; sur la dernière ligne signifie qu&rsquo;il faut sauvegarder le fichier.</p>
+<p>Voici un exemple :</p>
+<pre tabindex="0"><code>## Ceci est un commentaire
+$ echo ceci est une commande
+ceci est une commande
+
+## édition d&#39;un fichier
+$vi foo.md
++++
+date = &#34;2014-09-28&#34;
+title = &#34;Création d&#39;un nouveau thème&#34;
++++
+
+Contenu du fichier
+:wq
+
+## L&#39;afficher
+$ cat foo.md
++++
+date = &#34;2014-09-28&#34;
+title = &#34;Création d&#39;un nouveau thème&#34;
++++
+
+Contenu du fichier
+$
+</code></pre><h2 id="quelques-définitions">Quelques définitions</h2>
+<p>Il y a quelques concepts que vous devez comprendre avant de créer un thème.</p>
+<h3 id="skins">Skins</h3>
+<p>Les skins sont les fichiers responsables de l&rsquo;apparence de votre site. C&rsquo;est le CSS qui contrôle les couleurs et les polices, c&rsquo;est le Javascript qui détermine les actions et les réactions. Ce sont aussi les règles que Hugo utilise pour transformer votre contenu en HTML que le site montrera aux visiteurs.</p>
+<p>Vous avez deux façons de créer un skin. Le moyen le plus simple est de le créer dans le répertoire <code>layouts/</code>. Si vous le faites, vous n&rsquo;avez pas à vous soucier de configurer Hugo pour le reconnaître. Le premier endroit où Hugo recherchera pour les règles et les fichiers se trouve dans le répertoire <code>layouts/</code> afin de trouver toujours le skin.</p>
+<p>Votre deuxième choix est de le créer dans un sous-répertoire du répertoire <code>themes/</code>. Si vous le faites, vous devez toujours indiquer à Hugo où chercher le skin. C&rsquo;est un travail supplémentaire, cependant, alors, pourquoi s&rsquo;embêter avec ça?</p>
+<p>La différence entre la création d&rsquo;un skin dans <code>layouts/</code> et la création dans <code>themes/</code> est très subtile. Un skin dans <code>layouts/</code> ne peut pas être personnalisé sans mettre à jour les modèles et les fichiers statiques sur lesquels il est construit. Un skin créé dans <code>themes/</code>, d&rsquo;autre part, peut être et facilite son utilisation par d&rsquo;autres personnes.</p>
+<p>Le reste de ce tutoriel appellera un skin créé dans le répertoire <code>thèmes/</code>, un thème.</p>
+<p>Notez que vous pouvez utiliser ce tutoriel pour créer un skin dans le répertoire <code>layouts/</code> si vous le souhaitez. La principale différence sera que vous n&rsquo;aurez pas besoin de mettre à jour le fichier de configuration du site pour utiliser un thème.</p>
+<h3 id="la-page-daccueil">La page d&rsquo;accueil</h3>
+<p>La page d&rsquo;accueil, ou la page de destination, est la première page que beaucoup de visiteurs d&rsquo;un site voient. C&rsquo;est le fichier index.html dans le répertoire racine du site Web. Puisque Hugo écrit des fichiers dans le répertoire public/, notre page d&rsquo;accueil est public/index.html.</p>
+<h3 id="fichier-de-configuration-du-site">Fichier de configuration du site</h3>
+<p>Lorsque Hugo s&rsquo;exécute, il recherche un fichier de configuration qui contient des paramètres qui remplacent les valeurs par défaut pour l&rsquo;ensemble du site. Le fichier peut utiliser TOML, YAML ou JSON. Je préfère utiliser TOML pour mes fichiers de configuration. Si vous préférez utiliser JSON ou YAML, vous devrez traduire mes exemples. Vous devrez également modifier le nom du fichier puisque Hugo utilise l&rsquo;extension pour déterminer comment le traiter.</p>
+<p>Hugo traduit les fichiers Markdown en HTML. Par défaut, Hugo s&rsquo;attend à trouver des fichiers Markdown dans votre répertoire <code>content/</code> and les modèles dans le répertoire <code>themes/</code>. Il créera les fichiers HTML dans votre répertoire <code>public/</code>. Vous pouvez le modifier en spécifiant d&rsquo;autres emplacements dans le fichier de configuration.</p>
+<h3 id="le-contenu">Le contenu</h3>
+<p>Le contenu est stocké dans des fichiers texte contenant deux sections. La première section est la &ldquo;section liminaire&rdquo;, qui contient les méta-informations sur le contenu. La deuxième section contient le Markdown qui sera converti en HTML.</p>
+<h4 id="section-liminaire">Section liminaire</h4>
+<p>La section liminaire est une information sur le contenu. Comme le fichier de configuration, il peut être écrit en TOML, YAML ou JSON. Contrairement au fichier de configuration, Hugo n&rsquo;utilise pas l&rsquo;extension du fichier pour connaître le format. Il recherche des marqueurs pour signaler le type. TOML est entouré de &ldquo;<code>+++</code>&rdquo;, YAML par &ldquo;<code>---</code>&rdquo;, et JSON est enfermé dans des accolades. Je préfère utiliser TOML, donc vous devrez traduire mes exemples si vous préférez YAML ou JSON.</p>
+<p>L&rsquo;information dans la section liminaire est transmise au modèle avant que le contenu ne soit rendu en HTML.</p>
+<h4 id="markdown">Markdown</h4>
+<p>Le contenu est écrit dans Markdown qui facilite la création du contenu. Hugo exécute le contenu via un moteur Markdown pour créer le code HTML qui sera écrit dans le fichier de sortie.</p>
+<h3 id="modèles">Modèles</h3>
+<p>Hugo utilise des modèles pour rendre le contenu en HTML. Les modèles sont un pont entre le contenu et la présentation. Les règles du modèle définissent quel contenu est publié, où il est publié et comment il sera rendu au fichier HTML. Le modèle guide la présentation en spécifiant le style à utiliser.</p>
+<p>Il existe trois types de modèles: simple, liste et partiel. Chaque type prend un peu de contenu comme entrée et le transforme en fonction des commandes du modèle.</p>
+<p>Hugo utilise sa connaissance du contenu pour trouver le modèle a utiliser pour rendre le contenu. S&rsquo;il ne peut pas trouver un modèle qui correspond exactement au contenu, il changera de niveau et recherchera à partir de là. Il continuera à le faire jusqu&rsquo;à ce qu&rsquo;il trouve un modèle correspondant ou ne dispose plus de modèles à essayer. S&rsquo;il ne peut pas trouver un modèle, il utilisera le modèle par défaut pour le site.</p>
+<p>Veuillez noter que vous pouvez utiliser la section liminaire pour influencer le choix de modèles de Hugo.</p>
+<h4 id="modèle-simple">Modèle simple</h4>
+<p>Un modèle simple est utilisé pour rendre un seul contenu. Par exemple, un article ou une publication serait un seul élément de contenu et utiliserait un modèle simple.</p>
+<h4 id="modèle-de-liste">Modèle de liste</h4>
+<p>Un modèle de liste rend un groupe de contenu connexe. Cela pourrait être un résumé des publications récentes ou de tous les articles d&rsquo;une catégorie. Les modèles de liste peuvent contenir plusieurs groupes.</p>
+<p>Le modèle de la page d&rsquo;accueil est un type spécial de modèle de liste. Hugo suppose que la page d&rsquo;accueil de votre site servira de portail pour le reste du contenu sur le site.</p>
+<h4 id="modèle-partiel">Modèle partiel</h4>
+<p>Un modèle partiel est un modèle qui peut être inclus dans d&rsquo;autres modèles. Les modèles partiels doivent être appelés en utilisant la commande de modèle &ldquo;partial&rdquo;. Ils sont très utiles pour utiliser des comportement commun. Par exemple, votre site peut avoir une bannière que toutes les pages utilisent. Au lieu de copier le texte de la bannière dans chaque modèle simple et de liste, vous pouvez créer une partie avec la bannière. De cette façon, si vous décidez de modifier la bannière, il vous suffit de changer le modèle partiel.</p>
+<h2 id="créer-un-nouveau-site">Créer un nouveau site</h2>
+<p>Utilisons Hugo pour créer un nouveau site Web. Je suis un utilisateur Mac, alors je vais créer le mien dans mon répertoire personnel, dans le dossier Sites. Si vous utilisez Linux, vous devrez d&rsquo;abord créer le dossier.</p>
+<p>La commande &ldquo;new site&rdquo; créera un squelette d&rsquo;un site. Il vous donnera la structure de répertoire de base et un fichier de configuration utilisable.</p>
+<pre tabindex="0"><code>$ hugo new site ~/Sites/zafta
+$ cd ~/Sites/zafta
+$ ls -l
+total 8
+drwxr-xr-x  7 quoha  staff  238 Sep 29 16:49 .
+drwxr-xr-x  3 quoha  staff  102 Sep 29 16:49 ..
+drwxr-xr-x  2 quoha  staff   68 Sep 29 16:49 archetypes
+-rw-r--r--  1 quoha  staff   82 Sep 29 16:49 config.toml
+drwxr-xr-x  2 quoha  staff   68 Sep 29 16:49 content
+drwxr-xr-x  2 quoha  staff   68 Sep 29 16:49 layouts
+drwxr-xr-x  2 quoha  staff   68 Sep 29 16:49 static
+$
+</code></pre><p>Consultez le répertoire content/ pour confirmer qu&rsquo;il est vide.</p>
+<p>Les autres répertoires (archetypes/, layouts/ et static/) sont utilisés lors de la personnalisation d&rsquo;un thème. C&rsquo;est un sujet pour un tutoriel différent, alors ignorez-les pour l&rsquo;instant.</p>
+<h3 id="générer-le-html-pour-le-nouveau-site">Générer le HTML pour le nouveau site</h3>
+<p>Éxécuter la commande <code>hugo</code> sans options permet de lire tout le contenu disponible et de générer les fichiers HTML. Il copiera également tous les fichiers statiques (tout ce qui n&rsquo;est pas du contenu). Comme nous avons un site vide, il ne fera pas grand chose, mais il le fera très rapidement.</p>
+<pre tabindex="0"><code>$ hugo --verbose
+INFO: 2014/09/29 Using config file: config.toml
+INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/static/ to
+    /Users/quoha/Sites/zafta/public/
+WARN: 2014/09/29 Unable to locate layout: [index.html _default/list.html
+                                            _default/single.html]
+WARN: 2014/09/29 Unable to locate layout: [404.html]
+0 draft content
+0 future content
+0 pages created
+0 tags created
+0 categories created
+in 2 ms
+$
+</code></pre><p>Le drapeau &ldquo;<code>--verbose</code> &ldquo;donne des informations supplémentaires qui seront utiles lorsque nous créerons le modèle. Chaque ligne de sortie qui commence par &ldquo;INFO:&rdquo; ou &ldquo;WARN:&rdquo; est présente car nous avons utilisé ce drapeau. Les lignes qui commencent par &ldquo;WARN:&rdquo; sont des messages d&rsquo;avertissement. Nous les examinerons plus tard.</p>
+<p>Nous pouvons vérifier que la commande a fonctionné en regardant de nouveau le répertoire.</p>
+<pre tabindex="0"><code>$ ls -l
+total 8
+drwxr-xr-x  2 quoha  staff   68 Sep 29 16:49 archetypes
+-rw-r--r--  1 quoha  staff   82 Sep 29 16:49 config.toml
+drwxr-xr-x  2 quoha  staff   68 Sep 29 16:49 content
+drwxr-xr-x  2 quoha  staff   68 Sep 29 16:49 layouts
+drwxr-xr-x  4 quoha  staff  136 Sep 29 17:02 public
+drwxr-xr-x  2 quoha  staff   68 Sep 29 16:49 static
+$
+</code></pre><p>Voyez-vous ce nouveau répertoire public/ ? Hugo y a placé tout le contenu généré. Lorsque vous êtes prêt à publier votre site Web, c&rsquo;est l&rsquo;endroit idéal pour commencer. Pour l&rsquo;instant, nous allons simplement confirmer que nous avons ce que nous attendons pour un site sans contenu.</p>
+<pre tabindex="0"><code>$ ls -l public
+total 16
+-rw-r--r--  1 quoha  staff  416 Sep 29 17:02 index.xml
+-rw-r--r--  1 quoha  staff  262 Sep 29 17:02 sitemap.xml
+$
+</code></pre><p>Hugo a créé deux fichiers XML, ce qui est standard, mais il n&rsquo;y a pas de fichiers HTML.</p>
+<h3 id="tester-le-nouveau-site">Tester le nouveau site</h3>
+<p>Vérifiez que vous pouvez exécuter le serveur Web intégré. Cela réduira considérablement votre cycle de développement si vous le faites. Commencez en exécutant la commande &ldquo;server&rdquo;. Si vous réussissez, vous verrez une sortie similaire à la suivante:</p>
+<pre tabindex="0"><code>$ hugo server --verbose
+INFO: 2014/09/29 Using config file: /Users/quoha/Sites/zafta/config.toml
+INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/static/ to
+    /Users/quoha/Sites/zafta/public/
+WARN: 2014/09/29 Unable to locate layout: [index.html _default/list.html
+                                            _default/single.html]
+WARN: 2014/09/29 Unable to locate layout: [404.html]
+0 draft content
+0 future content
+0 pages created
+0 tags created
+0 categories created
+in 2 ms
+Serving pages from /Users/quoha/Sites/zafta/public
+Web Server is available at http://localhost:1313
+Press Ctrl+C to stop
+</code></pre><p>Connectez-vous à l&rsquo;URL répertorié (c&rsquo;est sur la ligne qui commence par &ldquo;Web Server&rdquo;). Si tout fonctionne correctement, vous devriez obtenir une page qui montre ce qui suit:</p>
+<pre tabindex="0"><code>index.xml
+sitemap.xml
+</code></pre><p>C&rsquo;est une liste de votre répertoire public/. Hugo n&rsquo;a pas créé une page d&rsquo;accueil car notre site n&rsquo;a aucun contenu. Quand il n&rsquo;y a pas de fichier index.html dans un répertoire, le serveur répertorie les fichiers dans le répertoire, ce que vous devriez voir dans votre navigateur.</p>
+<p>Revenons encore à ces avertissements.</p>
+<pre tabindex="0"><code>WARN: 2014/09/29 Unable to locate layout: [index.html _default/list.html
+                                            _default/single.html]
+WARN: 2014/09/29 Unable to locate layout: [404.html]
+</code></pre><p>Ce deuxième avertissement est plus facile à expliquer. Nous n&rsquo;avons pas créé un modèle à utiliser pour générer des &ldquo;erreurs de page non trouvées&rdquo;. Le message 404 est un sujet pour un tutoriel distinct.</p>
+<p>À propos du premier avertissement. C&rsquo;est pour la page d&rsquo;accueil. Vous pouvez le dire parce que la première mise en page qu&rsquo;il recherchait était &ldquo;index.html&rdquo;. Cela n&rsquo;est utilisé que par la page d&rsquo;accueil.</p>
+<p>J&rsquo;aime que le drapeau verbose demande à Hugo de lister les fichiers qu&rsquo;il recherche. Pour la page d&rsquo;accueil, ce sont index.html, _default/list.html et _default/single.html. Il y a des règles que nous aborderons plus loin qui expliquent les noms et les chemins. Pour l&rsquo;instant, n&rsquo;oubliez pas que Hugo n&rsquo;a pas pu trouver un modèle pour la page d&rsquo;accueil et il vous l&rsquo;a dit.</p>
+<p>À ce stade, vous avez une installation de travail et un site sur lequel nous pouvons développer. Tout ce qui reste, c&rsquo;est d&rsquo;ajouter du contenu et un thème pour l&rsquo;afficher.</p>
+<h2 id="créer-un-nouveau-thème">Créer un nouveau thème</h2>
+<p>Hugo ne fournit pas de thème par défaut. Il y a quelques-uns disponibles (j&rsquo;ai compté une douzaine lorsque j&rsquo;ai installé Hugo pour la première fois) et Hugo contient une commande pour créer de nouveaux thèmes.</p>
+<p>Nous allons créer un nouveau thème appelé &ldquo;zafta&rdquo;. Étant donné que le but de ce didacticiel est de vous montrer comment remplir les fichiers pour extraire votre contenu, le thème ne contiendra aucun CSS. En d&rsquo;autres termes, moche mais fonctionnel.</p>
+<p>Tous les thèmes utilisent des philosophies différentes sur le contenu et la mise en page. Les philosophies fortes permettent de créer un thème facilement, mais différentes philosophies rendrons l&rsquo;utilisation du thème plus difficile. Par exemple, Zafta utilise &ldquo;post&rdquo; au lieu de &ldquo;blog&rdquo;. Lorsque vous construisez un thème, envisagez d&rsquo;utiliser les termes que d&rsquo;autres thèmes utilisent.</p>
+<h3 id="créer-un-squelette">Créer un squelette</h3>
+<p>Utilisez la commande &ldquo;new&rdquo; de Hugo pour créer le squelette d&rsquo;un thème. Cela crée la structure du répertoire et place les fichiers vides à remplir.</p>
+<pre tabindex="0"><code>$ hugo new theme zafta
+
+$ ls -l
+total 8
+drwxr-xr-x  2 quoha  staff   68 Sep 29 16:49 archetypes
+-rw-r--r--  1 quoha  staff   82 Sep 29 16:49 config.toml
+drwxr-xr-x  2 quoha  staff   68 Sep 29 16:49 content
+drwxr-xr-x  2 quoha  staff   68 Sep 29 16:49 layouts
+drwxr-xr-x  4 quoha  staff  136 Sep 29 17:02 public
+drwxr-xr-x  2 quoha  staff   68 Sep 29 16:49 static
+drwxr-xr-x  3 quoha  staff  102 Sep 29 17:31 themes
+
+$ find themes -type f | xargs ls -l
+-rw-r--r--  1 quoha  staff  1081 Sep 29 17:31 themes/zafta/LICENSE.md
+-rw-r--r--  1 quoha  staff     0 Sep 29 17:31 themes/zafta/archetypes/default.md
+-rw-r--r--  1 quoha  staff     0 Sep 29 17:31 themes/zafta/layouts/_default/
+                                                list.html
+-rw-r--r--  1 quoha  staff     0 Sep 29 17:31 themes/zafta/layouts/_default/
+                                                single.html
+-rw-r--r--  1 quoha  staff     0 Sep 29 17:31 themes/zafta/layouts/index.html
+-rw-r--r--  1 quoha  staff     0 Sep 29 17:31 themes/zafta/layouts/partials/
+                                                footer.html
+-rw-r--r--  1 quoha  staff     0 Sep 29 17:31 themes/zafta/layouts/partials/
+                                                header.html
+-rw-r--r--  1 quoha  staff    93 Sep 29 17:31 themes/zafta/theme.toml
+$
+</code></pre><p>Le squelette comprend des modèles (les fichiers se terminant par .html), un fichier de licence, une description de votre thème (le fichier theme.toml) et un archétype vide.</p>
+<p>Prenez une minute pour remplir les fichiers theme.toml et LICENSE.md. Ils sont facultatifs, mais si vous allez distribuer votre thème, il dit au monde qui féliciter (ou blâmer). Il est également agréable de déclarer la licence afin que les gens sachent comment ils peuvent utiliser le thème.</p>
+<pre tabindex="0"><code>$ vi themes/zafta/theme.toml
+author = &#34;michael d henderson&#34;
+description = &#34;Un thème minimal fonctionnel&#34;
+license = &#34;MIT&#34;
+name = &#34;zafta&#34;
+source_repo = &#34;&#34;
+tags = [&#34;tags&#34;, &#34;categories&#34;]
+:wq
+
+## éditez également themes/zafta/LICENSE.md et changez
+## l&#39;emplacement où il est écrit &#34;YOUR_NAME_HERE&#34;
+</code></pre><p>Notez que les fichiers du squelette du thème sont vides. Ne vous inquiètez pas, nous allons remédier à cela rapidement.</p>
+<pre tabindex="0"><code>$ find themes/zafta -name &#39;*.html&#39; | xargs ls -l
+-rw-r--r--  1 quoha  staff  0 Sep 29 17:31 themes/zafta/layouts/_default/
+                                            list.html
+-rw-r--r--  1 quoha  staff  0 Sep 29 17:31 themes/zafta/layouts/_default/
+                                            single.html
+-rw-r--r--  1 quoha  staff  0 Sep 29 17:31 themes/zafta/layouts/
+                                            index.html
+-rw-r--r--  1 quoha  staff  0 Sep 29 17:31 themes/zafta/layouts/partials/
+                                            footer.html
+-rw-r--r--  1 quoha  staff  0 Sep 29 17:31 themes/zafta/layouts/partials/
+                                            header.html
+$
+</code></pre><h3 id="mettre-à-jour-le-fichier-de-configuration-pour-utiliser-notre-thème">Mettre à jour le fichier de configuration pour utiliser notre thème</h3>
+<p>Maintenant que nous avons un thème sur lequel travailler, il est judicieux d&rsquo;ajouter le nom du thème au fichier de configuration. Ceci est facultatif, car vous pouvez toujours ajouter &ldquo;-t zafta&rdquo; à toutes vos commandes. J&rsquo;aime mettre le fichier de configuration car j&rsquo;aime les lignes de commande plus courtes. Si vous ne le placez pas dans le fichier de configuration ou ne le spécifiez pas sur la ligne de commande, vous n&rsquo;utiliserez pas le modèle que vous attendez.</p>
+<p>Modifiez le fichier pour ajouter le thème, ajoutez un titre pour le site et spécifiez que tout notre contenu utilisera le format TOML.</p>
+<pre tabindex="0"><code>$ vi config.toml
+theme = &#34;zafta&#34;
+baseurl = &#34;&#34;
+languageCode = &#34;en-us&#34;
+title = &#34;zafta - totally refreshing&#34;
+MetaDataFormat = &#34;toml&#34;
+:wq
+
+$
+</code></pre><h3 id="générer-le-site">Générer le site</h3>
+<p>Maintenant que nous avons un thème vide, générez le site à nouveau.</p>
+<pre tabindex="0"><code>$ hugo --verbose
+INFO: 2014/09/29 Using config file: /Users/quoha/Sites/zafta/config.toml
+INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/themes/zafta/static/ to
+    /Users/quoha/Sites/zafta/public/
+INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/static/ to
+    /Users/quoha/Sites/zafta/public/
+WARN: 2014/09/29 Unable to locate layout: [404.html theme/404.html]
+0 draft content
+0 future content
+0 pages created
+0 tags created
+0 categories created
+in 2 ms
+$
+</code></pre><p>Avez-vous remarqué que la sortie est différente? Le message d&rsquo;avertissement pour la page d&rsquo;accueil a disparu et nous avons une ligne d&rsquo;information supplémentaire indiquant que Hugo est en train de se synchroniser avec le répertoire du thème.</p>
+<p>Vérifions le répertoire public/ pour voir ce que Hugo a généré.</p>
+<pre tabindex="0"><code>$ ls -l public
+total 16
+drwxr-xr-x  2 quoha  staff   68 Sep 29 17:56 css
+-rw-r--r--  1 quoha  staff    0 Sep 29 17:56 index.html
+-rw-r--r--  1 quoha  staff  407 Sep 29 17:56 index.xml
+drwxr-xr-x  2 quoha  staff   68 Sep 29 17:56 js
+-rw-r--r--  1 quoha  staff  243 Sep 29 17:56 sitemap.xml
+$
+</code></pre><p>Notez quatre choses:</p>
+<ol>
+<li>Hugo a créé une page d&rsquo;accueil. C&rsquo;est le fichier public/index.html.</li>
+<li>Hugo a créé un répertoire css/.</li>
+<li>Hugo a créé un répertoire js/.</li>
+<li>Hugo a affirmé avoir créé 0 pages. Il a créé un fichier et copié sur des fichiers statiques, mais n&rsquo;a pas créé de pages. C&rsquo;est parce qu&rsquo;il considère une «page» comme un fichier créé directement à partir d&rsquo;un fichier de contenu. Il ne compte pas les choses comme les fichiers index.html qu&rsquo;il crée automatiquement.</li>
+</ol>
+<h4 id="la-page-daccueil-1">La page d&rsquo;accueil</h4>
+<p>Hugo prend en charge plusieurs types de modèles différents. La page d&rsquo;accueil est spéciale car elle possède son propre type de modèle et son propre fichier modèle. Le fichier, layouts/index.html, sert à générer le HTML pour la page d&rsquo;accueil. La documentation de Hugo indique que c&rsquo;est le seul modèle requis, mais cela dépend. Le message d&rsquo;avertissement d&rsquo;Hugo montre qu&rsquo;il recherche trois modèles différents:</p>
+<pre tabindex="0"><code>WARN: 2014/09/29 Unable to locate layout: [index.html _default/list.html
+                                            _default/single.html]
+</code></pre><p>S&rsquo;il ne trouve aucun de ces derniers, il saute complètement la création de la page d&rsquo;accueil. Nous avons remarqué que lorsque nous avons construit le site sans avoir un thème installé.</p>
+<p>Lorsque Hugo a créé notre thème, il a créé un modèle de page d&rsquo;accueil vide. Maintenant, lorsque nous construisons le site, Hugo trouve le modèle et l&rsquo;utilise pour générer le HTML pour la page d&rsquo;accueil. Comme le fichier modèle est vide, le fichier HTML est également vide. Si le modèle avait eu des règles, Hugo les aurait utilisé pour générer la page d&rsquo;accueil.</p>
+<pre tabindex="0"><code>$ find . -name index.html | xargs ls -l
+-rw-r--r--  1 quoha  staff  0 Sep 29 20:21 ./public/index.html
+-rw-r--r--  1 quoha  staff  0 Sep 29 17:31 ./themes/zafta/layouts/index.html
+$
+</code></pre><h4 id="la-magie-du-statique">La magie du statique</h4>
+<p>Hugo fait deux choses lors de la génération du site. Il utilise des modèles pour transformer le contenu en HTML et copie des fichiers statiques dans le site. Contrairement au contenu, les fichiers statiques ne sont pas transformés. Ils sont copiés exactement comme ils sont.</p>
+<p>Hugo suppose que votre site utilisera à la fois CSS et JavaScript, de sorte qu&rsquo;il crée des répertoires sur votre thème pour les retenir. Rappelez-vous les philosophies ? Eh bien, la philosophie de Hugo est que vous allez stocker votre CSS dans un répertoire nommé css/ et votre JavaScript dans un répertoire nommé js/. Si vous n&rsquo;aimez pas cela, vous pouvez modifier les noms de répertoire dans votre répertoire de thème ou même les supprimer complètement. Hugo est assez agréable pour offrir son avis, puis bien se comporter si vous êtes en désaccord.</p>
+<pre tabindex="0"><code>$ find themes/zafta -type d | xargs ls -ld
+drwxr-xr-x  7 quoha  staff  238 Sep 29 17:38 themes/zafta
+drwxr-xr-x  3 quoha  staff  102 Sep 29 17:31 themes/zafta/archetypes
+drwxr-xr-x  5 quoha  staff  170 Sep 29 17:31 themes/zafta/layouts
+drwxr-xr-x  4 quoha  staff  136 Sep 29 17:31 themes/zafta/layouts/_default
+drwxr-xr-x  4 quoha  staff  136 Sep 29 17:31 themes/zafta/layouts/partials
+drwxr-xr-x  4 quoha  staff  136 Sep 29 17:31 themes/zafta/static
+drwxr-xr-x  2 quoha  staff   68 Sep 29 17:31 themes/zafta/static/css
+drwxr-xr-x  2 quoha  staff   68 Sep 29 17:31 themes/zafta/static/js
+$
+</code></pre><h2 id="le-cycle-de-développement-dun-site">Le cycle de développement d&rsquo;un site</h2>
+<p>Lorsque vous travaillez sur un thème, vous modifiez le répertoire du thème, reconstruisez le site et vérifiez vos modifications dans le navigateur. Hugo rend cela très simple:</p>
+<ol>
+<li>Purgez le répertoire public/.</li>
+<li>Exécutez le serveur Web intégré en mode surveillance.</li>
+<li>Ouvrez votre site dans un navigateur.</li>
+<li>Mettre à jour le thème.</li>
+<li>Regardez la fenêtre de votre navigateur pour voir les changements.</li>
+<li>Revenez à l&rsquo;étape 4.</li>
+</ol>
+<p>Je vais vous donner un conseil: ne jamais travailler sur un thème sur un site en production. Toujours travailler sur une copie de votre site. Effectuez des modifications sur votre thème, testez-les, puis copiez-les sur votre site. Pour plus de sécurité, utilisez un outil comme Git pour garder un historique de révision de votre contenu et de votre thème. Croyez-moi quand je dis qu&rsquo;il est trop facile de perdre vos changements.</p>
+<p>Consultez le site Hugo principal pour obtenir de l&rsquo;information sur l&rsquo;utilisation de Git avec Hugo.</p>
+<h3 id="purger-le-répertoire-public">Purger le répertoire public/</h3>
+<p>Lors de la génération du site, Hugo va créer de nouveaux fichiers et mettre à jour les existants dans le répertoire <code>public /</code>. Il ne supprimera pas les fichiers qui ne sont plus utilisés. Par exemple, les fichiers créés dans le mauvais répertoire ou avec le mauvais titre resteront. Si vous les laissez, vous pourriez les confondre plus tard. Je recommande de nettoyer votre site avant de le générer.</p>
+<p>Remarque: Si vous utilisez un SSD, vous devez ignorer cela. L&rsquo;agitation sur un SSD peut être coûteuse.</p>
+<h3 id="loption-watch-de-hugo">L&rsquo;option watch de Hugo</h3>
+<p>L&rsquo;option &ldquo;<code>--watch</code>&rdquo; de Hugo va surveiller les changements dans le répertoire content/ et les répertoire de vos thème afin de regénérer le site automatiquement.</p>
+<h3 id="rchargement-en-direct">Rchargement en direct</h3>
+<p>Le serveur web intégré de Hugo supporte les rechargements en direct. Lorsque qu&rsquo;une page est sauvegardée sur le serveur, le navigateur est amené à rafraîchir la page. Habituellement, cela se produit avant que vous puissiez dire &ldquo;Woah, c&rsquo;est incroyable.&rdquo;</p>
+<h3 id="commandes-de-développement">Commandes de développement</h3>
+<p>Utilisez les commandes suivantes comme base de votre workflow.</p>
+<pre tabindex="0"><code>## Purger les anciens fichiers. Hugo recréera le répertoire public.
+##
+$ rm -rf public
+##
+## Lancer Hugo en mode de surveillance
+##
+$ hugo server --watch --verbose
+</code></pre><p>L&rsquo;exemple de sortie suivant montre que Hugo detecte une modification sur le modèle de la page d&rsquo;accueil. Après l&rsquo;avoir générée, le serveur web va automatiquement recharger la page. Je l&rsquo;ai dit précédement, c&rsquo;est incroyable.</p>
+<pre tabindex="0"><code>$ rm -rf public
+$ hugo server --watch --verbose
+INFO: 2014/09/29 Using config file: /Users/quoha/Sites/zafta/config.toml
+INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/themes/zafta/static/ to
+    /Users/quoha/Sites/zafta/public/
+INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/static/ to
+    /Users/quoha/Sites/zafta/public/
+WARN: 2014/09/29 Unable to locate layout: [404.html theme/404.html]
+0 draft content
+0 future content
+0 pages created
+0 tags created
+0 categories created
+in 2 ms
+Watching for changes in /Users/quoha/Sites/zafta/content
+Serving pages from /Users/quoha/Sites/zafta/public
+Web Server is available at http://localhost:1313
+Press Ctrl+C to stop
+INFO: 2014/09/29 File System Event: [&#34;/Users/quoha/Sites/zafta/themes/zafta/
+                                        layouts/index.html&#34;: MODIFY|ATTRIB]
+Change detected, rebuilding site
+
+WARN: 2014/09/29 Unable to locate layout: [404.html theme/404.html]
+0 draft content
+0 future content
+0 pages created
+0 tags created
+0 categories created
+in 1 ms
+</code></pre><h2 id="mettre-à-jour-le-modèle-de-la-page-daccueil">Mettre à jour le modèle de la page d&rsquo;accueil</h2>
+<p>La page d&rsquo;accueil est l&rsquo;une des quelques pages spéciales que Hugo crée automatiquement. Comme mentionné précédemment, il recherche l&rsquo;un des trois fichiers dans le répertoire de mise en page (layout/) du thème:</p>
+<ol>
+<li>index.html</li>
+<li>_default/list.html</li>
+<li>_default/single.html</li>
+</ol>
+<p>Nous pourrions mettre à jour l&rsquo;un des modèles par défaut, mais une bonne décision de conception est de mettre à jour le modèle le plus spécifique disponible. Ce n&rsquo;est pas une règle difficile et rapide (en fait, nous ne la respecterons pas plusieurs fois dans ce tutoriel), mais c&rsquo;est une bonne généralisation.</p>
+<h3 id="créer-une-page-daccueil-statique">Créer une page d&rsquo;accueil statique</h3>
+<p>À l&rsquo;heure actuelle, cette page est vide car nous n&rsquo;avons aucun contenu et nous n&rsquo;avons aucune logique dans le modèle. Changeons cela en ajoutant du texte au modèle.</p>
+<pre tabindex="0"><code>$ vi themes/zafta/layouts/index.html
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+  &lt;p&gt;hugo dit bonjour!&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+:wq
+
+$
+</code></pre><p>Générez le site web et vérifiez les résultats.</p>
+<pre tabindex="0"><code>$ hugo --verbose
+INFO: 2014/09/29 Using config file: /Users/quoha/Sites/zafta/config.toml
+INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/themes/zafta/static/ to
+    /Users/quoha/Sites/zafta/public/
+INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/static/ to
+    /Users/quoha/Sites/zafta/public/
+WARN: 2014/09/29 Unable to locate layout: [404.html theme/404.html]
+0 draft content
+0 future content
+0 pages created
+0 tags created
+0 categories created
+in 2 ms
+
+$ find public -type f -name &#39;*.html&#39; | xargs ls -l
+-rw-r--r--  1 quoha  staff  78 Sep 29 21:26 public/index.html
+
+$ cat public/index.html
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+  &lt;p&gt;hugo dit bonjour!&lt;/p&gt;
+&lt;/html&gt;
+</code></pre><h4 id="rechargement-en-direct">Rechargement en direct</h4>
+<p>Note: Si vous avez lancé le serveur avec l&rsquo;option <code>--watch</code>, vous verrez un contenu différent dans le fichier :</p>
+<pre tabindex="0"><code>$ cat public/index.html
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+  &lt;p&gt;hugo dit bonjour!&lt;/p&gt;
+&lt;script&gt;document.write(&#39;&lt;script src=&#34;http://&#39;
+        + (location.host || &#39;localhost&#39;).split(&#39;:&#39;)[0]
+    + &#39;:1313/livereload.js?mindelay=10&#34;&gt;&lt;/&#39;
+        + &#39;script&gt;&#39;)&lt;/script&gt;&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>Lorsque vous utilisez <code>--watch</code>, le script de rechargement automatique est ajouté par Hugo. Renseignez-vous dans la documentation avec les termes <em>live reload</em> pour voir qu&rsquo;est-ce qu&rsquo;il fait et comment le désactiver.</p>
+<h3 id="créer-une-page-daccueil-dynamique">Créer une page d&rsquo;accueil &ldquo;dynamique&rdquo;</h3>
+<p>&ldquo;Une page d&rsquo;accueil dynamique ?&rdquo; Hugo est un générateur de site statique, cela paraît étrange à dire. Je veux dire que la page d&rsquo;accueil reflète le contenu du site chaque fois que Hugo le regénère. Nous allons utiliser l&rsquo;itération dans le modèle pour faire cela.</p>
+<h4 id="créer-un-nouvel-article">Créer un nouvel article</h4>
+<p>Maintenant que nous avons la page d&rsquo;accueil générée avec un contenu statique, ajoutons du contenu au site. Nous allons lister ces articles sur la page d&rsquo;accueil et sur leurs propre page également.</p>
+<p>Hugo a une commande pour générer un squelette d&rsquo;article, comme il le fait pour les sites et les thèmes.</p>
+<pre tabindex="0"><code>$ hugo --verbose new post/permier.md
+INFO: 2014/09/29 Using config file: /Users/quoha/Sites/zafta/config.toml
+INFO: 2014/09/29 attempting to create  post/premier.md of post
+INFO: 2014/09/29 curpath: /Users/quoha/Sites/zafta/themes/zafta/archetypes/
+                            default.md
+ERROR: 2014/09/29 Unable to Cast &lt;nil&gt; to map[string]interface{}
+
+$
+</code></pre><p>C&rsquo;est pas bon, n&rsquo;est-ce pas ?</p>
+<p>La commande &ldquo;new&rdquo; utilise un archétype pour créer le fichier de l&rsquo;article. Hugo crée un fichier d&rsquo;archétype vide par défault, mais cela provoque une erreur lorsqu&rsquo;il y a un thème. Pour moi, la solution était de créer un fichier d&rsquo;archétype spécifiquement pour le type article.</p>
+<pre tabindex="0"><code>$ vi themes/zafta/archetypes/post.md
++++
+Description = &#34;&#34;
+Tags = []
+Categories = []
++++
+:wq
+
+$ find themes/zafta/archetypes -type f | xargs ls -l
+-rw-r--r--  1 quoha  staff   0 Sep 29 21:53 themes/zafta/archetypes/default.md
+-rw-r--r--  1 quoha  staff  51 Sep 29 21:54 themes/zafta/archetypes/post.md
+
+$ hugo --verbose new post/premier.md
+INFO: 2014/09/29 Using config file: /Users/quoha/Sites/zafta/config.toml
+INFO: 2014/09/29 attempting to create  post/premier.md of post
+INFO: 2014/09/29 curpath: /Users/quoha/Sites/zafta/themes/zafta/archetypes/
+                            post.md
+INFO: 2014/09/29 creating /Users/quoha/Sites/zafta/content/post/premier.md
+/Users/quoha/Sites/zafta/content/post/premier.md created
+
+$ hugo --verbose new post/second.md
+INFO: 2014/09/29 Using config file: /Users/quoha/Sites/zafta/config.toml
+INFO: 2014/09/29 attempting to create  post/second.md of post
+INFO: 2014/09/29 curpath: /Users/quoha/Sites/zafta/themes/zafta/archetypes/
+                            post.md
+INFO: 2014/09/29 creating /Users/quoha/Sites/zafta/content/post/second.md
+/Users/quoha/Sites/zafta/content/post/second.md created
+
+$ ls -l content/post
+total 16
+-rw-r--r--  1 quoha  staff  104 Sep 29 21:54 premier.md
+-rw-r--r--  1 quoha  staff  105 Sep 29 21:57 second.md
+
+$ cat content/post/premier.md
++++
+Categories = []
+Description = &#34;&#34;
+Tags = []
+date = &#34;2014-09-29T21:54:53-05:00&#34;
+title = &#34;premier&#34;
+
++++
+Mon permier article
+
+$ cat content/post/second.md
++++
+Categories = []
+Description = &#34;&#34;
+Tags = []
+date = &#34;2014-09-29T21:57:09-05:00&#34;
+title = &#34;second&#34;
+
++++
+Mon second article
+
+$
+</code></pre><p>Générez le site web et vérifiez le résultat.</p>
+<pre tabindex="0"><code>$ rm -rf public
+$ hugo --verbose
+INFO: 2014/09/29 Using config file: /Users/quoha/Sites/zafta/config.toml
+INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/themes/zafta/static/ to
+    /Users/quoha/Sites/zafta/public/
+INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/static/ to
+    /Users/quoha/Sites/zafta/public/
+INFO: 2014/09/29 found taxonomies: map[string]string{&#34;category&#34;:&#34;categories&#34;,
+                                                    &#34;tag&#34;:&#34;tags&#34;}
+WARN: 2014/09/29 Unable to locate layout: [404.html theme/404.html]
+0 draft content
+0 future content
+2 pages created
+0 tags created
+0 categories created
+in 4 ms
+$
+</code></pre><p>La sortie annonce qu&rsquo;il a créé 2 pages. Ce sont nos nouveaux articles:</p>
+<pre tabindex="0"><code>$ find public -type f -name &#39;*.html&#39; | xargs ls -l
+-rw-r--r--  1 quoha  staff  78 Sep 29 22:13 public/index.html
+-rw-r--r--  1 quoha  staff   0 Sep 29 22:13 public/post/premier/index.html
+-rw-r--r--  1 quoha  staff   0 Sep 29 22:13 public/post/index.html
+-rw-r--r--  1 quoha  staff   0 Sep 29 22:13 public/post/second/index.html
+$
+</code></pre><p>Les nouveaux fichiers sont vides parce que les modèles utilisé pour générer le contenu sont vides. La page d&rsquo;accueil n&rsquo;affiche pas non plus le nouveau contenu. Nous devons modifier les modèles pour ajouter les articles.</p>
+<h3 id="modèles-de-liste-et-simples">Modèles de liste et simples</h3>
+<p>Avec Hugo, nous avons trois principaux types de modèles. Il y a le modèle de page d&rsquo;accueil que nous avons édité précédement. Il est utilisé seulement pour la page d&rsquo;accueil. Nous avons également le modèles simple qui sont utilisés pour générer du contenu simple. Et nous avons les modèles de liste qui sont utilisés pour grouper plusieurs contenus.</p>
+<p>D&rsquo;une manière générale, les modèles de liste sont nommés &ldquo;list.html&rdquo; et les modèles simples sont nommés &ldquo;single.html&rdquo;.</p>
+<h3 id="ajouter-du-contenu-sur-la-page-daccueil">Ajouter du contenu sur la page d&rsquo;accueil</h3>
+<p>La page d&rsquo;accueil contiendra une liste d&rsquo;articles. Modifions son modèle pour ajouter les articles que nous venons de créer. La logique dans le modèle s&rsquo;éxecutera chaque fois que nous génèrerons notre site.</p>
+<pre tabindex="0"><code>$ vi themes/zafta/layouts/index.html
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+  {{ range first 10 .Data.Pages }}
+    &lt;h1&gt;{{ .Title }}&lt;/h1&gt;
+  {{ end }}
+&lt;/body&gt;
+&lt;/html&gt;
+:wq
+
+$
+</code></pre><p>Hugo utilise le moteur de modèle de Go. Ce moteur analyse les fichiers de modèle pour y trouver des commandes qui sont spécifiées entre &ldquo;{{&rdquo; et &ldquo;}}&rdquo;. Dans notre modèle, les commandes sont:</p>
+<ol>
+<li>range</li>
+<li>.Title</li>
+<li>end</li>
+</ol>
+<p>La commande &ldquo;range&rdquo; est un itérateur. Nous allons l&rsquo;utiliser pour parcourir les dix premières pages. Chaque fichier HTML que Hugo crée est traité comme une page. Donc, boucler autour de la liste des pages examinera chaque fichier qui a été crée.</p>
+<p>La commande &ldquo;.Title&rdquo; affiche la valeur de la variable &ldquo;title&rdquo;. Hugo la récupère depuis la section liminaire dans la fichier Markdown.</p>
+<p>La commande &ldquo;end&rdquo; signale la fin de l&rsquo;itération. Le moteur retourne en haut de l&rsquo;itération lorsque qu&rsquo;il trouve &ldquo;end&rdquo;. Tout ce qui est entre &ldquo;range&rdquo; et &ldquo;end&rdquo; est évalué chaque fois que le moteur passe par l&rsquo;itération. Dans ce fichier, cela va afficher le titre des dix premières pages dans la sortie comme titre de niveau 1.</p>
+<p>Il est utile de se rappeler de quelques variables, comme .Data, sont créées avant tout fichier de sortie. Hugo charge tout les fichiers de contenu dans la variable et donne une chance au modèle de procèder avant de créer les fichiers HTML.</p>
+<p>Générez le site web et vérifiez le résultat.</p>
+<pre tabindex="0"><code>$ rm -rf public
+$ hugo --verbose
+INFO: 2014/09/29 Using config file: /Users/quoha/Sites/zafta/config.toml
+INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/themes/zafta/static/ to
+    /Users/quoha/Sites/zafta/public/
+INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/static/ to
+    /Users/quoha/Sites/zafta/public/
+INFO: 2014/09/29 found taxonomies: map[string]string{&#34;tag&#34;:&#34;tags&#34;,
+                                                    &#34;category&#34;:&#34;categories&#34;}
+WARN: 2014/09/29 Unable to locate layout: [404.html theme/404.html]
+0 draft content
+0 future content
+2 pages created
+0 tags created
+0 categories created
+in 4 ms
+$ find public -type f -name &#39;*.html&#39; | xargs ls -l
+-rw-r--r--  1 quoha  staff  94 Sep 29 22:23 public/index.html
+-rw-r--r--  1 quoha  staff   0 Sep 29 22:23 public/post/premier/index.html
+-rw-r--r--  1 quoha  staff   0 Sep 29 22:23 public/post/index.html
+-rw-r--r--  1 quoha  staff   0 Sep 29 22:23 public/post/second/index.html
+$ cat public/index.html
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+    &lt;h1&gt;second&lt;/h1&gt;
+
+    &lt;h1&gt;premier&lt;/h1&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+$
+</code></pre><p>Félicitation, la page d&rsquo;accueil affiche le titre des deux articles. Les articles eux-même sont toujours vide, mais prenez un moment pour apprécier ce que nous avons effectué. Votre modèle génère maintenant des sorties dynamiquement. Croyez-le ou non, en insérant la commande &ldquo;range&rdquo; à l&rsquo;intérieur de ces accolades, vous avez appris tout ce que vous devez savoir pour créer un thème. Tout ce qu&rsquo;il reste vraiment est de comprendre quel modèle va être utilisé pour générer chaque fichier de contenu et de devenir familier avec les commandes du moteur de modèles.</p>
+<p>Et, si c&rsquo;est entièrement vrai, ce tutoriel devrai être plus court. Il y a quelques choses à savoir qui rendrons la création de nouveaux thèmes plus facile. Ne vous inquiétez pas, ca va bien se passer.</p>
+<h3 id="ajouter-du-contenu-à-larticle">Ajouter du contenu à l&rsquo;article</h3>
+<p>Nous travaillons avec des articles, qui sont stockés dans le répertoire content/post/. Cela signifie que leur section est &ldquo;post&rdquo; (et si nous n&rsquo;avons rien fait de travers, leur type est également &ldquo;post&rdquo;).</p>
+<p>Hugo utilise la section et le type pour définir le modèle pour chaque partie du contenu. Hugo va d&rsquo;abord chercher un modèle qui correspond à la section ou au type. S&rsquo;il n&rsquo;arrive pas à en trouver un, il va alors chercher dans le répertoire _default/. Il y a quelques cas que nous allons couvrir lorsque nous travaillerons avec les catégories et les tags, mais pour le moment, nous supposerons que Hugo va essayer post/single.html, puis _default/single.html.</p>
+<p>Maintenant que nous connaissons la règle de rechercher, regardons ce qui est mis à notre disposition actuellement:</p>
+<pre tabindex="0"><code>$ find themes/zafta -name single.html | xargs ls -l
+-rw-r--r--  1 quoha  staff  132 Sep 29 17:31 themes/zafta/layouts/_default/
+                                                single.html
+</code></pre><p>Nous pourrions créer un nouveau modèle, post/single.html, ou modifier le modèle par défaut. Comme nous n&rsquo;utilisons actuellement aucun autre type de contenu, commençons par mettre à jour le modèle par défaut.</p>
+<p>Sovenez-vous, tout contenu pour lequel nous n&rsquo;avons pas créé de modèle utilisera ce modèle. Cela peut être bien ou mauvais. Mauvais parce que je sais que nous allons ajouter d&rsquo;autres types de contenu et nous allons devoir annuler certaines des modifications que nous avons effectuées. Mais c&rsquo;est bien parce que nous allons pouvoir voir directement les résultats. C&rsquo;est également bien de démarrer ici car nous pouvons commencer à faire la mise en place basique du site. Comme nous ajouterons plus de contenu, nous remanierons ce fichier et déplacerons la logique ailleur. Hugo fait cela plutôt bien, donc nous accepterons le coût et procèderons.</p>
+<h4 id="mise-à-jour-du-modèle">Mise à jour du modèle</h4>
+<pre tabindex="0"><code>$ vi themes/zafta/layouts/_default/single.html
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;{{ .Title }}&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;{{ .Title }}&lt;/h1&gt;
+  {{ .Content }}
+&lt;/body&gt;
+&lt;/html&gt;
+:wq
+
+$
+</code></pre><p>Générez le site web et vérifiez le résultat.</p>
+<pre tabindex="0"><code>$ rm -rf public
+$ hugo --verbose
+INFO: 2014/09/29 Using config file: /Users/quoha/Sites/zafta/config.toml
+INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/themes/zafta/static/ to
+    /Users/quoha/Sites/zafta/public/
+INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/static/ to
+    /Users/quoha/Sites/zafta/public/
+INFO: 2014/09/29 found taxonomies: map[string]string{&#34;tag&#34;:&#34;tags&#34;,
+                                                    &#34;category&#34;:&#34;categories&#34;}
+WARN: 2014/09/29 Unable to locate layout: [404.html theme/404.html]
+0 draft content
+0 future content
+2 pages created
+0 tags created
+0 categories created
+in 4 ms
+
+$ find public -type f -name &#39;*.html&#39; | xargs ls -l
+-rw-r--r--  1 quoha  staff   94 Sep 29 22:40 public/index.html
+-rw-r--r--  1 quoha  staff  125 Sep 29 22:40 public/post/premier/index.html
+-rw-r--r--  1 quoha  staff    0 Sep 29 22:40 public/post/index.html
+-rw-r--r--  1 quoha  staff  128 Sep 29 22:40 public/post/second/index.html
+
+$ cat public/post/premier/index.html
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;premier&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;premier&lt;/h1&gt;
+  &lt;p&gt;Mon premier article&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+$ cat public/post/second/index.html
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;second&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;second&lt;/h1&gt;
+  &lt;p&gt;Mon second article&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+$
+</code></pre><p>Notez que les articles ont maintenant un contenu. Vous pouvez aller sur localhost:1313/post/premier pour vérifier.</p>
+<h3 id="lier-du-contenu">Lier du contenu</h3>
+<p>Les articles sont sur la page d&rsquo;accueil. Ajoutons un lien d&rsquo;ici vers l&rsquo;article. Comme cela se trouve sur la page d&rsquo;accueil, nous allons mettre à jour le modèle.</p>
+<pre tabindex="0"><code>$ vi themes/zafta/layouts/index.html
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+  {{ range first 10 .Data.Pages }}
+    &lt;h1&gt;&lt;a href=&#34;{{ .Permalink }}&#34;&gt;{{ .Title }}&lt;/a&gt;&lt;/h1&gt;
+  {{ end }}
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>Générez le site web et vérifiez le résultat.</p>
+<pre tabindex="0"><code>$ rm -rf public
+$ hugo --verbose
+INFO: 2014/09/29 Using config file: /Users/quoha/Sites/zafta/config.toml
+INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/themes/zafta/static/ to
+    /Users/quoha/Sites/zafta/public/
+INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/static/ to
+    /Users/quoha/Sites/zafta/public/
+INFO: 2014/09/29 found taxonomies: map[string]string{&#34;tag&#34;:&#34;tags&#34;,
+                                                    &#34;category&#34;:&#34;categories&#34;}
+WARN: 2014/09/29 Unable to locate layout: [404.html theme/404.html]
+0 draft content
+0 future content
+2 pages created
+0 tags created
+0 categories created
+in 4 ms
+
+$ find public -type f -name &#39;*.html&#39; | xargs ls -l
+-rw-r--r--  1 quoha  staff  149 Sep 29 22:44 public/index.html
+-rw-r--r--  1 quoha  staff  125 Sep 29 22:44 public/post/premier/index.html
+-rw-r--r--  1 quoha  staff    0 Sep 29 22:44 public/post/index.html
+-rw-r--r--  1 quoha  staff  128 Sep 29 22:44 public/post/second/index.html
+
+$ cat public/index.html
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+    &lt;h1&gt;&lt;a href=&#34;http://localhost:1313/post/second/&#34;&gt;second&lt;/a&gt;&lt;/h1&gt;
+
+    &lt;h1&gt;&lt;a href=&#34;http://localhost:1313/post/premier/&#34;&gt;premier&lt;/a&gt;&lt;/h1&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+$
+</code></pre><h3 id="créer-une-liste-darticles">Créer une liste d&rsquo;articles</h3>
+<p>Nous avons les articles affichés sur la page d&rsquo;accueil et sur leur propre page. Nous avons également un fichier public/post/index.html qui est vide. Faisons en sorte qu&rsquo;il liste tous les articles (pas seulement les dix premiers).</p>
+<p>Nous devons décider quel modèle mettre à jour. Nous allons faire une liste, donc, cela doit être un modèle de liste. Regardons quels modèles de liste sont disponibles.</p>
+<pre tabindex="0"><code>$ find themes/zafta -name list.html | xargs ls -l
+-rw-r--r--  1 quoha  staff  0 Sep 29 17:31 themes/zafta/layouts/_default/
+                                            list.html
+</code></pre><p>Comme pour l&rsquo;article seul, nous devons décider d&rsquo;éditer _default/list.html ou de créer post/list.html. Nous n&rsquo;avons toujours pas plusieurs types de contenu, alors restons cohérant et éditons le modèle de liste par défaut.</p>
+<h2 id="création-dune-page-de-haut-niveau">Création d&rsquo;une page de haut niveau</h2>
+<p>Ajoutons une page &ldquo;à propos&rdquo; et affichons la au plus haut niveau (à l&rsquo;opposé d&rsquo;un sous-niveau comme nous avons fait pour les articles).</p>
+<p>La valeur par défaut de Hugo consiste à utiliser la structure du répertoire content/ pour guider l&rsquo;emplacement du HTML généré dans le répertoire public/. Vérifions cela en créant une page &ldquo;à propos&rdquo; (about dans l&rsquo;exemple) au plus haut niveau:</p>
+<pre tabindex="0"><code>$ vi content/about.md
++++
+title = &#34;about&#34;
+description = &#34;about this site&#34;
+date = &#34;2014-09-27&#34;
+slug = &#34;about time&#34;
++++
+
+## about us
+
+i&#39;m speechless
+:wq
+</code></pre><p>Générez le site web et vérifiez le résultat.</p>
+<pre tabindex="0"><code>$ find public -name &#39;*.html&#39; | xargs ls -l
+-rw-rw-r--  1 mdhender  staff   334 Sep 27 15:08 public/about-time/index.html
+-rw-rw-r--  1 mdhender  staff   527 Sep 27 15:08 public/index.html
+-rw-rw-r--  1 mdhender  staff   358 Sep 27 15:08 public/post/premier-post/
+                                                    index.html
+-rw-rw-r--  1 mdhender  staff     0 Sep 27 15:08 public/post/index.html
+-rw-rw-r--  1 mdhender  staff   342 Sep 27 15:08 public/post/second-post/
+                                                    index.html
+</code></pre><p>Notez que la page n&rsquo;a pas été crée au plus haut niveau. Ça a créé un sous répertoire nommé &lsquo;about-time&rsquo;. Ce nom vient de notre slug. Hugo va l&rsquo;utiliser pour nommer les contenu générés.</p>
+<p>Autre chose : regardez la page d&rsquo;accueil.</p>
+<pre tabindex="0"><code>$ cat public/index.html
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+    &lt;h1&gt;&lt;a href=&#34;http://localhost:1313/post/theme/&#34;&gt;
+        creating a new theme&lt;/a&gt;&lt;/h1&gt;
+    &lt;h1&gt;&lt;a href=&#34;http://localhost:1313/about-time/&#34;&gt;about&lt;/a&gt;&lt;/h1&gt;
+    &lt;h1&gt;&lt;a href=&#34;http://localhost:1313/post/second-post/&#34;&gt;second&lt;/a&gt;&lt;/h1&gt;
+    &lt;h1&gt;&lt;a href=&#34;http://localhost:1313/post/premier-post/&#34;&gt;first&lt;/a&gt;&lt;/h1&gt;
+&lt;script&gt;document.write(&#39;&lt;script src=&#34;http://&#39;
+        + (location.host || &#39;localhost&#39;).split(&#39;:&#39;)[0]
+		+ &#39;:1313/livereload.js?mindelay=10&#34;&gt;&lt;/&#39;
+        + &#39;script&gt;&#39;)&lt;/script&gt;&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>Notez que le liens vers &ldquo;about&rdquo; est listé avec les articles. Ce n&rsquo;était l&rsquo;effet désire, corrigeons donc cela d&rsquo;abord.</p>
+<pre tabindex="0"><code>$ vi themes/zafta/layouts/index.html
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+  &lt;h1&gt;articles&lt;/h1&gt;
+  {{ range first 10 .Data.Pages }}
+    {{ if eq .Type &#34;post&#34;}}
+      &lt;h2&gt;&lt;a href=&#34;{{ .Permalink }}&#34;&gt;{{ .Title }}&lt;/a&gt;&lt;/h2&gt;
+    {{ end }}
+  {{ end }}
+
+  &lt;h1&gt;pages&lt;/h1&gt;
+  {{ range .Data.Pages }}
+    {{ if eq .Type &#34;page&#34; }}
+      &lt;h2&gt;&lt;a href=&#34;{{ .Permalink }}&#34;&gt;{{ .Title }}&lt;/a&gt;&lt;/h2&gt;
+    {{ end }}
+  {{ end }}
+&lt;/body&gt;
+&lt;/html&gt;
+:wq
+</code></pre><p>Générez le site web et vérifiez le résultat. La page d&rsquo;accueil a deux sections, articles et pages, et chaque section contient le bon ensemble de lien</p>
+<p>Mais la page &ldquo;à propos&rdquo; est toujours rendue dans about-time/index.html.</p>
+<pre tabindex="0"><code>$ find public -name &#39;*.html&#39; | xargs ls -l
+-rw-rw-r--  1 mdhender  staff    334 Sep 27 15:33 public/about-time/index.html
+-rw-rw-r--  1 mdhender  staff    645 Sep 27 15:33 public/index.html
+-rw-rw-r--  1 mdhender  staff    358 Sep 27 15:33 public/post/premier-post/
+                                                    index.html
+-rw-rw-r--  1 mdhender  staff      0 Sep 27 15:33 public/post/index.html
+-rw-rw-r--  1 mdhender  staff    342 Sep 27 15:33 public/post/second-post/
+                                                    index.html
+</code></pre><p>Sachant que Hugo utilise le slug pour générer les noms des fichiers, la solution la plus simple serait de changer le slug. Utilisons la manière forte et changeons le lien permanent dans la configuration.</p>
+<pre tabindex="0"><code>$ vi config.toml
+[permalinks]
+	page = &#34;/:title/&#34;
+	about = &#34;/:filename/&#34;
+</code></pre><p>Générez le site web et vérifiez que cela ne fonctionne pas. Hugo laisse le slug ou l&rsquo;URL outrepasser l&rsquo;option des liens permanents dans le fichier de configuration. Commentez le slug dans content/about.md, puis générez le site web pour qu&rsquo;elle soit générée au bon endroit.</p>
+<h2 id="partager-des-modèles">Partager des modèles</h2>
+<p>Si vous avez suivi, vous avez sûrement remarqué que les articles ont un titre dans le navigateur et pas la page d&rsquo;accueil. C&rsquo;est parce que nous n&rsquo;avons pas mis de titre dans le modèle de la page d&rsquo;accueil (layout/index.html). C&rsquo;est quelque chose de facile, mais utilisons une option différente.</p>
+<p>Nous pouvons placer les parties communes dans un modèle partagé qui sera stocké dans le répertoire themes/zafta/layouts/partials/.</p>
+<h3 id="création-du-modèle-partiel-de-lentête-et-du-pied-de-page">Création du modèle partiel de l&rsquo;entête et du pied de page</h3>
+<p>Avec Hugo, un modèle partiel est un modèle embelli. Normalement, un modèle fait référence à un chemin spécifique. Les modèles partiels sont différents. Hugo les recherche le long d&rsquo;un chemin de recherche défini. Cela permet aux utilisateurs finaux de remplacer plus facilement la présentation du thème.</p>
+<pre tabindex="0"><code>$ vi themes/zafta/layouts/partials/header.html
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;{{ .Title }}&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+:wq
+
+$ vi themes/zafta/layouts/partials/footer.html
+&lt;/body&gt;
+&lt;/html&gt;
+:wq
+</code></pre><h3 id="modification-du-modèle-de-page-daccueil-pour-utiliser-les-modèles-partiels">Modification du modèle de page d&rsquo;accueil pour utiliser les modèles partiels</h3>
+<p>La différence notable entre un appel d&rsquo;un modèle et celui d&rsquo;un modèle partiel est le manque de chemin:</p>
+<pre tabindex="0"><code>{{ template &#34;theme/partials/header.html&#34; . }}
+</code></pre><p>versus</p>
+<pre tabindex="0"><code>{{ partial &#34;header.html&#34; . }}
+</code></pre><p>Les deux passent dans le contexte.</p>
+<p>Changeons le modèle de la page d&rsquo;accueil pour utiliser ces nouveaux modèles partiels.</p>
+<pre tabindex="0"><code>$ vi themes/zafta/layouts/index.html
+{{ partial &#34;header.html&#34; . }}
+
+  &lt;h1&gt;articles&lt;/h1&gt;
+  {{ range first 10 .Data.Pages }}
+    {{ if eq .Type &#34;post&#34;}}
+      &lt;h2&gt;&lt;a href=&#34;{{ .Permalink }}&#34;&gt;{{ .Title }}&lt;/a&gt;&lt;/h2&gt;
+    {{ end }}
+  {{ end }}
+
+  &lt;h1&gt;pages&lt;/h1&gt;
+  {{ range .Data.Pages }}
+    {{ if or (eq .Type &#34;page&#34;) (eq .Type &#34;about&#34;) }}
+      &lt;h2&gt;&lt;a href=&#34;{{ .Permalink }}&#34;&gt;{{ .Type }} -
+        {{ .Title }} - {{ .RelPermalink }}&lt;/a&gt;&lt;/h2&gt;
+    {{ end }}
+  {{ end }}
+
+{{ partial &#34;footer.html&#34; . }}
+:wq
+</code></pre><p>Générez le site web et vérifiez le résultat. Le titre sur la page d&rsquo;accueil est maintenant &ldquo;your title here&rdquo;, qui de la variable &ldquo;title&rdquo; dans la fichier config.toml.</p>
+<h3 id="modification-du-modèle-simple-par-défaut-pour-utiliser-les-modèles-partiels">Modification du modèle simple par défaut pour utiliser les modèles partiels</h3>
+<pre tabindex="0"><code>$ vi themes/zafta/layouts/_default/single.html
+{{ partial &#34;header.html&#34; . }}
+
+  &lt;h1&gt;{{ .Title }}&lt;/h1&gt;
+  {{ .Content }}
+
+{{ partial &#34;footer.html&#34; . }}
+:wq
+</code></pre><p>Générez le site web et vérifiez le résultat. Le titre sur les articles et la page &ldquo;a propos&rdquo; devrait tout les deux refléter la valeur présente dans le fichier markdown.</p>
+<h2 id="ajouter-la-date-de-publication-des-articles">Ajouter la &ldquo;Date de publication&rdquo; des articles</h2>
+<p>Il est commun de voir la date à laquelle un article a été écrit ou publié, donc ajoutons cela. La section liminaire de notre article possède une variable nommée &ldquo;date&rdquo;. C&rsquo;est généralement la date de la création du contenu, mais supposons que c&rsquo;est la valeur que nous souhaitons afficher.</p>
+<h3 id="ajouter-la-date-de-publication-au-modèle">Ajouter la &ldquo;Date de publication&rdquo; au modèle</h3>
+<p>Nous allons commencer par modifier le modèle utilisé pour rendre les articles. Le code du modèle ressemblera à cela:</p>
+<pre tabindex="0"><code>{{ .Date.Format &#34;Mon, Jan 2, 2006&#34; }}
+</code></pre><p>Les articles utilisent le modèle simple par défaut, donc nous modifierons ce fichier.</p>
+<pre tabindex="0"><code>$ vi themes/zafta/layouts/_default/single.html
+{{ partial &#34;header.html&#34; . }}
+
+  &lt;h1&gt;{{ .Title }}&lt;/h1&gt;
+  &lt;h2&gt;{{ .Date.Format &#34;Mon, Jan 2, 2006&#34; }}&lt;/h2&gt;
+  {{ .Content }}
+
+{{ partial &#34;footer.html&#34; . }}
+:wq
+</code></pre><p>Générez le site web et vérifiez le résultat. Les articles ont maintenant la date affiché. Mais il y a un problème, la page &ldquo;a propos&rdquo; a également la date d&rsquo;affichée.</p>
+<p>Comme d&rsquo;habiture, il y a différent moyens d&rsquo;afficher la date seulement sur les articles. Nous pourrions utiliser un &ldquo;if&rdquo; comme nous l&rsquo;avons fait sur la page d&rsquo;accueil. Une autre méthode serait de créer un modèle séparer pour les articles.</p>
+<p>La solution du &ldquo;if&rdquo; fonctionne pour les site n&rsquo;ayant que quelques types de contenu. Il s&rsquo;harmonise avec le principe du &ldquo;code pour aujourd&rsquo;hui&rdquo;, aussi.</p>
+<p>Admettons que nous avons rendu notre site tellement complexe que nous estimons qu&rsquo;il faut créer un nouveau type de modèle. En langage Hugo, nous allons créer un modèle de section.</p>
+<p>Restaurons le modèle simple par défaut avant d&rsquo;oublier.</p>
+<pre tabindex="0"><code>$ mkdir themes/zafta/layouts/post
+$ vi themes/zafta/layouts/_default/single.html
+{{ partial &#34;header.html&#34; . }}
+
+  &lt;h1&gt;{{ .Title }}&lt;/h1&gt;
+  {{ .Content }}
+
+{{ partial &#34;footer.html&#34; . }}
+:wq
+</code></pre><p>Maintenant, nous allons modifier le modèle simple des articles. Si vous vous souvenez des règles d&rsquo;Hugo, le moteur de modèles va utiliser cette version à la place de celle par défaut.</p>
+<pre tabindex="0"><code>$ vi themes/zafta/layouts/post/single.html
+{{ partial &#34;header.html&#34; . }}
+
+  &lt;h1&gt;{{ .Title }}&lt;/h1&gt;
+  &lt;h2&gt;{{ .Date.Format &#34;Mon, Jan 2, 2006&#34; }}&lt;/h2&gt;
+  {{ .Content }}
+
+{{ partial &#34;footer.html&#34; . }}
+:wq
+</code></pre><p>Notez que nous retirons la logique de la date dans le modèle par défaut et que nous la plaçons dans le modèle des articles. Générez le site web et vérifiez le résultat. Les articles ont leur dates et la page &ldquo;a propos&rdquo; non.</p>
+<h3 id="ne-répètez-pas-cela-vous-même">Ne répètez pas cela vous-même</h3>
+<p>DRY (Don&rsquo;t Repeat Yourself) est un bon objectif de conception et Hugo fait du bon boulot pour supporter cette idée. Une partie de l&rsquo;art du bon modèle est de savoir quand il faut ajouter un nouveau modèle ou quand il faut modifier un existant. Avant de saisir complétement ce principe, faites vous à l&rsquo;idée que vous allez devoir faire de la refactorisation. Hugo rend cela facile et rapide, il est donc préférable de diviser un modèle.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Débuter avec Hugo</title>
+            <link>http://localhost:1313/fr/posts/2014/04/d%C3%A9buter-avec-hugo/</link>
+            <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+            
+            <guid>http://localhost:1313/fr/posts/2014/04/d%C3%A9buter-avec-hugo/</guid>
+            <description>&lt;h2 id=&#34;étape-1-installer-hugo&#34;&gt;Étape 1. Installer Hugo&lt;/h2&gt;
+&lt;p&gt;Allez sur la page de téléchargements de
+&lt;a href=&#34;https://github.com/spf13/hugo/releases&#34;&gt;hugo&lt;/a&gt; et téléchargez la version
+appropriée à votre système d&amp;rsquo;exploitation et votre architecture.&lt;/p&gt;
+&lt;p&gt;Sauvegardez le fichier téléchargé à un endroit précis, afin de l&amp;rsquo;utiliser dans
+l&amp;rsquo;étape suivante.&lt;/p&gt;
+&lt;p&gt;Des informations plus complètes sont disponibles sur la page
+&lt;a href=&#34;http://localhost:1313/overview/installing/&#34;&gt;installing hugo&lt;/a&gt;&lt;/p&gt;</description>
+            <content type="html"><![CDATA[<h2 id="étape-1-installer-hugo">Étape 1. Installer Hugo</h2>
+<p>Allez sur la page de téléchargements de
+<a href="https://github.com/spf13/hugo/releases">hugo</a> et téléchargez la version
+appropriée à votre système d&rsquo;exploitation et votre architecture.</p>
+<p>Sauvegardez le fichier téléchargé à un endroit précis, afin de l&rsquo;utiliser dans
+l&rsquo;étape suivante.</p>
+<p>Des informations plus complètes sont disponibles sur la page
+<a href="/overview/installing/">installing hugo</a></p>
+<h2 id="étape-2-compilez-la-documentation">Étape 2. Compilez la documentation</h2>
+<p>Hugo possède son propre site d&rsquo;exemple qui se trouve être également le site que
+vous lisez actuellement.</p>
+<p>Suivez les instructions suivante :</p>
+<ol>
+<li>Clonez le <a href="http://github.com/spf13/hugo">dépôt de hugo</a></li>
+<li>Allez dans ce dépôt</li>
+<li>Lancez Hugo en mode serveur et compilez la documentation</li>
+<li>Ouvrez votre navigateur sur http://localhost:1313</li>
+</ol>
+<p>Voici les commandes génériques correspondantes :</p>
+<pre><code>git clone https://github.com/spf13/hugo
+cd hugo
+/chemin/ou/vous/avez/installe/hugo server --source=./docs
+&gt; 29 pages created
+&gt; 0 tags index created
+&gt; in 27 ms
+&gt; Web Server is available at http://localhost:1313
+&gt; Press ctrl+c to stop
+</code></pre>
+<p>Lorsque vous avez cela, continuez le reste de ce guide sur votre version locale.</p>
+<h2 id="étape-3-changer-le-site-de-documentation">Étape 3. Changer le site de documentation</h2>
+<p>Arrêtez le processus de Hugo en pressant ctrl+c.</p>
+<p>Maintenant, nous allons relancer hugo, mais cette fois avec Hugo en mode de
+surveillance.</p>
+<pre><code>/chemin/vers/hugo/de/l-etape/1/hugo server --source=./docs --watch
+&gt; 29 pages created
+&gt; 0 tags index created
+&gt; in 27 ms
+&gt; Web Server is available at http://localhost:1313
+&gt; Watching for changes in /Users/spf13/Code/hugo/docs/content
+&gt; Press ctrl+c to stop
+</code></pre>
+<p>Ouvrez votre <a href="https://vim.spf13.com">éditeur favori</a> et changer l&rsquo;une des
+sources des pages de contenu.
+Open your <a href="http://vim.spf13.com">favorite editor</a> and change one of the source
+content pages. Que diriez-vous de modifier ce fichier pour <em>résoudre une faute
+de typo</em>.</p>
+<p>Les fichiers de contenu peuvent être trouvés dans <code>docs/content/</code>. Sauf
+indication contraire, les fichiers sont situés au même emplacement relatif que
+l&rsquo;URL, dans notre cas <code>docs/content/overview/quickstart.md</code>.</p>
+<p>Modifiez et sauvegardez ce fichier. Notez ce qu&rsquo;il se passe dans le terminal.</p>
+<pre><code>&gt; Change detected, rebuilding site
+
+&gt; 29 pages created
+&gt; 0 tags index created
+&gt; in 26 ms
+</code></pre>
+<p>Rechargez la page dans votre navigateur et voyez que le problème de typo est
+maintenant résolu.</p>
+<p>Notez à quel point cela a été rapide. Essayez de recharger le site avant qu&rsquo;il
+soit fini de compiler.
+Notice how quick that was. Try to refresh the site before it&rsquo;s finished
+building. Je paris que vous n&rsquo;y arrivez pas.
+Le fait d&rsquo;avoir des réactions presque instantanées vous permet d&rsquo;avoir votre
+créativité fluide sans avoir à attendre de longues compilations.</p>
+<h2 id="step-4-amusez-vous">Step 4. Amusez-vous</h2>
+<p>Le meilleur moyen d&rsquo;apprendre quelque chose est de s&rsquo;amuser avec.</p>]]></content>
+        </item>
+        
+        <item>
+            <title>Introduction aux modèles (Hu)go</title>
+            <link>http://localhost:1313/fr/posts/2014/04/introduction-aux-mod%C3%A8les-hugo/</link>
+            <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+            
+            <guid>http://localhost:1313/fr/posts/2014/04/introduction-aux-mod%C3%A8les-hugo/</guid>
+            <description>Hugo utilise l&amp;rsquo;excellente librairie go html/template pour son moteur de modèles. c&amp;rsquo;est un moteur extrêmement léger qui offre un très petit nombre de fonctions logiques. À notre expérience, c&amp;rsquo;est juste ce qu&amp;rsquo;il faut pour créer un bon site web statique. Si vous avez déjà utilisé d&amp;rsquo;autre moteurs de modèles pour différents langages ou frameworks, vous allez retrouver beaucoup de similitudes avec les modèles go.
+Ce document est une introduction sur l&amp;rsquo;utilisation de Go templates.</description>
+            <content type="html"><![CDATA[<p>Hugo utilise l&rsquo;excellente librairie <a href="http://golang.org/">go</a> <a href="http://golang.org/pkg/html/template/">html/template</a> pour
+son moteur de modèles. c&rsquo;est un moteur extrêmement léger qui offre un très petit
+nombre de fonctions logiques. À notre expérience, c&rsquo;est juste ce qu&rsquo;il faut pour
+créer un bon site web statique. Si vous avez déjà utilisé d&rsquo;autre moteurs de
+modèles pour différents langages ou frameworks, vous allez retrouver beaucoup de
+similitudes avec les modèles go.</p>
+<p>Ce document est une introduction sur l&rsquo;utilisation de Go templates. La
+<a href="http://golang.org/pkg/html/template/">documentation go</a> fourni plus de détails.</p>
+<h2 id="introduction-aux-modèles-go">Introduction aux modèles Go</h2>
+<p>Go templates fournit un langage de modèles très simple. Il adhère à la
+conviction que les modèles ou les vues doivent avoir une logique des plus
+élémentaires. L&rsquo;une des conséquences de cette simplicité est que les modèles
+seront plus rapides a être analysés.</p>
+<p>Une caractéristique unique de Go templates est qu&rsquo;il est conscient du contenu.
+Les variables et le contenu va être nettoyé suivant le contexte d&rsquo;utilisation.
+Plus de détails sont disponibles dans la <a href="http://golang.org/pkg/html/template/">documentation go</a>.</p>
+<h2 id="syntaxe-basique">Syntaxe basique</h2>
+<p>Les modèles en langage Go sont des fichiers HTML avec l&rsquo;ajout de variables et
+fonctions.</p>
+<p><strong>Les variables Go et les fonctions sont accessibles avec {{ }}</strong></p>
+<p>Accès à une variable prédéfinie &ldquo;foo&rdquo;:</p>
+<pre><code>{{ foo }}
+</code></pre>
+<p><strong>Les paramètres sont séparés par des espaces</strong></p>
+<p>Appel de la fonction add avec 1 et 2 en argument**</p>
+<pre><code>{{ add 1 2 }}
+</code></pre>
+<p><strong>Les méthodes et les champs sont accessibles par un point</strong></p>
+<p>Accès au paramètre de la page &ldquo;bar&rdquo;</p>
+<pre><code>{{ .Params.bar }}
+</code></pre>
+<p><strong>Les parenthèses peuvent être utilisées pour grouper des éléments ensemble</strong></p>
+<pre tabindex="0"><code>{{ if or (isset .Params &#34;alt&#34;) (isset .Params &#34;caption&#34;) }} Caption {{ end }}
+</code></pre><h2 id="variables">Variables</h2>
+<p>Chaque modèle go a une structure (objet) mis à sa disposition. Avec Hugo, à
+chaque modèle est passé soit une page, soit une structure de nœud, suivant quel
+type de page vous rendez. Plus de détails sont disponibles sur la page des
+<a href="/layout/variables">variables</a>.</p>
+<p>Une variable est accessible par son nom.</p>
+<pre><code>&lt;title&gt;{{ .Title }}&lt;/title&gt;
+</code></pre>
+<p>Les variables peuvent également être définies et appelées.</p>
+<pre><code>{{ $address := &quot;123 Main St.&quot;}}
+{{ $address }}
+</code></pre>
+<h2 id="functions">Functions</h2>
+<p>Go templace est livré avec quelques fonctions qui fournissent des
+fonctionnalités basiques. Le système de Go template fourni également un
+mécanisme permettant aux applications d&rsquo;étendre les fonctions disponible. Les
+<a href="/layout/functions">fonctions de modèle Hugo</a> fourni quelques fonctionnalités
+supplémentaires que nous espérons qu&rsquo;elles seront utiles pour vos sites web.
+Les functions sont appelées en utilisant leur nom suivi par les paramètres
+requis séparés par des espaces. Des fonctions de modèles ne peuvent pas être
+ajoutées sans recompiler Hugo.</p>
+<p><strong>Exemple:</strong></p>
+<pre><code>{{ add 1 2 }}
+</code></pre>
+<h2 id="inclusions">Inclusions</h2>
+<p>Lorsque vous incluez un autre modèle, vous devez y passer les données qu&rsquo;il sera
+en mesure d&rsquo;accèder. Pour passer le contexte actuel, pensez à ajouter un point.
+La localisation du modèle sera toujours à partir du répertoire /layout/ dans
+Hugo.</p>
+<p><strong>Exemple:</strong></p>
+<pre><code>{{ template &quot;chrome/header.html&quot; . }}
+</code></pre>
+<h2 id="logique">Logique</h2>
+<p>Go templates fourni les itérations et la logique conditionnèle des plus basique.</p>
+<h3 id="itération">Itération</h3>
+<p>Comme en go, les modèles go utilisent fortement <em>range</em> pour itérer dans une
+map, un array ou un slice. Les exemples suivant montre différentes façons
+d&rsquo;utiliser <em>range</em></p>
+<p><strong>Exemple 1: En utilisant le context</strong></p>
+<pre><code>{{ range array }}
+    {{ . }}
+{{ end }}
+</code></pre>
+<p><strong>Exemple 2: En déclarant un nom de variable</strong></p>
+<pre><code>{{range $element := array}}
+    {{ $element }}
+{{ end }}
+</code></pre>
+<p><strong>Exemple 2: En déclarant un nom de varialbe pour la clé et la valeur</strong></p>
+<pre><code>{{range $index, $element := array}}
+    {{ $index }}
+    {{ $element }}
+{{ end }}
+</code></pre>
+<h3 id="conditions">Conditions</h3>
+<p><em>If</em>, <em>else</em>, <em>with</em>, <em>or</em>, <em>&amp;</em>, <em>and</em> fournissent la base pour la logique
+conditionnelle avec Go templates. Comme <em>range</em>, chaque déclaration est fermé
+avec <code>end</code>.</p>
+<p>Go templates considère les valeurs suivante comme <em>false</em> :</p>
+<ul>
+<li>false</li>
+<li>0</li>
+<li>tout array, slice, map ou chaine d&rsquo;une longueur de zéro</li>
+</ul>
+<p><strong>Exemple 1: If</strong></p>
+<pre><code>{{ if isset .Params &quot;title&quot; }}&lt;h4&gt;{{ index .Params &quot;title&quot; }}&lt;/h4&gt;{{ end }}
+</code></pre>
+<p><strong>Exemple 2: If -&gt; Else</strong></p>
+<pre><code>{{ if isset .Params &quot;alt&quot; }}
+    {{ index .Params &quot;alt&quot; }}
+{{else}}
+    {{ index .Params &quot;caption&quot; }}
+{{ end }}
+</code></pre>
+<p><strong>Exemple 3: And &amp; Or</strong></p>
+<pre tabindex="0"><code>{{ if and (or (isset .Params &#34;title&#34;) (isset .Params &#34;caption&#34;))
+    (isset .Params &#34;attr&#34;)}}
+</code></pre><p><strong>Exemple 4: With</strong></p>
+<p>Une manière alternative d&rsquo;écrire un &ldquo;if&rdquo; et de référencer cette même valeur est
+d&rsquo;utiliser &ldquo;with&rdquo;. Cela permet de remplacer le contexte <code>.</code> par cet valeur et
+saute le bloc si la variable est absente.</p>
+<p>Le premier exemple peut être simplifié à ceci :</p>
+<pre><code>{{ with .Params.title }}&lt;h4&gt;{{ . }}&lt;/h4&gt;{{ end }}
+</code></pre>
+<p><strong>Exemple 5: If -&gt; Else If</strong></p>
+<pre><code>{{ if isset .Params &quot;alt&quot; }}
+    {{ index .Params &quot;alt&quot; }}
+{{ else if isset .Params &quot;caption&quot; }}
+    {{ index .Params &quot;caption&quot; }}
+{{ end }}
+</code></pre>
+<h2 id="pipes"><em>Pipes</em></h2>
+<p>L&rsquo;un des composants le plus puissant de Go templates est la capacité d&rsquo;empiler
+les action l&rsquo;une après l&rsquo;autre. Cela est fait en utilisant les <em>pipes</em>.
+Empruntés aux <em>pipes</em> unix, le concept est simple. Chaque sortie de <em>pipeline</em>
+devient l&rsquo;entrée du <em>pipe</em> suivant.</p>
+<p>À cause de la syntaxe très simple de Go templates, le <em>pipe</em> est essentiel pour
+être capable d&rsquo;enchainer les appels de fonctions. Une limitation des <em>pipes</em>
+est qu&rsquo;il ne peuvent fonctionner seulement avec une seule valeur et cette valeur
+devient le dernier paramètre du prochain <em>pipeline</em>.</p>
+<p>Quelques exemples simple devrait vous aider à comprendre comment utiliser les
+<em>pipes</em>.</p>
+<p><strong>Exemple 1 :</strong></p>
+<pre><code>{{ if eq 1 1 }} Same {{ end }}
+</code></pre>
+<p>est identique à</p>
+<pre><code>{{ eq 1 1 | if }} Same {{ end }}
+</code></pre>
+<p>Il semble étrange de placer le <em>if</em> à la fin, mais il fournit une bonne
+illustration de la façon d&rsquo;utiliser les tuyaux.</p>
+<p><strong>Exemple 2 :</strong></p>
+<pre><code>{{ index .Params &quot;disqus_url&quot; | html }}
+</code></pre>
+<p>Accès au paramètre de page nommé &ldquo;disqus_url&rdquo; et échappement du HTML</p>
+<p><strong>Exemple 3 :</strong></p>
+<pre tabindex="0"><code>{{ if or (or (isset .Params &#34;title&#34;) (isset .Params &#34;caption&#34;))
+    (isset .Params &#34;attr&#34;)}}
+Stuff Here
+{{ end }}
+</code></pre><p>Peut être réécrit en</p>
+<pre tabindex="0"><code>{{  isset .Params &#34;caption&#34; | or isset .Params &#34;title&#34; |
+    or isset .Params &#34;attr&#34; | if }}
+Stuff Here
+{{ end }}
+</code></pre><h2 id="contexte-alias-le-point">Contexte (alias. le point)</h2>
+<p>Le concept le plus facilement négligé pour comprendre les modèles go est que
+{{ . }} fait toujours référence au contexte actuel. Dans le plus haut niveau de
+votre modèle, ce sera l&rsquo;ensemble des données mis à votre disposition. Dans une
+itération, ce sera la valeur de l&rsquo;élément actuel. Enfin, dans une boucle, le
+contexte change. . ne fera plus référence aux données disponibles dans la page
+entière. Si vous avez besoin y d&rsquo;accèder depuis l&rsquo;intérieur d&rsquo;une boucle, il est
+judicieux d&rsquo;y définir comme variable au lieu de dépendre du contexte.</p>
+<p><strong>Exemple:</strong></p>
+<pre tabindex="0"><code>{{ $title := .Site.Title }}
+{{ range .Params.tags }}
+&lt;li&gt; &lt;a href=&#34;{{ $baseurl }}/tags/{{ . | urlize }}&#34;&gt;
+    {{ . }}&lt;/a&gt; - {{ $title }} &lt;/li&gt;
+{{ end }}
+</code></pre><p>Notez que, une fois que nous sommes entrés dans la boucle, la valeur de
+{{ . }} a changée. Nous avons défini une variable en dehors de la boucle, afin
+d&rsquo;y avoir accès dans la boucle.</p>
+<h1 id="les-paramètres-dhugo">Les Paramètres d&rsquo;Hugo</h1>
+<p>Hugo fournit l&rsquo;option de passer des valeurs au modèle depuis la configuration du
+site, ou depuis les métadonnées de chaque partie du contenu. Vous pouvez définir
+n&rsquo;importe quelle valeur de n&rsquo;importe quel type (supporté par votre section
+liminaire / format de configuration) et les utiliser comme vous le souhaitez
+dans votre modèle.</p>
+<h2 id="utiliser-les-paramètres-de-contenu-page">Utiliser les paramètres de contenu (page)</h2>
+<p>Dans chaque partie du contenu, vous pouvez fournir des variables pour être
+utilisées par le modèle. Cela se passe dans la
+<a href="/content/front-matter">section liminaire</a>.</p>
+<p>Un exemple de cela est utilisé par ce site de documentation. La plupart des
+pages bénéficient de la présentation de la table des matières. Quelques fois,
+la table des matières n&rsquo;a pas beaucoup de sens. Nous avons défini une variable
+dans notre section liminaire de quelques pages pour désactiver la table des
+matières.</p>
+<p>Ceci est un exemple de section liminaire :</p>
+<pre tabindex="0"><code>---
+title: &#34;Permalinks&#34;
+date: &#34;2013-11-18&#34;
+aliases:
+  - &#34;/doc/permalinks/&#34;
+groups: [&#34;extras&#34;]
+groups_weight: 30
+notoc: true
+---
+</code></pre><p>Ceci est le code correspondant dans le modèle :</p>
+<pre><code>  {{ if not .Params.notoc }}
+    &lt;div id=&quot;toc&quot; class=&quot;well col-md-4 col-sm-6&quot;&gt;
+    {{ .TableOfContents }}
+    &lt;/div&gt;
+  {{ end }}
+</code></pre>
+<h2 id="utiliser-les-paramètres-de-site-config">Utiliser les paramètres de site (config)</h2>
+<p>Dans votre configuration de plus haut niveau (ex <code>config.yaml</code>), vous pouvez
+définir des paramètres de site, dont les valeurs vous seront accessibles.</p>
+<p>Pour les instances, vous pourriez délarer :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">params</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">CopyrightHTML</span>: <span style="color:#e6db74">&#34;Copyright &amp;#xA9; 2013 John Doe. All Rights Reserved.&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">TwitterUser</span>: <span style="color:#e6db74">&#34;spf13&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">SidebarRecentLimit</span>: <span style="color:#ae81ff">5</span>
+</span></span></code></pre></div><p>Avec un pied de page, vous devriez déclarer un <code>&lt;footer&gt;</code> qui est affiché
+seulement si le paramètre <code>CopyrightHTML</code> est déclaré, et si il l&rsquo;est, vous
+devriez le déclarer comme HTML-safe, afin d&rsquo;éviter d&rsquo;échapper les entités HTML.
+Cela vous permettra de le modifier facilement dans votre configuration au lieu
+de le chercher dans votre modèle.</p>
+<pre tabindex="0"><code>{{if .Site.Params.CopyrightHTML}}&lt;footer&gt;
+&lt;div class=&#34;text-center&#34;&gt;{{.Site.Params.CopyrightHTML | safeHtml}}&lt;/div&gt;
+&lt;/footer&gt;{{end}}
+</code></pre><p>Une alternative au &ldquo;if&rdquo; et d&rsquo;appeler la même valeur est d&rsquo;utiliser &ldquo;with&rdquo;. Cela
+modifiera le contexte et passera le bloc si la variable est absente :</p>
+<pre tabindex="0"><code>{{with .Site.Params.TwitterUser}}&lt;span class=&#34;twitter&#34;&gt;
+&lt;a href=&#34;https://twitter.com/{{.}}&#34; rel=&#34;author&#34;&gt;
+&lt;img src=&#34;http://localhost:1313/images/twitter.png&#34; width=&#34;48&#34; height=&#34;48&#34; title=&#34;Twitter: {{.}}&#34;
+ alt=&#34;Twitter&#34;&gt;&lt;/a&gt;
+&lt;/span&gt;{{end}}
+</code></pre><p>Enfin, si vous souhaitez extraire des &ldquo;constantes magiques&rdquo; de vos mises en
+page, vous pouvez le faire comme dans l&rsquo;exemple suivant :</p>
+<pre tabindex="0"><code>&lt;nav class=&#34;recent&#34;&gt;
+  &lt;h1&gt;Recent Posts&lt;/h1&gt;
+  &lt;ul&gt;{{range first .Site.Params.SidebarRecentLimit .Site.Recent}}
+    &lt;li&gt;&lt;a href=&#34;{{.RelPermalink}}&#34;&gt;{{.Title}}&lt;/a&gt;&lt;/li&gt;
+  {{end}}&lt;/ul&gt;
+&lt;/nav&gt;
+</code></pre>]]></content>
+        </item>
+        
+        <item>
+            <title>Migrer vers Hugo depuis Jekyll</title>
+            <link>http://localhost:1313/fr/posts/2014/03/migrer-vers-hugo-depuis-jekyll/</link>
+            <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+            
+            <guid>http://localhost:1313/fr/posts/2014/03/migrer-vers-hugo-depuis-jekyll/</guid>
+            <description>&lt;h2 id=&#34;déplacez-le-contenu-statique-vers-static&#34;&gt;Déplacez le contenu statique vers &lt;code&gt;static&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;Jekyll a une règle comme quoi tout répertoire qui ne commence pas par &lt;code&gt;_&lt;/code&gt; sera
+copié tel-quel dans le répertoire &lt;code&gt;_site&lt;/code&gt;. Hugo garde tout le contenu statique
+dans le répertoire &lt;code&gt;static&lt;/code&gt;. Vous devez donc déplacer tout ce type de contenu
+là-dedans. Avec Jekylll, l&amp;rsquo;arborescence ressemblant à ceci :&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;▾ &amp;lt;root&amp;gt;/
+    ▾ images/
+        logo.png
+&lt;/code&gt;&lt;/pre&gt;</description>
+            <content type="html"><![CDATA[<h2 id="déplacez-le-contenu-statique-vers-static">Déplacez le contenu statique vers <code>static</code></h2>
+<p>Jekyll a une règle comme quoi tout répertoire qui ne commence pas par <code>_</code> sera
+copié tel-quel dans le répertoire <code>_site</code>. Hugo garde tout le contenu statique
+dans le répertoire <code>static</code>. Vous devez donc déplacer tout ce type de contenu
+là-dedans. Avec Jekylll, l&rsquo;arborescence ressemblant à ceci :</p>
+<pre><code>▾ &lt;root&gt;/
+    ▾ images/
+        logo.png
+</code></pre>
+<p>doit devenir</p>
+<pre><code>▾ &lt;root&gt;/
+    ▾ static/
+        ▾ images/
+            logo.png
+</code></pre>
+<p>En outre, vous allez devoir déplacer tous les fichiers présents à la racine vers
+le répertoire <code>static</code>.</p>
+<h2 id="créez-votre-configuration-hugo">Créez votre configuration Hugo</h2>
+<p>Hugo peut lire votre fichier de configuration au format JSON, YAML et TOML. Hugo
+supporte également les paramètres de configuration. Plus d&rsquo;informations sur la
+<a href="/overview/configuration/">documentation de configuration Hugo</a></p>
+<h2 id="définiez-votre-répertoire-de-publication-sur-_site">Définiez votre répertoire de publication sur <code>_site</code></h2>
+<p>La valeur par défaut pour Jekyll est d&rsquo;utiliser le répertoire <code>_site</code> pour
+publier le contenu. Pour Hugo, le répertoire de publication est <code>public</code>. Si,
+comme moi, vous avez [lié <code>_site</code> vers un sous-module git sur la branche
+<code>gh-pages</code>](<a href="http://blog.blindgaenger.net/generate_github_pages_in_a_submodule.ht">http://blog.blindgaenger.net/generate_github_pages_in_a_submodule.ht</a>
+ml), vous allez vouloir avoir quelques alternatives :</p>
+<ol>
+<li>
+<p>Changez votre lien du sous-module <code>gh-pages</code> pour pointer sur public au lieu
+de <code>_site</code> (recommendé).</p>
+<pre><code> git submodule deinit _site
+ git rm _site
+ git submodule add -b gh-pages
+     git@github.com:your-username/your-repo.git public
+</code></pre>
+</li>
+<li>
+<p>Ou modifiez la configuration de Hugo pour utiliser le répertoire <code>_site</code> au
+lieu de <code>public</code>.</p>
+<pre><code> {
+     ..
+     &quot;publishdir&quot;: &quot;_site&quot;,
+     ..
+ }
+</code></pre>
+</li>
+</ol>
+<h2 id="convertir-un-thème-jekyll-pour-hugo">Convertir un thème Jekyll pour Hugo</h2>
+<p>C&rsquo;est la majeure partie du travail. La documentation est votre ami.
+Vous devriez vous référer à [la documentation des thèmes de Jekyll]
+(<a href="http://jekyllrb.com/docs/templates/">http://jekyllrb.com/docs/templates/</a>) si vous devez vous rafraîchir la mémoire
+sur la façon dont vous avez construit votre blog et [les thèmes de Hugo]
+(/layout/templates/) pour apprendre la manière de faire sur Hugo.</p>
+<p>Pour vous donner un point de référence, la conversion du thème pour
+<a href="http://heyitsalex.net/">heyitsalex.net</a> ne m&rsquo;a pris que quelques heures.</p>
+<h2 id="convertir-les-extensions-jekyll-vers-des-shortcodes-hugo">Convertir les extensions Jekyll vers des shortcodes Hugo</h2>
+<p>Jekyll support les <a href="http://jekyllrb.com/docs/plugins/">extensions</a>; Hugo lui a
+les <a href="/doc/shortcodes/">shortcodes</a>. C&rsquo;est assez banal les porter.</p>
+<h3 id="implémentation">Implémentation</h3>
+<p>Comme exemple, j&rsquo;utilise une extension pour avoir un [<code>image_tag</code>](https://githu
+b.com/alexandre-normand/alexandre-normand/blob/74bb12036a71334fdb7dba84e073382fc
+06908ec/_plugins/image_tag.rb) presonnalisé pour générer les images avec une
+légende sur Jekyll. J&rsquo;ai vu que Hugo implémente un shortcode qui fait exactement
+la même chose.</p>
+<p>Extension Jekyll :</p>
+<pre tabindex="0"><code>module Jekyll
+  class ImageTag &lt; Liquid::Tag
+    @url = nil
+    @caption = nil
+    @class = nil
+    @link = nil
+    // Patterns
+    IMAGE_URL_WITH_CLASS_AND_CAPTION =
+    IMAGE_URL_WITH_CLASS_AND_CAPTION_AND_LINK =
+        /(\w+)(\s+)((https?:\/\/|\/)(\S+))(\s+)&#34;(.*?)&#34;(\s+)-&gt;
+        ((https?:\/\/|\/)(\S+))(\s*)/i
+    IMAGE_URL_WITH_CAPTION = /((https?:\/\/|\/)(\S+))(\s+)&#34;(.*?)&#34;/i
+    IMAGE_URL_WITH_CLASS = /(\w+)(\s+)((https?:\/\/|\/)(\S+))/i
+    IMAGE_URL = /((https?:\/\/|\/)(\S+))/i
+    def initialize(tag_name, markup, tokens)
+      super
+      if markup =~ IMAGE_URL_WITH_CLASS_AND_CAPTION_AND_LINK
+        @class   = $1
+        @url     = $3
+        @caption = $7
+        @link = $9
+      elsif markup =~ IMAGE_URL_WITH_CLASS_AND_CAPTION
+        @class   = $1
+        @url     = $3
+        @caption = $7
+      elsif markup =~ IMAGE_URL_WITH_CAPTION
+        @url     = $1
+        @caption = $5
+      elsif markup =~ IMAGE_URL_WITH_CLASS
+        @class = $1
+        @url   = $3
+      elsif markup =~ IMAGE_URL
+        @url = $1
+      end
+    end
+    def render(context)
+      if @class
+        source = &#34;&lt;figure class=&#39;#{@class}&#39;&gt;&#34;
+      else
+        source = &#34;&lt;figure&gt;&#34;
+      end
+      if @link
+        source += &#34;&lt;a href=\&#34;#{@link}\&#34;&gt;&#34;
+      end
+      source += &#34;&lt;img src=\&#34;#{@url}\&#34;&gt;&#34;
+      if @link
+        source += &#34;&lt;/a&gt;&#34;
+      end
+      source += &#34;&lt;figcaption&gt;#{@caption}&lt;/figcaption&gt;&#34; if @caption
+      source += &#34;&lt;/figure&gt;&#34;
+      source
+    end
+  end
+end
+Liquid::Template.register_tag(&#39;image&#39;, Jekyll::ImageTag)
+</code></pre><p>Écrite en tant que shortcode Hugo:</p>
+<pre tabindex="0"><code>&lt;!-- image --&gt;
+&lt;figure {{ with .Get &#34;class&#34; }}class=&#34;{{.}}&#34;{{ end }}&gt;
+    {{ with .Get &#34;link&#34;}}&lt;a href=&#34;{{.}}&#34;&gt;{{ end }}
+        &lt;img src=&#34;{{ .Get &#34;src&#34; }}&#34;
+            {{ if or (.Get &#34;alt&#34;) (.Get &#34;caption&#34;) }}
+                alt=&#34;{{ with .Get &#34;alt&#34;}}
+                        {{.}}
+                     {{else}}
+                        {{ .Get &#34;caption&#34; }}
+                     {{ end }}&#34;
+               {{ end }} /&gt;
+    {{ if .Get &#34;link&#34;}}&lt;/a&gt;{{ end }}
+    {{ if or (or (.Get &#34;title&#34;) (.Get &#34;caption&#34;)) (.Get &#34;attr&#34;)}}
+    &lt;figcaption&gt;{{ if isset .Params &#34;title&#34; }}
+        {{ .Get &#34;title&#34; }}{{ end }}
+        {{ if or (.Get &#34;caption&#34;) (.Get &#34;attr&#34;)}}&lt;p&gt;
+        {{ .Get &#34;caption&#34; }}
+        {{ with .Get &#34;attrlink&#34;}}&lt;a href=&#34;{{.}}&#34;&gt; {{ end }}
+            {{ .Get &#34;attr&#34; }}
+        {{ if .Get &#34;attrlink&#34;}}&lt;/a&gt; {{ end }}
+        &lt;/p&gt; {{ end }}
+    &lt;/figcaption&gt;
+    {{ end }}
+&lt;/figure&gt;
+&lt;!-- image --&gt;
+</code></pre><h3 id="utilisation">Utilisation</h3>
+<p>J&rsquo;ai simplement changé :</p>
+<pre tabindex="0"><code>{% image
+    full http://farm5.staticflickr.com/4136/4829260124_57712e570a_o_d.jpg
+    &#34;One of my favorite touristy-type photos. I secretly waited for the
+    good light while we were &#34;having fun&#34; and took this. Only regret: a
+    stupid pole in the top-left corner of the frame I had to clumsily get
+    rid of at post-processing.&#34;
+    -&gt;http://www.flickr.com/photos/alexnormand/4829260124/in/
+        set-72157624547713078/ %}
+</code></pre><p>pour cela (cet exemple utilise une version légèrement étendue nommée <code>fig</code>,
+différente de la <code>figure</code> intégrée) :</p>
+<pre tabindex="0"><code>{{% fig class=&#34;full&#34;
+    src=&#34;http://farm5.staticflickr.com/4136/4829260124_57712e570a_o_d.jpg&#34;
+    title=&#34;One of my favorite touristy-type photos. I secretly waited for the
+    good light while we were having fun and took this. Only regret: a stupid
+    pole in the top-left corner of the frame I had to clumsily get rid of at
+    post-processing.&#34;
+    link=&#34;http://www.flickr.com/photos/alexnormand/4829260124/in/
+            set-72157624547713078/&#34; %}}
+</code></pre><p>Comme bonus, les paramètres nommés des shortcodes sont plus lisibles.</p>
+<h2 id="touches-finales">Touches finales</h2>
+<h3 id="corriger-le-contenu">Corriger le contenu</h3>
+<p>Suivant le nombre de modifications que vous avez effectué sur chaque articles
+avec Jekyll, cette étape requierra plus ou moins d&rsquo;efforts. Il n&rsquo;y a pas de
+règles rigoureuses ici, si ce n&rsquo;est que <code>hugo server --watch</code> est votre ami.
+Testez vos modifications et corrigez les erreurs au besoin.</p>
+<h3 id="nettoyez-le-tout">Nettoyez le tout</h3>
+<p>Vous voudrez sûrement supprimer votre configuration Jekyll maintenant que tout
+est fini. Exact, pensez à supprimer tout ce qui est inutilisé.</p>
+<h2 id="un-exemple-pratique">Un exemple pratique</h2>
+<p><a href="http://heyitsalex.net/">Hey, it&rsquo;s Alex</a> a été migré de Jekyll vers Hugo en
+moins de temps qu&rsquo;une journée père enfant. Vous pouvez trouver toutes les
+modification en regardant ce [diff](<a href="https://github.com/alexandre-normand/alexand">https://github.com/alexandre-normand/alexand</a>
+re-normand/compare/869d69435bd2665c3fbf5b5c78d4c22759d7613a&hellip;b7f6605b1265e83b4b
+81495423294208cc74d610).</p>]]></content>
+        </item>
+        
+    </channel>
+</rss>
