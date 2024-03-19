@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/posts/三十多岁，第一次看海 ｜ 三亚跨年旅行.md",
-                "mode": "source",
+                "file": "content/posts/白日梦想家.md",
+                "mode": "preview",
                 "source": true
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/posts/三十多岁，第一次看海 ｜ 三亚跨年旅行.md",
+                "file": "content/posts/白日梦想家.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/posts/三十多岁，第一次看海 ｜ 三亚跨年旅行.md",
+                "file": "content/posts/白日梦想家.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/posts/三十多岁，第一次看海 ｜ 三亚跨年旅行.md"
+                "file": "content/posts/白日梦想家.md"
               }
             }
           }
@@ -148,9 +148,9 @@
   },
   "active": "7a86bdb06b05ba4c",
   "lastOpenFiles": [
+    "content/posts/2023.10 国庆云南 2500KM 自驾游.md",
     "content/posts/春节自驾回湖北，赶上罕见暴雪.md",
     "content/posts/三十多岁，第一次看海 ｜ 三亚跨年旅行.md",
-    "content/posts/白日梦想家.md",
-    "content/posts/2023.10 国庆云南 2500KM 自驾游.md"
+    "content/posts/白日梦想家.md"
   ]
 }
