@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/about.md",
+                "file": "content/posts/独自徒步四姑娘山长坪沟.md",
                 "mode": "source",
                 "source": true
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/about.md",
+                "file": "content/posts/独自徒步四姑娘山长坪沟.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/about.md",
+                "file": "content/posts/独自徒步四姑娘山长坪沟.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/about.md"
+                "file": "content/posts/独自徒步四姑娘山长坪沟.md"
               }
             }
           }
@@ -148,21 +148,23 @@
   },
   "active": "7a86bdb06b05ba4c",
   "lastOpenFiles": [
-    "content/posts/白日梦想家.md",
-    "content/about.md",
-    "content/posts/2023.10 国庆云南 2500KM 自驾游.md",
+    "IMG_0365.jpeg",
+    "public/posts/2023/08/独自徒步四姑娘山长坪沟/index.html",
+    "public/posts/2023/08/独自徒步四姑娘山长坪沟",
+    "public/posts/2023/08",
+    "public/posts/1/01/独自徒步四姑娘山长坪沟/index.html",
+    "public/posts/1/01/独自徒步四姑娘山长坪沟",
+    "public/posts/2023/05/独自徒步四姑娘山长坪沟/index.html",
+    "public/posts/2023/05/独自徒步四姑娘山长坪沟",
+    "public/posts/2023/05/三十多岁第一次看海/index.html",
+    "public/posts/2023/05/三十多岁第一次看海",
+    "public/posts/2023/05",
     "content/posts/三十多岁，第一次看海.md",
+    "content/posts/独自徒步四姑娘山长坪沟.md",
+    "content/about.md",
+    "content/posts/白日梦想家.md",
+    "content/posts/2023.10 国庆云南 2500KM 自驾游.md",
     "content/posts/春节自驾回湖北，赶上罕见暴雪.md",
-    "public/posts/2023/12/三十多岁第一次看海/index.html",
-    "public/posts/2023/12/三十多岁第一次看海",
-    "public/main.3d2b7c431031ca51e0c188a44ac49def80eebd714795934ff4d8b2f7f2ce6d7e.css",
-    "public/main.9a19932410e0acdee86710cba0f283e01957e7a148aaddee29196847635f616c.css",
-    "public/main.b9ce4ae7ce087d0b2919e85c2f1fb2963e4923a4681f298cccc1c59e3a66fe1e.css",
-    "themes/hello-friend-ng/assets/scss/_main.scss~",
-    "public/main.50e2b9a5fa5fde0e0254d647132ab0f3aec992d34a9d3674cedd54c473add82e.css",
-    "public/main.7ea78322f2474ef9a9082ca6af21e6050a5bf7c46566de61c6f76d11487d6ef3.css",
-    "public/main.fd7d42389bab2ced910ffb6940fe715ae62879a5e002116333e29e385942229f.css",
-    "public/main.eeffa650d40f54e62f793cd74a4b0b3a9fb3049089577ee25d4438fa9c53aca5.css",
     "public/flags/1x1/ht.svg",
     "public/flags/1x1/es.svg",
     "public/flags/1x1/gl.svg",
