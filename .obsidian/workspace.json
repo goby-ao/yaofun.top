@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/posts/白日梦想家.md",
+                "file": "content/posts/春节自驾回湖北，赶上罕见暴雪.md",
                 "mode": "preview",
                 "source": true
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/posts/白日梦想家.md",
+                "file": "content/posts/春节自驾回湖北，赶上罕见暴雪.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/posts/白日梦想家.md",
+                "file": "content/posts/春节自驾回湖北，赶上罕见暴雪.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/posts/白日梦想家.md"
+                "file": "content/posts/春节自驾回湖北，赶上罕见暴雪.md"
               }
             }
           }
@@ -148,22 +148,22 @@
   },
   "active": "7a86bdb06b05ba4c",
   "lastOpenFiles": [
-    "public/tags/life/page/1/index.html",
-    "public/tags/life/page/1",
-    "public/tags/life/page",
-    "public/tags/life/index.html",
-    "public/tags/life/index.xml",
-    "public/tags/life",
-    "public/tags/think/page/1/index.html",
-    "public/tags/think/page/1",
-    "public/tags/think/page",
-    "public/tags/think/index.html",
-    "public/tags/think/index.xml",
-    "content/posts/2023.10 国庆云南 2500KM 自驾游.md",
-    "content/posts/春节自驾回湖北，赶上罕见暴雪.md",
     "content/posts/三十多岁，第一次看海 ｜ 三亚跨年旅行.md",
+    "content/posts/2023.10 国庆云南 2500KM 自驾游.md",
     "content/posts/白日梦想家.md",
     "content/about.md",
+    "content/posts/春节自驾回湖北，赶上罕见暴雪.md",
+    "public/posts/2024/02/春节自驾回湖北赶上罕见暴雪/index.html",
+    "public/posts/2024/02/春节自驾回湖北赶上罕见暴雪",
+    "public/posts/2024/02",
+    "public/tags/旅行/page/1/index.html",
+    "public/tags/旅行/page/1",
+    "public/tags/旅行/index.xml",
+    "public/tags/旅行/page",
+    "public/tags/旅行/index.html",
+    "public/tags/旅行",
+    "public/posts/2023/12/三十多岁第一次看海-三亚跨年旅行/index.html",
+    "README.md",
     "public/flags/1x1/ht.svg",
     "public/flags/1x1/es.svg",
     "public/flags/1x1/gl.svg",
