@@ -56,10 +56,11 @@ disableHugoGeneratorInject = false
 
   # Metadata mostly used in document's head
   # 
-  description = "Nice theme for homepages and blogs"
+  description = "yao's blog"
   keywords = ""
   images = [""]
 
+    
   # Home subtitle of the index page.
   #
   homeSubtitle = "Hello Friend NG"
@@ -81,7 +82,8 @@ disableHugoGeneratorInject = false
   # Per default, this option is off. 
   # The theme is respecting the prefers-color-scheme of the operating system. 
   # With this option on, the page user is able to set the scheme he wants. 
-  enableThemeToggle = false
+
+  enableThemeToggle = true
 
   # Sharing buttons
   #
@@ -256,4 +258,4 @@ disableHugoGeneratorInject = false
    identifier = "tags"
    name       = "Tags"
    url        = "/tags/"
-    weight     = "2"
+   weight     = "2"
