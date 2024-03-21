@@ -129,7 +129,6 @@ disableHugoGeneratorInject = false
     ]
 
   # Colors for favicons
-  #
   [params.favicon.color]
     mask = "#1b1c1d"
     msapplication = "#1b1c1d"
@@ -152,27 +151,13 @@ disableHugoGeneratorInject = false
   # Addon: Startpage portrait 
   # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
   # Uncomment this if you want a portrait on your start page
-  #
+
   [params.portrait]
     #path     = "https://raw.githubusercontent.com/goby-ao/picgo/main/img/IMG_6041.jpeg"
     path     = "/img/cover.jpeg"
     alt      = "Portrait"
     maxWidth = "690px"
     hello = "「晚来天欲雪，能饮一杯无？」"
-
-  # # # # # # # # # # # # # # # # # # # # # # # # # # # # #  
-  # Addon: Commento
-  # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-  # Commento is more than just a comments widget you can embed — 
-  # it’s a return to the roots of the internet. 
-  # An internet without the tracking and invasions of privacy. 
-  # An internet that is simple and lightweight. 
-  # An internet that is focused on interesting discussions, not ads. 
-  # A better internet.
-  # Uncomment this to enable Commento.
-  #
-  # [params.commento]
-  #   url = ""
 
   # # # # # # # # # # # # # # # # # # # # # # # # # # # # #  
   # Addon: Utteranc.es
@@ -236,12 +221,6 @@ disableHugoGeneratorInject = false
     copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
   [languages.en.params]
     subtitle  = ""
-
-  [languages.fr]
-    weight    = 2
-    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
-  [languages.fr.params]
-    subtitle  = "Hello Friend NG Theme"
 
 [menu]
   [[menu.main]]
