@@ -30,6 +30,14 @@ tags:
 - Cloudflare Page：静态网站托管 （也可以直接用 github page 托管）
 - Picgo + jsdelivr：基于 github 的图床 、cdn 加速
 
+本站源码与主题：
+- [GitHub - goby-ao/yaofun.top: my blog](https://github.com/goby-ao/yaofun.top/)
+- [GitHub - rhazdon/hugo-theme-hello-friend-ng](https://github.com/rhazdon/hugo-theme-hello-friend-ng)
+
+参考与致谢：
+- [折腾 :: 木木木木木](https://immmmm.com/tags/%E6%8A%98%E8%85%BE/)
+- [Lillian Who](https://lillianwho.com/)
+
 ## 折腾记录 
 
 ### 0 准备工作
@@ -40,6 +48,7 @@ tags:
 ### 1 本地初始化 hugo 博客
 
 **1.1 hugo 安装**
+
 windows 上安装 hugo 需要先安装 go，在 macOS 上安装 hugo 比较简单可以自动安装所需依赖。
 ```bash
 brew update
@@ -53,15 +62,19 @@ hugo new site yaofun.top
 例如 /home/yao/blog 下执行命令，会生成 yaofun.top 子目录： /home/yao/blog/yaofun.top
 
 **1.3 安装 hugo 主题**
-我安装的是 hello-friend-ng 主题
+
+我安装的是 hello-friend-ng 主题：
 ```bash
 $ git submodule add https://github.com/rhazdon/hugo-theme-hello-friend-ng.git themes/hello-friend-ng
 ```
 
-**1.4 本地试用 demo**
+**1.4 本地运行与调试**
+
 拷贝 theme 下的 exmapleSite 下的 content 目录和 .toml 配置到 hugo 根目录（/home/yao/blog/yaofun.top）
 
 执行 hugo server 即可用 http://localhost:1313 查看预览效果，修改静态代码后它会自动重新编译构建。
+
+你可以调试 hugo 的配置，折腾成自己满意的效果。
 
 ### 2 自动化发布与部署
 
@@ -76,7 +89,9 @@ $ git submodule add https://github.com/rhazdon/hugo-theme-hello-friend-ng.git th
 
 **2.2 博客源码自动化编译部署**
 1. 新建一个仓库，存放 hugo 生成的博客静态文件（这一步也可以用同仓库，不同分支）
- 2. 配置 github action [github action](https://github.com/goby-ao/goby-ao.github.io) 实现：1）hugo 编译生成静态代码 ./public；2）推送 ./public 静态代码到刚才新建的 [github 静态文件仓库](https://github.com/goby-ao/goby-ao.github.io)
+2. 配置 github action [github action](https://github.com/goby-ao/goby-ao.github.io) 实现：
+	1. hugo 编译生成静态代码 ./public；
+	2. 推送 ./public 静态代码到刚才新建的 [github 静态文件仓库](https://github.com/goby-ao/goby-ao.github.io)
 
 **2.3 cloudflare page 托管静态网站**
 1. cloudflare 在 workers & pages 里面新建一个 page，指向静态代码的仓库
@@ -85,6 +100,7 @@ $ git submodule add https://github.com/rhazdon/hugo-theme-hello-friend-ng.git th
 
 
 至此完成基本的自动化发布流程：
+
 本地 -> github 源码库 -> github 静态仓库 -> cloudflare page 托管
 
 ### 3 图床与图床加速
@@ -150,5 +166,11 @@ tags: ['<% tp.system.suggester(item => item, Object.keys(app.metadataCache.getTa
 
 在 hugo.toml 里加入一行：hasCJKLanguage = true
 
+
+## 为什么要写博客 ？
+
+督促自己思考，沉淀，进步。在互联网上有一片属于自己的自留地。
+> People Die, but Long Live GitHub
 ------------
-> 本文使用 obsidian 一键发布
+
+*本文使用 obsidian 一键发布*
