@@ -1,1 +1,9 @@
-{}
+{
+  "userIgnoreFilters": [
+    "archetypes/",
+    "i18n/",
+    "data/",
+    "resources/",
+    "public/"
+  ]
+}

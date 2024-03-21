@@ -56,8 +56,8 @@ disableHugoGeneratorInject = false
 
   # Metadata mostly used in document's head
   # 
-  description = "yao's blog"
-  keywords = ""
+  description = "Welcome to yao's blog"
+  keywords = "博客，成都，大数据，草缸，骑行，吉他"
   images = [""]
 
     
@@ -137,7 +137,7 @@ disableHugoGeneratorInject = false
 
   [params.logo]
     logoMark     = ">"
-    logoText     = "$ cd  /home/treesblue🌲 "
+    logoText     = "$ cd /home/treesblue🌲 "
     logoHomeLink = "/"
     # Set true to remove the logo cursor entirely.
     # logoCursorDisabled = false
