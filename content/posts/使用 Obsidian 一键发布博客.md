@@ -5,7 +5,6 @@ tags:
   - 折腾
   - obsidian
 ---
-
 > 种豆南山下，草盛豆苗稀。  
 > 晨兴理荒秽，带月荷锄归。  
 > 道狭草木长，夕露沾我衣。  
@@ -169,8 +168,8 @@ tags: ['<% tp.system.suggester(item => item, Object.keys(app.metadataCache.getTa
 
 ## 为什么要写博客 ？
 
-督促自己思考，沉淀，进步。在互联网上有一片属于自己的自留地。
-> People Die, but Long Live GitHub
+督促自己思考，沉淀，进步。在互联网上有一片属于自己的 Secret Garden。
+
 ------------
 
 *本文使用 obsidian 一键发布*
