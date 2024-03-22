@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "c15b6f1db0c83c9a",
+        "id": "2b20b9bbf24f1b20",
         "type": "tabs",
         "children": [
           {
-            "id": "ce781cf344f66659",
+            "id": "355eeb28fe20226a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/posts/2023 三亚跨年看海之旅.md",
+                "file": "content/posts/使用 Obsidian 一键发布博客.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/posts/2023 三亚跨年看海之旅.md",
+                "file": "content/posts/使用 Obsidian 一键发布博客.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/posts/2023 三亚跨年看海之旅.md",
+                "file": "content/posts/使用 Obsidian 一键发布博客.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/posts/2023 三亚跨年看海之旅.md"
+                "file": "content/posts/使用 Obsidian 一键发布博客.md"
               }
             }
           }
@@ -147,8 +147,9 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "ce781cf344f66659",
+  "active": "355eeb28fe20226a",
   "lastOpenFiles": [
+    "content/posts/2023 三亚跨年看海之旅.md",
     "layouts/posts/single.html",
     "layouts/posts",
     "layouts/single.html",
@@ -162,7 +163,6 @@
     "content/posts/使用 Obsidian 一键发布博客.md",
     "public/posts/2024/03/使用-obsidian-一键发布博客/index.html",
     "public/posts/2024/03/使用-obsidian-一键发布博客",
-    "public/posts/2024/03/obsidian-博客一键发布折腾记/index.html",
     "template/blog.md",
     "README.md",
     "content/posts/Untitled.md",
@@ -182,7 +182,6 @@
     "public/flags/1x1/gm.svg",
     "content/chat/测试 chat.md",
     "2024-03-20.md",
-    "content/posts/2023 三亚跨年看海之旅.md",
     "content/posts/测试图文混排.md",
     "content/posts/testwrite.md",
     "content/posts/test quickadd blog.md",

@@ -128,18 +128,6 @@ disableHugoGeneratorInject = false
       "Made with &#10084; by <a href=\"https://github.com/rhazdon\">Djordje Atlialp</a>"
     ]
 
-  [params.busuanzi]
-    enable = true
-    site_uv = true
-    site_uv_pre = '<i class="fa fa-user"></i>' 
-    site_uv_post = ''
-    site_pv = true
-    site_pv_pre = '<i class="fa fa-eye"></i>'
-    site_pv_post = ''
-    page_pv = true
-    page_pv_pre = '<i class="far fa-eye fa-fw"></i>'
-    page_pv_post = ''
-
   # Colors for favicons
   [params.favicon.color]
     mask = "#1b1c1d"

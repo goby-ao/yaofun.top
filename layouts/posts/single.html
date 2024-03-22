@@ -59,7 +59,6 @@
           <polyline points="12 6 12 12 16 14"></polyline>
         </svg>
         {{ i18n "readingTime" .Page.ReadingTime }}
-        {{- partial "busuanzi.html" (dict "params" .Site.Params.busuanzi "bsz_type" "page-reading") -}}
         {{ if .IsTranslated }} | {{ i18n "postAvailable" }}
           {{ range .Translations }}
               <a href="{{ .Permalink }}"><span class="flag fi fi-{{ index $.Site.Data.langFlags (.Lang) }}"></span></a>
