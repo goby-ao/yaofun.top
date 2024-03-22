@@ -58,7 +58,8 @@ brew install hugo
 ```bash
 hugo new site yaofun.top
 ```
-例如 /home/yao/blog 下执行命令，会生成 yaofun.top 子目录： /home/yao/blog/yaofun.top
+例如 /home/yao/blog 下执行命令，会
+生成 yaofun.top 子目录： /home/yao/blog/yaofun.top
 
 **1.3 安装 hugo 主题**
 

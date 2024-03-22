@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "04f5467c5a4affde",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/posts/1.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/posts/使用 Obsidian 一键发布博客.md",
+                "file": "content/posts/1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/posts/使用 Obsidian 一键发布博客.md",
+                "file": "content/posts/1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/posts/使用 Obsidian 一键发布博客.md"
+                "file": "content/posts/1.md"
               }
             }
           }
@@ -147,8 +160,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "355eeb28fe20226a",
+  "active": "04f5467c5a4affde",
   "lastOpenFiles": [
+    "content/posts/使用 Obsidian 一键发布博客.md",
+    "content/posts/1.md",
     "content/posts/2023 三亚跨年看海之旅.md",
     "layouts/posts/single.html",
     "layouts/posts",
@@ -160,7 +175,6 @@
     "content/posts/123.md",
     "public/posts/2024/03/123/index.html",
     "public/posts/2024/03/123",
-    "content/posts/使用 Obsidian 一键发布博客.md",
     "public/posts/2024/03/使用-obsidian-一键发布博客/index.html",
     "public/posts/2024/03/使用-obsidian-一键发布博客",
     "template/blog.md",
