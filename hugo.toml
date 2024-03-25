@@ -232,9 +232,14 @@ disableHugoGeneratorInject = false
     identifier = "about"
     name       = "About"
     url        = "about/"
-    weight     = "3"
+    weight     = "10"
  [[menu.main]]
    identifier = "tags"
    name       = "Tags"
    url        = "/tags/"
    weight     = "2"
+  [[menu.main]]
+    identifier = "running"
+    name       = "Running"
+    url        = "running/"
+    weight     = "3"

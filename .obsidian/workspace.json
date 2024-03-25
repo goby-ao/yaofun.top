@@ -4,18 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "2b20b9bbf24f1b20",
+        "id": "b9ffc4d2ca89aacd",
         "type": "tabs",
         "children": [
           {
-            "id": "355eeb28fe20226a",
+            "id": "897375b8122b2b90",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/posts/重新开始跑步.md",
+                "file": "content/running/跑步记录_2024-03-25.md",
                 "mode": "source",
-                "source": true
+                "source": false
               }
             }
           }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/posts/重新开始跑步.md",
+                "file": "content/running/跑步记录_2024-03-25.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/posts/重新开始跑步.md",
+                "file": "content/running/跑步记录_2024-03-25.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/posts/重新开始跑步.md"
+                "file": "content/running/跑步记录_2024-03-25.md"
               }
             }
           }
@@ -148,15 +148,28 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "355eeb28fe20226a",
+  "active": "897375b8122b2b90",
   "lastOpenFiles": [
-    "content/about.md",
+    "public/tags/跑步/page/1/index.html",
+    "public/tags/跑步/page/1",
+    "public/tags/跑步/page",
+    "public/tags/跑步/index.xml",
+    "public/tags/跑步/index.html",
+    "public/tags/跑步",
+    "public/posts/2024/03/重新开始跑步/index.html",
+    "public/posts/2024/03/重新开始跑步",
+    "public/running/page/1/index.html",
+    "public/running/跑步记录_2024-03-25/index.html",
+    "public/running/page/1",
+    "content/running/跑步记录_2024-03-25.md",
+    "content/posts/2023 三亚跨年看海之旅.md",
+    "content/posts/2023 国庆云南 2500KM 自驾游.md",
+    "content/posts/使用 Obsidian 一键发布博客.md",
+    "content/posts/春节自驾回湖北，赶上罕见暴雪.md",
     "content/posts/测试图文混排.md",
     "content/posts/重新开始跑步.md",
+    "content/about.md",
     "content/posts/白日梦想家.md",
-    "content/posts/春节自驾回湖北，赶上罕见暴雪.md",
-    "content/posts/使用 Obsidian 一键发布博客.md",
-    "content/posts/2023 三亚跨年看海之旅.md",
     "template/Write Blog.md",
     "template/Running Diary.md",
     "content/posts/跑步记录_2024-03-25.md",
@@ -166,19 +179,8 @@
     "content/posts/Running-log.md",
     "content/posts/123.md",
     "Untitled.md",
-    "layouts/_internal/google_analytics.html",
-    "layouts/_internal",
-    "layouts/posts/single.html",
-    "layouts/posts",
-    "layouts/single.html",
-    "layouts/partials/footer.html",
-    "layouts/partials",
-    "themes/hello-friend-ng/layouts/partials/busuanzi.html",
-    "public/posts/2024/03/123/index.html",
-    "public/posts/2024/03/123",
     "README.md",
     "content/posts/Untitled.md",
-    "content/posts/2023 国庆云南 2500KM 自驾游.md",
     "content/posts/独自徒步四姑娘山长坪沟.md",
     "public/flags/1x1/ht.svg",
     "public/flags/1x1/es.svg",
@@ -193,8 +195,6 @@
     "content/chat/测试 chat.md",
     "2024-03-20.md",
     "content/posts/testwrite.md",
-    "content/posts/test quickadd blog.md",
-    "测试 quick add.md",
-    "content/posts/测试模板.md"
+    "content/posts/test quickadd blog.md"
   ]
 }
