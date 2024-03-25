@@ -237,7 +237,7 @@ disableHugoGeneratorInject = false
    identifier = "tags"
    name       = "Tags"
    url        = "/tags/"
-   weight     = "2"
+   weight     = "9"
   [[menu.main]]
     identifier = "running"
     name       = "Running"

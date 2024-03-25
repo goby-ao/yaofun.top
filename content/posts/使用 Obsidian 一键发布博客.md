@@ -146,6 +146,13 @@ tags: ['<% tp.system.suggester(item => item, Object.keys(app.metadataCache.getTa
 .post-content p:has(> img:nth-child(6)) img{margin-bottom:8px;}
 ```
 
+效果如下：
+![image.png](https://cdn.jsdelivr.net/gh/goby-ao/picgo@main/img/20240325181122.png)
+
+实际显示：
+![IMG_2017.jpeg](https://cdn.jsdelivr.net/gh/goby-ao/picgo@main/img/IMG_2017.jpeg)
+![IMG_2020.jpeg](https://cdn.jsdelivr.net/gh/goby-ao/picgo@main/img/IMG_2020.jpeg)
+
 **5.2 图片灯箱效果**
 
 图片点击后灯箱效果，使用：[ViewImage.js - 2kb minimalist lightbox.](https://tokinx.github.io/ViewImage/)
