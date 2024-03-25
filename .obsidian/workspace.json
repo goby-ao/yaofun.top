@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/posts/使用 Obsidian 一键发布博客.md",
+                "file": "content/posts/重新开始跑步.md",
                 "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "04f5467c5a4affde",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/posts/反思当前的生活状态.md",
-                "mode": "source",
-                "source": false
+                "source": true
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/posts/反思当前的生活状态.md",
+                "file": "content/posts/重新开始跑步.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/posts/反思当前的生活状态.md",
+                "file": "content/posts/重新开始跑步.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/posts/反思当前的生活状态.md"
+                "file": "content/posts/重新开始跑步.md"
               }
             }
           }
@@ -147,7 +134,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -160,29 +148,37 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "04f5467c5a4affde",
+  "active": "355eeb28fe20226a",
   "lastOpenFiles": [
+    "content/about.md",
+    "content/posts/测试图文混排.md",
+    "content/posts/重新开始跑步.md",
+    "content/posts/白日梦想家.md",
+    "content/posts/春节自驾回湖北，赶上罕见暴雪.md",
     "content/posts/使用 Obsidian 一键发布博客.md",
-    "content/posts/反思当前的生活状态.md",
+    "content/posts/2023 三亚跨年看海之旅.md",
+    "template/Write Blog.md",
+    "template/Running Diary.md",
+    "content/posts/跑步记录_2024-03-25.md",
+    "content/posts/你在说什么.md",
+    "content/posts/Running_Log_2024-03-25.md",
+    "content/posts/Running-log_<% tp.date.now(\"YYYY-[W]ww\") %>.md",
+    "content/posts/Running-log.md",
+    "content/posts/123.md",
+    "Untitled.md",
     "layouts/_internal/google_analytics.html",
     "layouts/_internal",
-    "content/posts/2023 三亚跨年看海之旅.md",
     "layouts/posts/single.html",
     "layouts/posts",
     "layouts/single.html",
     "layouts/partials/footer.html",
     "layouts/partials",
     "themes/hello-friend-ng/layouts/partials/busuanzi.html",
-    "content/about.md",
-    "content/posts/123.md",
     "public/posts/2024/03/123/index.html",
     "public/posts/2024/03/123",
-    "template/blog.md",
     "README.md",
     "content/posts/Untitled.md",
-    "content/posts/白日梦想家.md",
     "content/posts/2023 国庆云南 2500KM 自驾游.md",
-    "content/posts/春节自驾回湖北，赶上罕见暴雪.md",
     "content/posts/独自徒步四姑娘山长坪沟.md",
     "public/flags/1x1/ht.svg",
     "public/flags/1x1/es.svg",
@@ -196,16 +192,9 @@
     "public/flags/1x1/gm.svg",
     "content/chat/测试 chat.md",
     "2024-03-20.md",
-    "content/posts/测试图文混排.md",
     "content/posts/testwrite.md",
     "content/posts/test quickadd blog.md",
     "测试 quick add.md",
-    "content/posts/测试模板.md",
-    "template/templater-function-tag-selector.js.md",
-    "Untitled.md",
-    "content/posts/测试博客模板.md",
-    "123.md",
-    "你好.md",
-    "content/posts/22.md"
+    "content/posts/测试模板.md"
   ]
 }
