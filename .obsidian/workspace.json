@@ -162,6 +162,8 @@
   },
   "active": "04f5467c5a4affde",
   "lastOpenFiles": [
+    "layouts/_internal/google_analytics.html",
+    "layouts/_internal",
     "content/posts/使用 Obsidian 一键发布博客.md",
     "content/posts/当前生活状态的思考.md",
     "content/posts/2023 三亚跨年看海之旅.md",
@@ -176,7 +178,6 @@
     "public/posts/2024/03/123/index.html",
     "public/posts/2024/03/123",
     "public/posts/2024/03/使用-obsidian-一键发布博客/index.html",
-    "public/posts/2024/03/使用-obsidian-一键发布博客",
     "template/blog.md",
     "README.md",
     "content/posts/Untitled.md",
