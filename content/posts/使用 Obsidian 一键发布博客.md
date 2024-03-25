@@ -147,11 +147,11 @@ tags: ['<% tp.system.suggester(item => item, Object.keys(app.metadataCache.getTa
 ```
 
 效果如下：
-![image.png](https://cdn.jsdelivr.net/gh/goby-ao/picgo@main/img/20240325181122.png)
+![image.png](https://cdn.jsdelivr.net/gh/goby-ao/picgo@main/img/20240325181403.png)
 
 实际显示：
-![IMG_2017.jpeg](https://cdn.jsdelivr.net/gh/goby-ao/picgo@main/img/IMG_2017.jpeg)
-![IMG_2020.jpeg](https://cdn.jsdelivr.net/gh/goby-ao/picgo@main/img/IMG_2020.jpeg)
+![春](https://cdn.jsdelivr.net/gh/goby-ao/picgo@main/img/IMG_2019.jpeg)
+![秋](https://cdn.jsdelivr.net/gh/goby-ao/picgo@main/img/IMG_1696.jpeg)
 
 **5.2 图片灯箱效果**
 
