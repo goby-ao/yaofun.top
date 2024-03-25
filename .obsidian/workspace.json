@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/posts/当前生活状态的思考.md",
+                "file": "content/posts/反思当前的生活状态.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/posts/当前生活状态的思考.md",
+                "file": "content/posts/反思当前的生活状态.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/posts/当前生活状态的思考.md",
+                "file": "content/posts/反思当前的生活状态.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/posts/当前生活状态的思考.md"
+                "file": "content/posts/反思当前的生活状态.md"
               }
             }
           }
@@ -162,10 +162,10 @@
   },
   "active": "04f5467c5a4affde",
   "lastOpenFiles": [
+    "content/posts/使用 Obsidian 一键发布博客.md",
+    "content/posts/反思当前的生活状态.md",
     "layouts/_internal/google_analytics.html",
     "layouts/_internal",
-    "content/posts/使用 Obsidian 一键发布博客.md",
-    "content/posts/当前生活状态的思考.md",
     "content/posts/2023 三亚跨年看海之旅.md",
     "layouts/posts/single.html",
     "layouts/posts",
@@ -177,7 +177,6 @@
     "content/posts/123.md",
     "public/posts/2024/03/123/index.html",
     "public/posts/2024/03/123",
-    "public/posts/2024/03/使用-obsidian-一键发布博客/index.html",
     "template/blog.md",
     "README.md",
     "content/posts/Untitled.md",
