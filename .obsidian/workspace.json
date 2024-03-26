@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/posts/使用 Obsidian 一键发布博客.md",
+                "file": "content/posts/2023 三亚跨年看海之旅.md",
                 "mode": "source",
                 "source": true
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/posts/使用 Obsidian 一键发布博客.md",
+                "file": "content/posts/2023 三亚跨年看海之旅.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/posts/使用 Obsidian 一键发布博客.md",
+                "file": "content/posts/2023 三亚跨年看海之旅.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/posts/使用 Obsidian 一键发布博客.md"
+                "file": "content/posts/2023 三亚跨年看海之旅.md"
               }
             }
           }
@@ -150,8 +150,8 @@
   },
   "active": "cc4160f1d91f0048",
   "lastOpenFiles": [
-    "content/posts/2023 三亚跨年看海之旅.md",
     "content/posts/使用 Obsidian 一键发布博客.md",
+    "content/posts/2023 三亚跨年看海之旅.md",
     "content/running/跑步记录_2024-03-25.md",
     "public/tags/跑步/page/1/index.html",
     "public/tags/跑步/page/1",
