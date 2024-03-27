@@ -28,11 +28,11 @@ Always like this.
 
 备上三个口罩，在交子大道地铁口嗦了一碗绵阳米粉，坐上了通往我第一次金属之旅的地铁，终点站 - 4号线，宽窄巷子。下地铁穿过老城小巷，大树成荫，生活的气息，春天的绿色扑面而来。路过魁星楼美食街，新闻里恐慌的疫情通告与美食街依然热闹的人群聚会形成强烈对比，街的尽头就是演出地点：纽空间_NUSPACE ，很漂亮的一小栋玻璃外墙建筑。
 
-![live house - 纽空间](https://upload-images.jianshu.io/upload_images/7207268-ef224b771c85b903.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image.png](https://cdn.jsdelivr.net/gh/goby-ao/picgo@main/img/20240328001353.png)
 
 戴上双层口罩，小心翼翼的进门去，前面摆满了各种文艺衍生品， 老唱片，经典电影，插画。看到这些 CD，脑海中浮现电影《Before Sunrise》里俩人听歌的画面。二楼还可以看展，live house 在后面。艺术氛围挺好的，想想自己的生活，天天就是对着手机，电脑，钢筋混林土，实在乏味，在这里转了一会，有种别样的感觉，觉得自己此时是一个完整的人。
 
-![文艺气息](https://upload-images.jianshu.io/upload_images/7207268-5ca873eaf1148905.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image.png](https://cdn.jsdelivr.net/gh/goby-ao/picgo@main/img/20240328001403.png)
 
 等了半天只有零零星星的几个人，有一对的，有单身的女生，有还在用电脑办公的。不过我又开始担心，会不会由于疫情买了票的也不敢来了，整场演出就只有我们这十几号人，那不是会有点尴尬。
 
@@ -54,4 +54,4 @@ Always like this.
 
 回想起来，很庆幸我当时做出的选择，及时行乐，下一次不知是何年。
 
-![大合影](https://upload-images.jianshu.io/upload_images/7207268-acebb292da7aa2c5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image.png](https://cdn.jsdelivr.net/gh/goby-ao/picgo@main/img/20240328001422.png)
