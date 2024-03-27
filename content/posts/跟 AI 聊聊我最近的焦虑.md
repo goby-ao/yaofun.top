@@ -1,6 +1,6 @@
 ---
 date: 2024-03-27
-title: 与 AI 对话 - 聊聊人生焦虑
+title: 跟 AI 聊聊我最近的焦虑
 tags:
   - life
 ---
