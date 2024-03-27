@@ -4,22 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "a86a76283e6c8b71",
+        "id": "317557073b5b596c",
         "type": "tabs",
         "children": [
           {
-            "id": "4e7f3b977b54e56f",
+            "id": "2b03c84475112448",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/posts/与 AI 对话 - 聊聊人生焦虑.md",
+                "file": "content/posts/Untitled.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6e4191e46ad98a92",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/posts/我的大模型使用方案.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/posts/与 AI 对话 - 聊聊人生焦虑.md",
+                "file": "content/posts/我的大模型使用方案.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/posts/与 AI 对话 - 聊聊人生焦虑.md",
+                "file": "content/posts/我的大模型使用方案.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/posts/与 AI 对话 - 聊聊人生焦虑.md"
+                "file": "content/posts/我的大模型使用方案.md"
               }
             }
           }
@@ -148,10 +161,13 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "4e7f3b977b54e56f",
+  "active": "6e4191e46ad98a92",
   "lastOpenFiles": [
-    "content/posts/使用 Obsidian 一键发布博客.md",
+    "content/posts/Untitled.md",
+    "content/posts/我的大模型使用方案.md",
     "content/posts/与 AI 对话 - 聊聊人生焦虑.md",
+    "content/posts/2023 国庆云南 2500KM 自驾游.md",
+    "content/posts/使用 Obsidian 一键发布博客.md",
     "content/posts/2023 三亚跨年看海之旅.md",
     "content/running/跑步记录_2024-03-25.md",
     "public/tags/跑步/page/1/index.html",
@@ -164,7 +180,6 @@
     "public/posts/2024/03/重新开始跑步",
     "public/running/page/1/index.html",
     "public/running/跑步记录_2024-03-25/index.html",
-    "content/posts/2023 国庆云南 2500KM 自驾游.md",
     "content/posts/春节自驾回湖北，赶上罕见暴雪.md",
     "content/posts/测试图文混排.md",
     "content/posts/重新开始跑步.md",
@@ -180,7 +195,6 @@
     "content/posts/123.md",
     "Untitled.md",
     "README.md",
-    "content/posts/Untitled.md",
     "content/posts/独自徒步四姑娘山长坪沟.md",
     "public/flags/1x1/ht.svg",
     "public/flags/1x1/es.svg",
@@ -194,7 +208,6 @@
     "public/flags/1x1/gm.svg",
     "content/chat/测试 chat.md",
     "2024-03-20.md",
-    "content/posts/testwrite.md",
-    "content/posts/test quickadd blog.md"
+    "content/posts/testwrite.md"
   ]
 }
