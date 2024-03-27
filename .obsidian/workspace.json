@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "819360c60dbc2dda",
+        "id": "afb24e6efd3b05f7",
         "type": "tabs",
         "children": [
           {
-            "id": "6447dfc0d68e8ea7",
+            "id": "5add551040126ef3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/posts/白日梦想家.md",
+                "file": "content/posts/Before Sunrise - 第一次感受金属乐现场.md",
                 "mode": "source",
                 "source": true
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/posts/白日梦想家.md",
+                "file": "content/posts/Before Sunrise - 第一次感受金属乐现场.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/posts/白日梦想家.md",
+                "file": "content/posts/Before Sunrise - 第一次感受金属乐现场.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/posts/白日梦想家.md"
+                "file": "content/posts/Before Sunrise - 第一次感受金属乐现场.md"
               }
             }
           }
@@ -148,15 +148,16 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "6447dfc0d68e8ea7",
+  "active": "5add551040126ef3",
   "lastOpenFiles": [
+    "content/posts/Before Sunrise - 第一次感受金属乐现场.md",
+    "content/posts/白日梦想家.md",
     "content/posts/2023 国庆云南 2500KM 自驾游.md",
     "content/posts/测试图文混排.md",
     "content/posts/读《非暴力沟通》.md",
     "content/posts/跟 AI 聊聊我最近的焦虑.md",
     "content/posts/我的大模型使用方案.md",
     "content/posts/重新开始跑步.md",
-    "content/posts/白日梦想家.md",
     "content/posts/使用 Obsidian 一键发布博客.md",
     "content/posts/2023 独自徒步四姑娘山长坪沟.md",
     "content/posts/2023 春节自驾回湖北，赶上罕见暴雪.md",
@@ -194,7 +195,6 @@
     "public/flags/1x1/ps.svg",
     "public/flags/1x1/sh.svg",
     "public/flags/1x1/gm.svg",
-    "content/chat/测试 chat.md",
-    "2024-03-20.md"
+    "content/chat/测试 chat.md"
   ]
 }
