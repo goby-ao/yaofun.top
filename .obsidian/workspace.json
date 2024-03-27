@@ -13,9 +13,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/posts/我的大模型使用方案.md",
+                "file": "content/posts/2023 三亚跨年看海之旅.md",
                 "mode": "source",
-                "source": false
+                "source": true
               }
             }
           },
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/posts/我的大模型使用方案.md",
+                "file": "content/posts/2023 三亚跨年看海之旅.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/posts/我的大模型使用方案.md",
+                "file": "content/posts/2023 三亚跨年看海之旅.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/posts/我的大模型使用方案.md"
+                "file": "content/posts/2023 三亚跨年看海之旅.md"
               }
             }
           }
@@ -162,10 +162,10 @@
   },
   "active": "2b03c84475112448",
   "lastOpenFiles": [
+    "content/posts/我的大模型使用方案.md",
     "content/posts/测试图文混排.md",
     "content/posts/使用 Obsidian 一键发布博客.md",
     "content/posts/与 AI 对话 - 聊聊人生焦虑.md",
-    "content/posts/我的大模型使用方案.md",
     "content/posts/Untitled.md",
     "content/posts/2023 国庆云南 2500KM 自驾游.md",
     "content/posts/2023 三亚跨年看海之旅.md",
