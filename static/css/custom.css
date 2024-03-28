@@ -15,3 +15,6 @@
   margin: auto;
   display: block;
 }
+.swiper-button-next:after, .swiper-button-prev:after {
+  font-size: 28px;
+}
