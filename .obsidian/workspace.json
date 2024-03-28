@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/about.md",
+                "file": "content/posts/白日梦想家.md",
                 "mode": "source",
                 "source": true
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/about.md",
+                "file": "content/posts/白日梦想家.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/about.md",
+                "file": "content/posts/白日梦想家.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/about.md"
+                "file": "content/posts/白日梦想家.md"
               }
             }
           }
@@ -150,6 +150,7 @@
   },
   "active": "c7f5cf9e68770abf",
   "lastOpenFiles": [
+    "content/about.md",
     "static/img/cover1.jpeg",
     "public/img/cover3.jpeg",
     "static/img/cover3.jpeg",
@@ -170,10 +171,8 @@
     "public/flags/1x1/gl.svg",
     "public/flags/1x1/qa.svg",
     "public/flags/1x1/pe.svg",
-    "public/flags/1x1/si.svg",
     "content/posts/读《非暴力沟通》.md",
     "content/posts/我的大模型使用方案.md",
-    "content/about.md",
     "content/posts/跟 AI 聊聊我最近的焦虑.md",
     "content/posts/使用 Obsidian 一键发布博客.md",
     "content/posts/Before Sunrise - 第一次感受金属乐现场.md",

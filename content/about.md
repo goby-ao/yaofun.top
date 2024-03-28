@@ -14,5 +14,3 @@ title = "About Me"
 >「 而世之奇伟、瑰怪，非常之观，常在于险远，而人之所罕至焉，故非有志者不能至也 」
 
  欢迎给我留言 ...
-
-我的 hugo 使用的 hello-friend-ng 主题，这是首页的代码的路径 themes/hello-friend-ng/layouts/index.html，我想把 单个 img 改成多个图片轮播，用优雅美观的方式实现，样式一定要有设计感，要美观。请给住详细的修改方案。代码如下：
