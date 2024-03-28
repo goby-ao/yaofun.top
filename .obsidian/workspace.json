@@ -18,8 +18,21 @@
                 "source": true
               }
             }
+          },
+          {
+            "id": "f0c9acfaba8210b1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/posts/在成都遥望雪山.md",
+                "mode": "source",
+                "source": true
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/posts/读《非暴力沟通》.md",
+                "file": "content/posts/在成都遥望雪山.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/posts/读《非暴力沟通》.md",
+                "file": "content/posts/在成都遥望雪山.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/posts/读《非暴力沟通》.md"
+                "file": "content/posts/在成都遥望雪山.md"
               }
             }
           }
@@ -148,19 +161,21 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "c7f5cf9e68770abf",
+  "active": "f0c9acfaba8210b1",
   "lastOpenFiles": [
-    "public/fonts/Inter-Medium.woff",
-    "public/fonts/Inter-Bold.woff",
-    "public/fonts/Inter-Regular.woff2",
-    "public/fonts/Inter-Regular.woff",
-    "public/fonts/Inter-MediumItalic.woff2",
-    "public/fonts/Inter-MediumItalic.woff",
-    "public/fonts/Inter-Medium.woff2",
-    "public/fonts/Inter-Italic.woff2",
-    "public/fonts/Inter-Italic.woff",
-    "public/fonts/Inter-BoldItalic.woff2",
-    "public/fonts/Inter-BoldItalic.woff",
+    "public/posts/2024/03/在成都遥望雪山/index.html",
+    "public/posts/2024/03/在成都遥望雪山",
+    "content/posts/读《非暴力沟通》.md",
+    "public/tags/-tp.system.suggesteritem--item-object.keysapp.metadatacache.gettags.mapx--x.replace#--/page/1/index.html",
+    "public/tags/-tp.system.suggesteritem--item-object.keysapp.metadatacache.gettags.mapx--x.replace#--/page/1",
+    "public/tags/-tp.system.suggesteritem--item-object.keysapp.metadatacache.gettags.mapx--x.replace#--/page",
+    "public/tags/-tp.system.suggesteritem--item-object.keysapp.metadatacache.gettags.mapx--x.replace#--/index.html",
+    "public/tags/-tp.system.suggesteritem--item-object.keysapp.metadatacache.gettags.mapx--x.replace#--/index.xml",
+    "public/tags/-tp.system.suggesteritem--item-object.keysapp.metadatacache.gettags.mapx--x.replace#--",
+    "public/posts/1/01/tp.file.title/index.html",
+    "public/posts/1/01/tp.file.title",
+    "public/posts/1/01",
+    "content/posts/在成都遥望雪山.md",
     "public/flags/1x1/ht.svg",
     "public/flags/1x1/es.svg",
     "public/flags/1x1/gl.svg",
@@ -173,7 +188,6 @@
     "public/flags/1x1/gm.svg",
     "content/posts/白日梦想家.md",
     "content/about.md",
-    "content/posts/读《非暴力沟通》.md",
     "content/posts/我的大模型使用方案.md",
     "content/posts/跟 AI 聊聊我最近的焦虑.md",
     "content/posts/使用 Obsidian 一键发布博客.md",
@@ -194,7 +208,6 @@
     "content/posts/Running_Log_2024-03-25.md",
     "content/posts/Running-log_<% tp.date.now(\"YYYY-[W]ww\") %>.md",
     "content/posts/Running-log.md",
-    "content/posts/123.md",
-    "Untitled.md"
+    "content/posts/123.md"
   ]
 }
