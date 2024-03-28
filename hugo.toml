@@ -162,15 +162,15 @@ disableHugoGeneratorInject = false
 
 
   [[params.Portraits]]
-    Path = "/img/cover0.jpeg"
+    Path = "https://cdn.jsdelivr.net/gh/goby-ao/picgo@main/img/cover0.jpeg"
     Alt = "Image 1 Description"
 
   [[params.Portraits]]
-    Path = "/img/cover1.jpeg"
+    Path = "https://cdn.jsdelivr.net/gh/goby-ao/picgo@main/img/cover1.jpeg"
     Alt = "Image 2 Description"
 
   [[params.Portraits]]
-    Path = "/img/cover2.jpeg"
+    Path = "https://cdn.jsdelivr.net/gh/goby-ao/picgo@main/img/cover2.jpeg"
     Alt = "Image 2 Description"
  
   # # # # # # # # # # # # # # # # # # # # # # # # # # # # #  

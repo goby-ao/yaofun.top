@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/posts/白日梦想家.md",
+                "file": "content/posts/读《非暴力沟通》.md",
                 "mode": "source",
                 "source": true
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/posts/白日梦想家.md",
+                "file": "content/posts/读《非暴力沟通》.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/posts/白日梦想家.md",
+                "file": "content/posts/读《非暴力沟通》.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/posts/白日梦想家.md"
+                "file": "content/posts/读《非暴力沟通》.md"
               }
             }
           }
@@ -152,15 +152,15 @@
   "lastOpenFiles": [
     "public/fonts/Inter-Medium.woff",
     "public/fonts/Inter-Bold.woff",
-    "public/fonts/Inter-BoldItalic.woff",
-    "public/fonts/Inter-MediumItalic.woff",
-    "public/fonts/Inter-Italic.woff2",
-    "public/fonts/Inter-Bold.woff2",
-    "public/fonts/Inter-BoldItalic.woff2",
-    "public/fonts/Inter-MediumItalic.woff2",
-    "public/fonts/Inter-Regular.woff",
-    "public/fonts/Inter-Italic.woff",
     "public/fonts/Inter-Regular.woff2",
+    "public/fonts/Inter-Regular.woff",
+    "public/fonts/Inter-MediumItalic.woff2",
+    "public/fonts/Inter-MediumItalic.woff",
+    "public/fonts/Inter-Medium.woff2",
+    "public/fonts/Inter-Italic.woff2",
+    "public/fonts/Inter-Italic.woff",
+    "public/fonts/Inter-BoldItalic.woff2",
+    "public/fonts/Inter-BoldItalic.woff",
     "public/flags/1x1/ht.svg",
     "public/flags/1x1/es.svg",
     "public/flags/1x1/gl.svg",
@@ -171,6 +171,7 @@
     "public/flags/1x1/ps.svg",
     "public/flags/1x1/sh.svg",
     "public/flags/1x1/gm.svg",
+    "content/posts/白日梦想家.md",
     "content/about.md",
     "content/posts/读《非暴力沟通》.md",
     "content/posts/我的大模型使用方案.md",
@@ -178,7 +179,6 @@
     "content/posts/使用 Obsidian 一键发布博客.md",
     "content/posts/Before Sunrise - 第一次感受金属乐现场.md",
     "content/posts/Apple Watch 使用体验与感受.md",
-    "content/posts/白日梦想家.md",
     "content/posts/2023 国庆云南 2500KM 自驾游.md",
     "content/posts/测试图文混排.md",
     "content/posts/重新开始跑步.md",
