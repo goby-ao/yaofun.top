@@ -166,14 +166,14 @@ disableHugoGeneratorInject = false
   # See https://utteranc.es/ for documentation
   # Uncomment this to enable Utteranc.es.
   #
-  # [params.utterances]
+   [params.utterances]
   #   Your GitHub repository
   #
-  #   repository = ""
+     repository = "goby-ao/goby-ao.github.io"
   #
   #   label used for GitHub issues
   #
-  #   label      = ""
+     label      = "blog comment"
   # 
   #   Blog Post <-> Issue mapping. This parameter is optional. Possible values are:
   #      - pathname
@@ -183,7 +183,7 @@ disableHugoGeneratorInject = false
   #      - issue number
   #      - specific term
   #
-  #   issueTerm  = ""
+     issueTerm  = "title"
   #
   #   Theme used: possible values are:
   #      - github-light
@@ -196,8 +196,8 @@ disableHugoGeneratorInject = false
   #      - boxy-light
   #      - gruvbox-dark
   #
-  #   theme      = ""
-  # 
+     theme      = "github-light"
+
 
   # # # # # # # # # # # # # # # # # # # # # # # # # # # # #  
   # Addon: Social icons
