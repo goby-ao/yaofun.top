@@ -103,7 +103,7 @@ disableHugoGeneratorInject = false
   # Integrate Javascript files or stylesheets by adding the url to the external assets or by
   # linking local files with their path relative to the static folder, e.g. "css/styles.css"
   #
-  customCSS = ["css/m.css"]
+  customCSS = ['/css/custom.css']
   customJS  = []
 
   # Toggle this option need to rebuild SCSS, requires extended version of Hugo
@@ -155,11 +155,24 @@ disableHugoGeneratorInject = false
 
   [params.portrait]
     #path     = "https://raw.githubusercontent.com/goby-ao/picgo/main/img/IMG_6041.jpeg"
-    path     = "/img/cover.jpeg"
-    alt      = "Portrait"
+    #path     = "/img/cover.jpeg"
+    #alt      = "Portrait"
     maxWidth = "690px"
     hello = "「晚来天欲雪，能饮一杯无？」"
 
+
+  [[params.Portraits]]
+    Path = "/img/cover0.jpeg"
+    Alt = "Image 1 Description"
+
+  [[params.Portraits]]
+    Path = "/img/cover1.jpeg"
+    Alt = "Image 2 Description"
+
+  [[params.Portraits]]
+    Path = "/img/cover2.jpeg"
+    Alt = "Image 2 Description"
+ 
   # # # # # # # # # # # # # # # # # # # # # # # # # # # # #  
   # Addon: Utteranc.es
   # # # # # # # # # # # # # # # # # # # # # # # # # # # # #

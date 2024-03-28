@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/posts/跟 AI 聊聊我最近的焦虑.md",
+                "file": "content/about.md",
                 "mode": "source",
                 "source": true
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/posts/跟 AI 聊聊我最近的焦虑.md",
+                "file": "content/about.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/posts/跟 AI 聊聊我最近的焦虑.md",
+                "file": "content/about.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/posts/跟 AI 聊聊我最近的焦虑.md"
+                "file": "content/about.md"
               }
             }
           }
@@ -150,32 +150,43 @@
   },
   "active": "c7f5cf9e68770abf",
   "lastOpenFiles": [
+    "static/img/cover1.jpeg",
+    "public/img/cover3.jpeg",
+    "static/img/cover3.jpeg",
+    "public/img/cover0.jpeg",
+    "static/img/cover0.jpeg",
+    "public/fonts/Inter-Medium.woff",
+    "public/fonts/Inter-Bold.woff",
+    "public/fonts/Inter-BoldItalic.woff",
+    "public/fonts/Inter-MediumItalic.woff",
+    "public/fonts/Inter-Italic.woff2",
+    "public/fonts/Inter-Bold.woff2",
+    "public/fonts/Inter-Regular.woff2",
+    "public/fonts/Inter-Regular.woff",
+    "public/fonts/Inter-MediumItalic.woff2",
+    "public/fonts/Inter-Medium.woff2",
+    "public/flags/1x1/ht.svg",
+    "public/flags/1x1/es.svg",
+    "public/flags/1x1/gl.svg",
+    "public/flags/1x1/qa.svg",
+    "public/flags/1x1/pe.svg",
+    "public/flags/1x1/si.svg",
+    "content/posts/读《非暴力沟通》.md",
     "content/posts/我的大模型使用方案.md",
-    "public/main.1c29c2cb04915bec5717d166517355b8ffcbe07112df6c8f4bf3c42b0dbdbfe1.css",
-    "public/main.fe1705fa71afb01bef6a92cb75dc9bf217dc02268a0ee7332c7699a7e64d1165.css",
-    "public/main.13c15b25122740703a21b781261d61adb952d89b3e65cff3bcfa22292299105c.css",
+    "content/about.md",
+    "content/posts/跟 AI 聊聊我最近的焦虑.md",
     "content/posts/使用 Obsidian 一键发布博客.md",
     "content/posts/Before Sunrise - 第一次感受金属乐现场.md",
-    "public/posts/使用-obsidian-一键发布博客/index.html",
-    "public/posts/使用-obsidian-一键发布博客",
-    "public/posts/我的大模型使用方案/index.html",
-    "public/posts/我的大模型使用方案",
-    "public/posts/跟-ai-聊聊我最近的焦虑/index.html",
-    "public/posts/跟-ai-聊聊我最近的焦虑",
-    "public/posts/重新开始跑步/index.html",
     "content/posts/Apple Watch 使用体验与感受.md",
     "content/posts/白日梦想家.md",
     "content/posts/2023 国庆云南 2500KM 自驾游.md",
     "content/posts/测试图文混排.md",
-    "content/posts/读《非暴力沟通》.md",
-    "content/posts/跟 AI 聊聊我最近的焦虑.md",
     "content/posts/重新开始跑步.md",
     "content/posts/2023 独自徒步四姑娘山长坪沟.md",
     "content/posts/2023 春节自驾回湖北，赶上罕见暴雪.md",
     "content/posts/2023 三亚跨年看海之旅.md",
     "content/posts/Untitled.md",
     "content/running/跑步记录_2024-03-25.md",
-    "content/about.md",
     "template/Write Blog.md",
     "template/Running Diary.md",
     "content/posts/跑步记录_2024-03-25.md",
@@ -184,16 +195,6 @@
     "content/posts/Running-log_<% tp.date.now(\"YYYY-[W]ww\") %>.md",
     "content/posts/Running-log.md",
     "content/posts/123.md",
-    "Untitled.md",
-    "public/flags/1x1/ht.svg",
-    "public/flags/1x1/es.svg",
-    "public/flags/1x1/gl.svg",
-    "public/flags/1x1/qa.svg",
-    "public/flags/1x1/pe.svg",
-    "public/flags/1x1/si.svg",
-    "public/flags/1x1/pr.svg",
-    "public/flags/1x1/ps.svg",
-    "public/flags/1x1/sh.svg",
-    "public/flags/1x1/gm.svg"
+    "Untitled.md"
   ]
 }

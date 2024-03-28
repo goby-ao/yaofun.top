@@ -4,19 +4,34 @@
 
 {{ define "main" }}
     <main aria-role="main">
-        <div style="max-width:690px">
-            {{ if .Site.Params.Portrait.Path }}
-               <img src="{{ .Site.Params.Portrait.Path }}" class="" alt="{{ .Site.Params.Portrait.Alt }}" style="border-radius: 22px;max-width: 100%;padding:12px;height: auto;" />
-            {{ end }}
-
-            <p>{{ .Site.Params.Portrait.hello }}</p>
-            {{ partial "subtitle.html" . }}
-
-            {{- with .Site.Params.social }}
-                <div style="margin-top: 20px;">
-                    {{ partial "social-icons.html" . }}
+<div style="max-width:620px">
+        <!-- Swiper -->
+        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <!-- 单个Slide -->
+                {{ range .Site.Params.Portraits }}
+                <div class="swiper-slide">
+                    <img src="{{ .Path }}" alt="{{ .Alt }}" style="border-radius: 22px;max-width: 100%; height: auto;" loading = "lazy">
+                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                 </div>
-            {{- end }}
+                {{ end }}
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+
+            <!-- 如果需要导航按钮 -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
+
+        <p>{{ .Site.Params.Portrait.hello }}</p>
+        {{ partial "subtitle.html" . }}
+        
+        {{- with .Site.Params.social }}
+            <div style="margin-top: 20px;">
+                {{ partial "social-icons.html" . }}
+            </div>
+        {{- end }}
+    </div>
     </main>
 {{ end }}

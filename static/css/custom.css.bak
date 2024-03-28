@@ -1,0 +1,15 @@
+/* 修改箭头颜色和样式 */
+.swiper-button-prev:hover, .swiper-button-next:hover {
+    color: #fff; /* 鼠标悬停时更明显的白色 */
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-pagination-bullet {
+    border: 2px solid #fff; /* 边框颜色 */
+    background: transparent; /* 背景透明 */
+}
