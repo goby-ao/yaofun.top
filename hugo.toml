@@ -4,7 +4,8 @@ languageCode = "zh-cn"
 theme = "hello-friend-ng"
 
 PygmentsCodeFences = true
-PygmentsStyle = "monokai"
+#PygmentsStyle = "monokai"
+PygmentsStyle = "github-dark"
 
 paginate  = 14
 rssLimit  = 10  # Maximum number of items in the RSS feed.
@@ -208,6 +209,14 @@ disableHugoGeneratorInject = false
     url  = "https://twitter.com/Sunflowers724"
 
   [[params.social]]
+    name = "weibo"
+    url  = "https://weibo.com/u/1714318434"
+
+  [[params.social]]
+    name = "bilibili"
+    url  = "https://space.bilibili.com/28799872"
+
+  [[params.social]]
     name = "email"
     url  = "mailto:tracyao@outlook.com"
 
@@ -220,7 +229,7 @@ disableHugoGeneratorInject = false
     weight    = 1
     copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
   [languages.en.params]
-    subtitle  = ""
+    subtitle  = "Yao's Blog"
 
 [menu]
   [[menu.main]]
