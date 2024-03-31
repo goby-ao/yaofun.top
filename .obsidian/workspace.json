@@ -26,13 +26,25 @@
               "type": "markdown",
               "state": {
                 "file": "content/posts/在成都遥望雪山.md",
+                "mode": "preview",
+                "source": true
+              }
+            }
+          },
+          {
+            "id": "8a1f8ee3ebe9aae0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/running/跑步记录_2024-03-31.md",
                 "mode": "source",
                 "source": true
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -98,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/posts/在成都遥望雪山.md",
+                "file": "content/running/跑步记录_2024-03-31.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/posts/在成都遥望雪山.md",
+                "file": "content/running/跑步记录_2024-03-31.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/posts/在成都遥望雪山.md"
+                "file": "content/running/跑步记录_2024-03-31.md"
               }
             }
           }
@@ -161,8 +173,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "f0c9acfaba8210b1",
+  "active": "8a1f8ee3ebe9aae0",
   "lastOpenFiles": [
+    "content/posts/在成都遥望雪山.md",
+    "content/running/跑步记录_2024-03-31.md",
+    "content/running/跑步记录_2024-03-25.md",
     "public/main.5f93a4538d01dacb17dc65959d5c410de111649f61fd9f5b8d4b049576dd2826.css",
     "public/fonts/Inter-Regular.woff2",
     "public/fonts/Inter-Regular.woff",
@@ -173,7 +188,6 @@
     "public/fonts/Inter-Italic.woff2",
     "public/fonts/Inter-BoldItalic.woff2",
     "public/fonts/Inter-Italic.woff",
-    "public/fonts/Inter-BoldItalic.woff",
     "public/flags/1x1/ht.svg",
     "public/flags/1x1/es.svg",
     "public/flags/1x1/gl.svg",
@@ -185,7 +199,6 @@
     "public/flags/1x1/sh.svg",
     "public/flags/1x1/gm.svg",
     "content/posts/读《非暴力沟通》.md",
-    "content/posts/在成都遥望雪山.md",
     "content/posts/白日梦想家.md",
     "content/about.md",
     "content/posts/我的大模型使用方案.md",
@@ -200,7 +213,6 @@
     "content/posts/2023 春节自驾回湖北，赶上罕见暴雪.md",
     "content/posts/2023 三亚跨年看海之旅.md",
     "content/posts/Untitled.md",
-    "content/running/跑步记录_2024-03-25.md",
     "template/Write Blog.md",
     "template/Running Diary.md",
     "content/posts/跑步记录_2024-03-25.md",
