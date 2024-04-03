@@ -42,9 +42,21 @@
                 "source": true
               }
             }
+          },
+          {
+            "id": "57f1adb4af177f13",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/posts/读《我的精神家园》.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -110,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/running/跑步记录_2024-03-31.md",
+                "file": "content/posts/读《我的精神家园》.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/running/跑步记录_2024-03-31.md",
+                "file": "content/posts/读《我的精神家园》.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/running/跑步记录_2024-03-31.md"
+                "file": "content/posts/读《我的精神家园》.md"
               }
             }
           }
@@ -173,10 +185,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "8a1f8ee3ebe9aae0",
+  "active": "57f1adb4af177f13",
   "lastOpenFiles": [
-    "content/posts/在成都遥望雪山.md",
     "content/running/跑步记录_2024-03-31.md",
+    "content/posts/读《我的精神家园》.md",
+    "content/posts/在成都遥望雪山.md",
     "content/running/跑步记录_2024-03-25.md",
     "public/main.5f93a4538d01dacb17dc65959d5c410de111649f61fd9f5b8d4b049576dd2826.css",
     "public/fonts/Inter-Regular.woff2",
@@ -219,7 +232,6 @@
     "content/posts/你在说什么.md",
     "content/posts/Running_Log_2024-03-25.md",
     "content/posts/Running-log_<% tp.date.now(\"YYYY-[W]ww\") %>.md",
-    "content/posts/Running-log.md",
-    "content/posts/123.md"
+    "content/posts/Running-log.md"
   ]
 }
