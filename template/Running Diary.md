@@ -3,8 +3,10 @@ date: <% tp.file.creation_date("YYYY-MM-DD") %>
 title: 跑步周报_<% tp.date.now("YYYY-[W]ww") %>
 tags:
   - 跑步
+  - life
 ---
-## 跑步记录 🏃‍♂️
+> 丢下手机，去运动、去阅读，好好生活。
+## 运动记录 🏃‍♂️
 
 ## 平均睡眠时间 💤
 
