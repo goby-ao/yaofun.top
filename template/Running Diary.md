@@ -1,6 +1,6 @@
 ---
 date: <% tp.file.creation_date("YYYY-MM-DD") %>
-title: 跑步周报_<% tp.date.now("YYYY-[W]ww") %>
+title: 运动周报_<% tp.date.now("YYYY-[W]ww") %>
 tags:
   - 跑步
   - life
@@ -15,3 +15,4 @@ tags:
 
 ## 阅读记录 📚
 
+## 周末生活
