@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/running/跑步记录_2024-04-15.md",
+                "file": "content/running/跑步记录_2024-04-22.md",
                 "mode": "source",
                 "source": true
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/running/跑步记录_2024-04-15.md",
+                "file": "content/running/跑步记录_2024-04-22.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/running/跑步记录_2024-04-15.md",
+                "file": "content/running/跑步记录_2024-04-22.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/running/跑步记录_2024-04-15.md"
+                "file": "content/running/跑步记录_2024-04-22.md"
               }
             }
           }
@@ -150,17 +150,19 @@
   },
   "active": "2ef63e5990bcd938",
   "lastOpenFiles": [
-    "content/running/跑步记录_2024-04-07.md",
     "content/running/跑步记录_2024-04-15.md",
+    "content/running/跑步记录_2024-04-07.md",
+    "content/running/跑步记录_2024-03-31.md",
+    "content/running/跑步记录_2024-04-22.md",
+    "content/about.md",
+    "content/posts/在成都遥望雪山.md",
+    "content/posts/跟 AI 聊聊我最近的焦虑.md",
+    "content/posts/读《非暴力沟通》.md",
+    "content/posts/读《我的精神家园》.md",
     "template/Running Diary.md",
     "template/Write Blog.md",
-    "content/running/跑步记录_2024-03-31.md",
-    "content/about.md",
     "content/posts/我的大模型使用方案.md",
     "content/posts/使用 Obsidian 一键发布博客.md",
-    "content/posts/读《我的精神家园》.md",
-    "content/posts/读《非暴力沟通》.md",
-    "content/posts/在成都遥望雪山.md",
     "content/reading",
     "content/running/跑步记录_2024-03-25.md",
     "public/main.5f93a4538d01dacb17dc65959d5c410de111649f61fd9f5b8d4b049576dd2826.css",
@@ -183,7 +185,6 @@
     "public/flags/1x1/sh.svg",
     "public/flags/1x1/gm.svg",
     "content/posts/白日梦想家.md",
-    "content/posts/跟 AI 聊聊我最近的焦虑.md",
     "content/posts/Before Sunrise - 第一次感受金属乐现场.md",
     "content/posts/Apple Watch 使用体验与感受.md",
     "content/posts/2023 国庆云南 2500KM 自驾游.md",
@@ -194,7 +195,6 @@
     "content/posts/2023 三亚跨年看海之旅.md",
     "content/posts/Untitled.md",
     "content/posts/跑步记录_2024-03-25.md",
-    "content/posts/你在说什么.md",
-    "content/posts/Running_Log_2024-03-25.md"
+    "content/posts/你在说什么.md"
   ]
 }
