@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/running/跑步记录_2024-04-22.md",
+                "file": "content/posts/读《我的精神家园》.md",
                 "mode": "source",
                 "source": true
               }
             }
+          },
+          {
+            "id": "754d509d88433441",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/running/跑步记录_2024-04-22.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -148,17 +161,19 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "2ef63e5990bcd938",
+  "active": "754d509d88433441",
   "lastOpenFiles": [
+    "content/posts/读《绿毛水怪》.md",
+    "content/posts/读《我的精神家园》.md",
+    "content/posts/Untitled.md",
+    "content/posts/读《非暴力沟通》.md",
+    "content/running/跑步记录_2024-04-22.md",
     "content/running/跑步记录_2024-04-15.md",
     "content/running/跑步记录_2024-04-07.md",
     "content/running/跑步记录_2024-03-31.md",
-    "content/running/跑步记录_2024-04-22.md",
     "content/about.md",
     "content/posts/在成都遥望雪山.md",
     "content/posts/跟 AI 聊聊我最近的焦虑.md",
-    "content/posts/读《非暴力沟通》.md",
-    "content/posts/读《我的精神家园》.md",
     "template/Running Diary.md",
     "template/Write Blog.md",
     "content/posts/我的大模型使用方案.md",
@@ -193,8 +208,6 @@
     "content/posts/2023 独自徒步四姑娘山长坪沟.md",
     "content/posts/2023 春节自驾回湖北，赶上罕见暴雪.md",
     "content/posts/2023 三亚跨年看海之旅.md",
-    "content/posts/Untitled.md",
-    "content/posts/跑步记录_2024-03-25.md",
-    "content/posts/你在说什么.md"
+    "content/posts/跑步记录_2024-03-25.md"
   ]
 }
