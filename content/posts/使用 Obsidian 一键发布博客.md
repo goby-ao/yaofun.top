@@ -24,7 +24,7 @@ tags:
 - 图片顺畅加载：github 图床国内访问有点难
 
 参考一些大佬的配置，最终的选型如下：
-- Obsidian + git 插件 ：markdown 写作，git 插件自动上传 github
+- Obsidian + obsidian git 插件 ：markdown 写作，obsidian git 插件自动上传 github
 - Hugo：静态网站构建工具
 - Github  + Github Action ：源码托管，自动化编译（*emmm，github 应该不会倒闭*）
 - Cloudflare Page：静态网站托管 （也可以直接用 github page 托管）
