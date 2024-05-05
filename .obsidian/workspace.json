@@ -18,8 +18,21 @@
                 "source": true
               }
             }
+          },
+          {
+            "id": "a17c0daf66ace1e0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/posts/读《当我谈跑步时，我谈些什么》.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/running/跑步记录_2024-04-29.md",
+                "file": "content/posts/读《当我谈跑步时，我谈些什么》.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/running/跑步记录_2024-04-29.md",
+                "file": "content/posts/读《当我谈跑步时，我谈些什么》.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/running/跑步记录_2024-04-29.md"
+                "file": "content/posts/读《当我谈跑步时，我谈些什么》.md"
               }
             }
           }
@@ -148,13 +161,14 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "2ef63e5990bcd938",
+  "active": "a17c0daf66ace1e0",
   "lastOpenFiles": [
-    "content/about.md",
+    "content/running/跑步记录_2024-04-29.md",
+    "content/posts/读《当我谈跑步时，我谈些什么》.md",
     "content/running/跑步记录_2024-04-22.md",
+    "content/about.md",
     "content/running/跑步记录_2024-04-15.md",
     "content/running/跑步记录_2024-03-31.md",
-    "content/running/跑步记录_2024-04-29.md",
     "content/posts/读《我的精神家园》.md",
     "content/posts/使用 Obsidian 一键发布博客.md",
     "content/posts/Before Sunrise - 第一次感受金属乐现场.md",
@@ -194,7 +208,6 @@
     "content/posts/测试图文混排.md",
     "content/posts/重新开始跑步.md",
     "content/posts/2023 独自徒步四姑娘山长坪沟.md",
-    "content/posts/2023 春节自驾回湖北，赶上罕见暴雪.md",
-    "content/posts/2023 三亚跨年看海之旅.md"
+    "content/posts/2023 春节自驾回湖北，赶上罕见暴雪.md"
   ]
 }
