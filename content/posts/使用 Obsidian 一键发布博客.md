@@ -15,13 +15,14 @@ tags:
 
 偶然的机会看到文章： [obsidian 配合 hugo、cloudflare：让发布博客简单到不可思议](https://lillianwho.com/posts/obsidian-hugo-cloudflare/)，心动入坑，花了近一周的时间研究折腾，终于把基于 obsidian 的博客写作与发布工作流搭建起来了，现在可以愉快的一键发布啦。
 
-从 0 到 1 折腾踩坑，整个过程好似「**晨兴理荒秽，带月荷锄归**」，心累，年纪再大点肯定折腾不动的，怕麻烦的劝退。
+从 0 到 1 折腾踩坑，整个过程好似「**晨兴理荒秽，带月荷锄归**」，心累，年纪再大点肯定折腾不动的，这里首先强烈建议怕麻烦同学的劝退。
 
 ## 博客方案
+
 折腾前我整理出自己的博客需求如下：
 - 简单快捷：使用 Obsidian 写完，一键发布
 - 稳定靠谱：减少第三方依赖，尽量使用靠谱的第三方服务，例如 github
-- 图片顺畅加载：github 图床国内访问有点难
+- 图片能够顺畅加载：github 图床国内访问有点难
 
 参考一些大佬的配置，最终的选型如下：
 - Obsidian + obsidian git 插件 ：markdown 写作，obsidian git 插件自动上传 github
@@ -30,9 +31,12 @@ tags:
 - Cloudflare Page：静态网站托管 （也可以直接用 github page 托管）
 - Picgo + jsdelivr：基于 github 的图床 、cdn 加速
 
-本站源码与主题：
+最终达到的效果是：
+在 obsidian 写文章，通过快捷键一件上传到 git 之后，自动构建发布。
+图片在 obsidian 可以自动上传到 github 图床，并且转为 cdn jsdelivr 加速。
+
+本站源码：
 - [GitHub - goby-ao/yaofun.top: my blog](https://github.com/goby-ao/yaofun.top/)
-- [GitHub - rhazdon/hugo-theme-hello-friend-ng](https://github.com/rhazdon/hugo-theme-hello-friend-ng)
 
 参考与致谢：
 - [折腾 :: 木木木木木](https://immmmm.com/tags/%E6%8A%98%E8%85%BE/)
