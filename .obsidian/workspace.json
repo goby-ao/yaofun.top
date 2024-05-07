@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/running/跑步记录_2024-04-29.md",
+                "file": "template/Write Blog.md",
                 "mode": "preview",
                 "source": true
               }
@@ -37,14 +37,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/posts/使用 Obsidian 一键发布博客.md",
+                "file": "content/posts/重新开始跑步.md",
                 "mode": "source",
                 "source": false
               }
             }
+          },
+          {
+            "id": "75fb1f2abe276086",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/running/跑步记录_2024-05-07.md",
+                "mode": "source",
+                "source": true
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -73,7 +85,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "421302",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -110,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/posts/使用 Obsidian 一键发布博客.md",
+                "file": "content/running/跑步记录_2024-05-07.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/posts/使用 Obsidian 一键发布博客.md",
+                "file": "content/running/跑步记录_2024-05-07.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/posts/使用 Obsidian 一键发布博客.md"
+                "file": "content/running/跑步记录_2024-05-07.md"
               }
             }
           }
@@ -173,13 +185,17 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "5b570cf59b5fde7b",
+  "active": "75fb1f2abe276086",
   "lastOpenFiles": [
-    "content/posts/测试.md",
+    "template/Write Blog.md",
+    "content/running/跑步记录_2024-05-07.md",
     "content/posts/使用 Obsidian 一键发布博客.md",
-    "content/posts/Untitled.md",
     "content/posts/读《当我谈跑步时，我谈些什么》.md",
     "content/running/跑步记录_2024-04-29.md",
+    "content/posts/重新开始跑步.md",
+    "template/Running Diary.md",
+    "content/posts/测试.md",
+    "content/posts/Untitled.md",
     "content/running/跑步记录_2024-04-22.md",
     "content/about.md",
     "content/running/跑步记录_2024-04-15.md",
@@ -191,8 +207,6 @@
     "content/running/跑步记录_2024-04-07.md",
     "content/posts/在成都遥望雪山.md",
     "content/posts/跟 AI 聊聊我最近的焦虑.md",
-    "template/Running Diary.md",
-    "template/Write Blog.md",
     "content/posts/我的大模型使用方案.md",
     "content/reading",
     "content/running/跑步记录_2024-03-25.md",
@@ -218,8 +232,6 @@
     "content/posts/白日梦想家.md",
     "content/posts/Apple Watch 使用体验与感受.md",
     "content/posts/2023 国庆云南 2500KM 自驾游.md",
-    "content/posts/测试图文混排.md",
-    "content/posts/重新开始跑步.md",
-    "content/posts/2023 独自徒步四姑娘山长坪沟.md"
+    "content/posts/测试图文混排.md"
   ]
 }
