@@ -22,7 +22,7 @@ tags:
 折腾前我整理出自己的博客需求如下：
 - 简单快捷：使用 Obsidian 写完，一键发布
 - 稳定靠谱：减少第三方依赖，尽量使用靠谱的第三方服务，例如 github
-- 图片能够顺畅加载：github 图床国内访问有点难
+- 图片能够顺畅加载：之前直接使用 github 做图床，国内访问很慢
 
 参考一些大佬的配置，最终的选型如下：
 - Obsidian + obsidian git 插件 ：markdown 写作，obsidian git 插件自动上传 github

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/posts/我的大模型使用方案.md",
+                "file": "content/posts/使用 Obsidian 一键发布博客.md",
                 "mode": "source",
                 "source": true
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/posts/我的大模型使用方案.md",
+                "file": "content/posts/使用 Obsidian 一键发布博客.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/posts/我的大模型使用方案.md",
+                "file": "content/posts/使用 Obsidian 一键发布博客.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/posts/我的大模型使用方案.md"
+                "file": "content/posts/使用 Obsidian 一键发布博客.md"
               }
             }
           }
@@ -150,6 +150,7 @@
   },
   "active": "2caba4646f42df9e",
   "lastOpenFiles": [
+    "content/posts/我的大模型使用方案.md",
     "content/running/跑步记录_2024-05-14.md",
     "template/Write Blog.md",
     "content/posts/使用 Obsidian 一键发布博客.md",
@@ -175,7 +176,6 @@
     "content/posts/读《我的精神家园》.md",
     "content/posts/Before Sunrise - 第一次感受金属乐现场.md",
     "content/posts/读《绿毛水怪》.md",
-    "content/posts/读《非暴力沟通》.md",
     "content/reading",
     "public/main.5f93a4538d01dacb17dc65959d5c410de111649f61fd9f5b8d4b049576dd2826.css",
     "public/fonts/Inter-Regular.woff2",
