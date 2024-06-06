@@ -33,7 +33,10 @@ tags:
 
 最终达到的效果是：
 在 obsidian 写文章，通过快捷键一件上传到 git 之后，自动构建发布。
-图片在 obsidian 可以自动上传到 github 图床，并且转为 cdn jsdelivr 加速。
+图片在 obsidian 可以自动上传到 github 图床，并且转为 cdn jsdelivr 加速。如下图所示：
+
+![image.png](https://cdn.jsdelivr.net/gh/goby-ao/picgo@main/img/20240606232431.png)
+
 
 本站源码：
 - [GitHub - goby-ao/yaofun.top: my blog](https://github.com/goby-ao/yaofun.top/)
