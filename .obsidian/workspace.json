@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/running/跑步记录_2024-05-14.md",
+                "file": "content/posts/我的大模型使用方案.md",
                 "mode": "source",
                 "source": true
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/running/跑步记录_2024-05-14.md",
+                "file": "content/posts/我的大模型使用方案.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/running/跑步记录_2024-05-14.md",
+                "file": "content/posts/我的大模型使用方案.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/running/跑步记录_2024-05-14.md"
+                "file": "content/posts/我的大模型使用方案.md"
               }
             }
           }
@@ -150,10 +150,10 @@
   },
   "active": "2caba4646f42df9e",
   "lastOpenFiles": [
+    "content/running/跑步记录_2024-05-14.md",
     "template/Write Blog.md",
     "content/posts/使用 Obsidian 一键发布博客.md",
     "2024-05-16.md",
-    "content/running/跑步记录_2024-05-14.md",
     "content/posts/跑步新手入门指南.md",
     "content/posts/23.md",
     "content/posts/234.md",
