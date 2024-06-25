@@ -18,8 +18,21 @@
                 "source": true
               }
             }
+          },
+          {
+            "id": "e5d1ab8dd001c943",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/posts/2024 年中工作总结.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -48,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:tp.system.suggester(item",
+                "query": "tag:谈谈技术",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,7 +78,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -85,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/posts/使用 Obsidian 一键发布博客.md",
+                "file": "content/posts/2024 年中工作总结.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/posts/使用 Obsidian 一键发布博客.md",
+                "file": "content/posts/2024 年中工作总结.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/posts/使用 Obsidian 一键发布博客.md"
+                "file": "content/posts/2024 年中工作总结.md"
               }
             }
           }
@@ -148,12 +162,13 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "2caba4646f42df9e",
+  "active": "e5d1ab8dd001c943",
   "lastOpenFiles": [
+    "content/posts/使用 Obsidian 一键发布博客.md",
+    "content/posts/2024 年中工作总结.md",
     "content/posts/我的大模型使用方案.md",
     "content/running/跑步记录_2024-05-14.md",
     "template/Write Blog.md",
-    "content/posts/使用 Obsidian 一键发布博客.md",
     "2024-05-16.md",
     "content/posts/跑步新手入门指南.md",
     "content/posts/23.md",
@@ -175,7 +190,6 @@
     "content/running/跑步记录_2024-03-31.md",
     "content/posts/读《我的精神家园》.md",
     "content/posts/Before Sunrise - 第一次感受金属乐现场.md",
-    "content/posts/读《绿毛水怪》.md",
     "content/reading",
     "public/main.5f93a4538d01dacb17dc65959d5c410de111649f61fd9f5b8d4b049576dd2826.css",
     "public/fonts/Inter-Regular.woff2",
