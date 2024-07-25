@@ -20,13 +20,13 @@
             }
           },
           {
-            "id": "e5d1ab8dd001c943",
+            "id": "cfa72a33280253a4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/posts/2024 年中工作总结.md",
-                "mode": "preview",
+                "file": "content/posts/2024 阿坝草原之旅.md",
+                "mode": "source",
                 "source": true
               }
             }
@@ -78,8 +78,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -99,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/posts/2024 年中工作总结.md",
+                "file": "content/posts/2024 阿坝草原之旅.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/posts/2024 年中工作总结.md",
+                "file": "content/posts/2024 阿坝草原之旅.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/posts/2024 年中工作总结.md"
+                "file": "content/posts/2024 阿坝草原之旅.md"
               }
             }
           }
@@ -162,9 +161,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "e5d1ab8dd001c943",
+  "active": "cfa72a33280253a4",
   "lastOpenFiles": [
     "content/posts/使用 Obsidian 一键发布博客.md",
+    "content/posts/2024 阿坝草原之旅.md",
     "content/posts/2024 年中工作总结.md",
     "content/posts/我的大模型使用方案.md",
     "content/running/跑步记录_2024-05-14.md",
@@ -189,7 +189,6 @@
     "content/running/跑步记录_2024-04-15.md",
     "content/running/跑步记录_2024-03-31.md",
     "content/posts/读《我的精神家园》.md",
-    "content/posts/Before Sunrise - 第一次感受金属乐现场.md",
     "content/reading",
     "public/main.5f93a4538d01dacb17dc65959d5c410de111649f61fd9f5b8d4b049576dd2826.css",
     "public/fonts/Inter-Regular.woff2",
