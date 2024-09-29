@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/posts/跑步新手入门指南.md",
+                "file": "content/posts/2024 川西阿坝草原之旅.md",
                 "mode": "source",
                 "source": true
               }
@@ -44,7 +44,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/posts/跑步新手入门指南.md",
+                "file": "content/posts/生活在别处.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/posts/跑步新手入门指南.md",
+                "file": "content/posts/生活在别处.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/posts/跑步新手入门指南.md"
+                "file": "content/posts/生活在别处.md"
               }
             }
           }
@@ -173,12 +173,13 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "cfa72a33280253a4",
+  "active": "ac5f7db27b64248c",
   "lastOpenFiles": [
-    "content/posts/跟 AI 聊聊我最近的焦虑.md",
-    "content/posts/跑步新手入门指南.md",
-    "content/posts/跑步入门指南.md",
     "content/posts/2024 川西阿坝草原之旅.md",
+    "content/posts/读《绿毛水怪》.md",
+    "content/posts/跑步新手入门指南.md",
+    "content/posts/跟 AI 聊聊我最近的焦虑.md",
+    "content/posts/跑步入门指南.md",
     "content/posts/生活在别处.md",
     "1.md",
     "content/posts/使用 Obsidian 一键发布博客.md",
@@ -200,7 +201,6 @@
     "content/posts/测试.md",
     "content/posts/Untitled.md",
     "content/running/跑步记录_2024-04-22.md",
-    "content/about.md",
     "content/reading",
     "public/main.5f93a4538d01dacb17dc65959d5c410de111649f61fd9f5b8d4b049576dd2826.css",
     "public/fonts/Inter-Regular.woff2",
