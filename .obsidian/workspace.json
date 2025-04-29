@@ -20,8 +20,37 @@
               "icon": "lucide-file",
               "title": "读《人类群星闪耀时》"
             }
+          },
+          {
+            "id": "b2a1f207306dfd51",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/posts/大行 P8 折叠自行车折腾记.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "大行 P8 折叠自行车折腾记"
+            }
+          },
+          {
+            "id": "90c95f0e9a15f386",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/posts/读《掌控习惯》.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "读《掌控习惯》"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -140,10 +169,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/posts/how to consist target.md"
+                "file": "content/posts/读《掌控习惯》.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of how to consist target"
+              "title": "Outline of 读《掌控习惯》"
             }
           }
         ],
@@ -151,8 +183,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -165,10 +196,13 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "f431a5a07674a8eb",
+  "active": "90c95f0e9a15f386",
   "lastOpenFiles": [
-    "content/posts/读《当我谈跑步时，我谈些什么》.md",
+    "content/posts/大行 P8 折叠自行车折腾记.md",
+    "content/posts/读《掌控习惯》.md",
     "content/posts/读《人类群星闪耀时》.md",
+    "content/posts/站在回家的十字路口的人潮中，我时常想起巴尔沃亚在山顶的那个黎明。太平洋的波涛在他脚下翻涌，而我们的战场早已从蛮荒大陆转移到内心的旷野。每个在通勤电车上构思小说的人，每个在深夜实验室等待数据结果的研究员，都在续写着人类勇气史的新篇章。也许真正的群星闪耀时刻，就藏在我们拒绝被生活驯服的每个清晨。.md",
+    "content/posts/读《当我谈跑步时，我谈些什么》.md",
     "content/posts/在成都遥望雪山.md",
     "content/posts/使用 Obsidian 一键发布博客.md",
     "content/posts/Untitled.md",
@@ -190,9 +224,6 @@
     "content/running/跑步记录_2024-05-14.md",
     "template/Write Blog.md",
     "2024-05-16.md",
-    "content/posts/23.md",
-    "content/posts/234.md",
-    "content/posts/跑步入门.md",
     "content/reading",
     "public/main.5f93a4538d01dacb17dc65959d5c410de111649f61fd9f5b8d4b049576dd2826.css",
     "public/fonts/Inter-Regular.woff2",
