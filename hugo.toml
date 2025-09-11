@@ -122,15 +122,14 @@ disableHugoGeneratorInject = false
   # If you want, you can easily override the default footer with your own content. 
   #
   [params.footer]
-    trademark = 2024
+    trademark = 
     rss = false
     copyright = false 
-    author = true
+    author = false
 
     topText = []
     bottomText = [
-      "Powered by <a href=\"http://gohugo.io\">Hugo</a>",
-      "Made with &#10084; by <a href=\"https://github.com/rhazdon\">Djordje Atlialp</a>"
+      "Powered by <a href=\"http://gohugo.io\">Hugo</a>"
     ]
 
   # Colors for favicons
