@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/posts/2025 年春节旅行：边境，阳光，与缓慢的迁徙.md",
+                "file": "content/posts/2025 登四姑娘山大峰：Welcome Home.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "2025 年春节旅行：边境，阳光，与缓慢的迁徙"
+              "title": "2025 登四姑娘山大峰：Welcome Home"
             }
           }
         ],
@@ -197,13 +197,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/posts/2025 年春节旅行：边境，阳光，与缓慢的迁徙.md",
+                "file": "content/posts/2025 登四姑娘山大峰：Welcome Home.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2025 年春节旅行：边境，阳光，与缓慢的迁徙"
+              "title": "Outline of 2025 登四姑娘山大峰：Welcome Home"
             }
           }
         ],
@@ -226,10 +226,10 @@
       "obsidian-md2wechat:排版到公众号": false
     }
   },
-  "active": "55fd024de68c0d03",
+  "active": "4205369dd205f993",
   "lastOpenFiles": [
-    "content/posts/生活在别处.md",
     "content/posts/2025 年春节旅行：边境，阳光，与缓慢的迁徙.md",
+    "content/posts/生活在别处.md",
     "content/posts/我的大模型使用方案.md",
     "content/posts/大行 P8 折叠自行车折腾记.md",
     "content/posts/人生中的 2025 .md",
