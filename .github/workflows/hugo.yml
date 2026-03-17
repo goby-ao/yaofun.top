@@ -11,14 +11,14 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
-              uses: actions/checkout@v3
+              uses: actions/checkout@v4
               with:
                   submodules: true
                   fetch-depth: 0
                   ref: master # 这里选择你触发部署的分支！默认是 master
 
             - name: Setup Hugo
-              uses: peaceiris/actions-hugo@v2
+              uses: peaceiris/actions-hugo@v3
               with:
                   hugo-version: "latest"
                   extended: true # 用 stack 主题需要加这个配置
