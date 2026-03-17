@@ -20,7 +20,7 @@ jobs:
             - name: Setup Hugo
               uses: peaceiris/actions-hugo@v3
               with:
-                  hugo-version: "0.122.0"
+                  hugo-version: "latest"
                   extended: true # 用 stack 主题需要加这个配置
 
             - name: Build Web
