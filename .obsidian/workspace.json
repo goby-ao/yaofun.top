@@ -85,7 +85,7 @@
               "state": {
                 "file": "content/posts/《人生中的 2024》.md",
                 "mode": "source",
-                "source": true
+                "source": false
               },
               "icon": "lucide-file",
               "title": "《人生中的 2024》"
