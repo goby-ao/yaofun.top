@@ -1,6 +1,6 @@
 ---
 date: 2026-04-16
-title: 我们的第一次演唱会 - 《杨千嬅 Live my live 1.0》
+title: 我们的第一次演唱会 - 《杨千嬅 Live MY LIVE 1.0》
 draft: false
 tags:
   - life
