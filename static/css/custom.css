@@ -1,5 +1,3 @@
-@import url("https://google-fonts.mirrors.sjtug.sjtu.edu.cn/css2?family=Noto+Serif+SC:wght@400;600;900&display=swap");
-
 body {
   font-family:
     "Noto Serif SC",
@@ -16,6 +14,31 @@ body {
     "Microsoft YaHei",
     "Microsoft JhengHei",
     serif;
+}
+
+.post-content {
+  font-family:
+    "Noto Serif SC",
+    "Source Han Serif SC",
+    "Songti SC",
+    "STSong",
+    "STZhongsong",
+    "SimSun",
+    "NSimSun",
+    "FangSong",
+    "KaiTi",
+    "PingFang SC",
+    "Hiragino Sans GB",
+    "Microsoft YaHei",
+    "Microsoft JhengHei",
+    serif;
+  font-weight: 500;
+  color: #1a1a1a;
+  font-size: 17px;
+  line-height: 1.8;
+  letter-spacing: 0.02em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .swiper-container {
