@@ -1,48 +1,54 @@
 body {
   font-family:
-    "Noto Serif SC",
-    "Source Han Serif SC",
-    "Songti SC",
-    "STSong",
-    "STZhongsong",
-    "SimSun",
-    "NSimSun",
-    "FangSong",
-    "KaiTi",
+    -apple-system,
+    BlinkMacSystemFont,
     "PingFang SC",
     "Hiragino Sans GB",
     "Microsoft YaHei",
+    "Source Han Sans SC",
+    "Noto Sans CJK SC",
     "Microsoft JhengHei",
-    serif;
+    sans-serif;
+  font-weight: 400;
+  color: #333333;
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: 0.02em;
 }
 
 .post-content {
-  font-family:
-    "Noto Serif SC",
-    "Source Han Serif SC",
-    "Songti SC",
-    "STSong",
-    "STZhongsong",
-    "SimSun",
-    "NSimSun",
-    "FangSong",
-    "KaiTi",
-    "PingFang SC",
-    "Hiragino Sans GB",
-    "Microsoft YaHei",
-    "Microsoft JhengHei",
-    serif;
-  font-weight: 500;
-  color: #1a1a1a;
-  font-size: 17px;
-  line-height: 1.8;
-  letter-spacing: 0.02em;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-family:
+    "Noto Serif SC",
+    "Songti SC",
+    "STZhongsong",
+    serif;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-top: 1.5em !important;
+  margin-bottom: 0.8em !important;
+}
+
 .post-content blockquote {
-  color: #555555;
+  font-family:
+    "Noto Serif SC",
+    "Songti SC",
+    serif;
+  font-style: normal;
+  color: #666666;
   font-size: 0.95em;
 }
 
