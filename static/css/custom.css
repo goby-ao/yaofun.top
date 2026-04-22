@@ -41,6 +41,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.post-content blockquote {
+  color: #555555;
+  font-size: 0.95em;
+}
+
 .swiper-container {
   height: 500px;
   display: flex;
